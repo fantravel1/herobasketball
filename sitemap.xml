@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://herobasketball.com/</loc>
+        <lastmod>2025-12-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://herobasketball.com/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://herobasketball.com/es/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://herobasketball.com/"/>
+    </url>
+
+    <!-- Players Directory -->
+    <url>
+        <loc>https://herobasketball.com/players.html</loc>
+        <lastmod>2025-12-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Training Hub -->
+    <url>
+        <loc>https://herobasketball.com/training.html</loc>
+        <lastmod>2025-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- About Page -->
+    <url>
+        <loc>https://herobasketball.com/about.html</loc>
+        <lastmod>2025-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Player Profiles -->
+    <url>
+        <loc>https://herobasketball.com/players/aja-wilson.html</loc>
+        <lastmod>2025-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Spanish Version -->
+    <url>
+        <loc>https://herobasketball.com/es/</loc>
+        <lastmod>2025-12-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://herobasketball.com/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://herobasketball.com/es/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/"/>
+    </url>
+
+    <!-- French Version -->
+    <url>
+        <loc>https://herobasketball.com/fr/</loc>
+        <lastmod>2025-12-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://herobasketball.com/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://herobasketball.com/es/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/"/>
+    </url>
+
+</urlset>
