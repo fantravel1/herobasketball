@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>WNBA All-Time Records | Career, Season, Game Leaders | HeroBasketball</title>
+    <meta name="description" content="Complete WNBA all-time records: Career leaders, single-season records, and single-game bests. From Diana Taurasi's scoring to Sue Bird's assists.">
+    <meta name="keywords" content="WNBA records, all-time leaders, career records, Diana Taurasi, Sue Bird, A'ja Wilson, scoring leaders">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herobasketball.com/leagues/wnba-records/">
+    <meta property="og:title" content="WNBA All-Time Records | HeroBasketball">
+    <meta property="og:description" content="Complete WNBA all-time records and statistical leaders.">
+
+    <link rel="canonical" href="https://herobasketball.com/leagues/wnba-records/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "WNBA All-Time Records",
+        "description": "Complete WNBA all-time statistical records and leaders",
+        "isPartOf": {"@type": "WebSite", "name": "HeroBasketball"}
+    }
+    </script>
+
+    <style>
+        .records-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #E85F0E 0%, #FF8C00 50%, #FFD700 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .records-hero::before { content: '📊'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.15; }
+        .records-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); }
+        .records-header h1 { font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .records-subtitle { font-size: 1.125rem; color: rgba(255,255,255,0.9); max-width: 600px; }
+        .records-content { padding: 2rem 0 4rem; }
+        .records-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--color-gray-900); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 3px solid var(--color-primary); }
+        .records-grid { display: grid; gap: 1rem; }
+        .record-card { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); transition: all 0.2s; }
+        .record-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .record-rank { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); color: white; font-family: var(--font-mono); font-weight: 700; border-radius: 50%; flex-shrink: 0; }
+        .record-rank.gold { background: linear-gradient(135deg, #FFD700, #FFA500); }
+        .record-rank.silver { background: linear-gradient(135deg, #C0C0C0, #A0A0A0); }
+        .record-rank.bronze { background: linear-gradient(135deg, #CD7F32, #B87333); }
+        .record-info { flex: 1; min-width: 0; }
+        .record-info h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .record-info p { font-size: 0.75rem; color: var(--color-gray-500); }
+        .record-value { font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: var(--color-primary); flex-shrink: 0; }
+        .record-category { margin-bottom: 2rem; }
+        .category-title { font-family: var(--font-display); font-weight: 600; font-size: 1.125rem; color: var(--color-gray-700); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .single-record { background: linear-gradient(135deg, rgba(232, 95, 14, 0.1), rgba(255, 215, 0, 0.1)); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #E85F0E; margin-bottom: 1rem; }
+        .single-record-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+        .single-record-title { font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); }
+        .single-record-value { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: #E85F0E; }
+        .single-record-details { font-size: 0.875rem; color: var(--color-gray-600); }
+        .tabs { display: flex; gap: 0.5rem; margin-bottom: 2rem; overflow-x: auto; padding-bottom: 0.5rem; }
+        .tab { padding: 0.75rem 1.25rem; background: white; border: 2px solid var(--color-gray-200); border-radius: 9999px; font-family: var(--font-display); font-weight: 600; color: var(--color-gray-600); cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+        .tab.active { background: var(--color-primary); border-color: var(--color-primary); color: white; }
+        .tab:hover:not(.active) { border-color: var(--color-primary); color: var(--color-primary); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        @media (min-width: 640px) { .records-header h1 { font-size: 3rem; } .records-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .records-grid { grid-template-columns: repeat(3, 1fr); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="../players.html" class="nav-link">Jugadoras</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Jugadoras Destacadas</h4>
+                                    <a href="../players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="../players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="../players/breanna-stewart.html">Breanna Stewart</a>
+                                    <a href="../players/sabrina-ionescu.html">Sabrina Ionescu</a>
+                                    <a href="../players/angel-reese.html">Angel Reese</a>
+                                    <a href="../players.html" class="view-all">Ver Todas las Jugadoras →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="../teams.html" class="nav-link">Equipos</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Equipos WNBA</h4>
+                                    <a href="../teams/las-vegas-aces.html">Las Vegas Aces</a>
+                                    <a href="../teams/new-york-liberty.html">New York Liberty</a>
+                                    <a href="../teams/indiana-fever.html">Indiana Fever</a>
+                                    <a href="../teams.html" class="view-all">Ver Todos los Equipos →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="wnba.html" class="nav-link" style="color: var(--color-primary);">Ligas</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Ligas</h4>
+                                    <a href="wnba.html">WNBA</a>
+                                    <a href="ncaa-womens.html">NCAA Women's</a>
+                                    <a href="euroleague-women.html">EuroLeague Women</a>
+                                    <a href="wnba-records.html">WNBA Records</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="../compare.html" class="nav-link">Comparar</a></li>
+                        <li><a href="../training.html" class="nav-link">Entrenamiento</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="../../leagues/wnba-records.html" class="lang-btn" aria-label="English">EN</a>
+                            <a href="wnba-records.html" class="lang-btn active" aria-label="Español">ES</a>
+                            <a href="../../fr/leagues/wnba-records.html" class="lang-btn" aria-label="Français">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="records-hero">
+            <div class="container">
+                <div class="records-hero-content">
+                    <nav class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/leagues/wnba.html">WNBA</a><span>/</span><span>Records</span></nav>
+                    <div class="records-header">
+                        <h1>📊 WNBA All-Time Records</h1>
+                        <p class="records-subtitle">The greatest statistical achievements in WNBA history. Career leaders, single-season bests, and unforgettable single-game performances.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="records-content">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab active" onclick="showTab('career')">Career Leaders</button>
+                    <button class="tab" onclick="showTab('season')">Season Records</button>
+                    <button class="tab" onclick="showTab('game')">Single-Game</button>
+                    <button class="tab" onclick="showTab('playoffs')">Playoff Records</button>
+                </div>
+
+                <!-- Career Leaders -->
+                <div id="career" class="tab-content active">
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🎯</span> Career Scoring Leaders</h2>
+                        <div class="records-grid">
+                            <a href="/players/diana-taurasi.html" class="record-card">
+                                <div class="record-rank gold">1</div>
+                                <div class="record-info"><h4>Diana Taurasi</h4><p>Phoenix Mercury • 2004-Present</p></div>
+                                <div class="record-value">10,646</div>
+                            </a>
+                            <div class="record-card">
+                                <div class="record-rank silver">2</div>
+                                <div class="record-info"><h4>Tina Charles</h4><p>Multiple Teams • 2010-Present</p></div>
+                                <div class="record-value">7,478</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank bronze">3</div>
+                                <div class="record-info"><h4>DeWanna Bonner</h4><p>PHX/CON • 2009-Present</p></div>
+                                <div class="record-value">6,743</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">4</div>
+                                <div class="record-info"><h4>Tamika Catchings</h4><p>Indiana Fever • 2002-2016</p></div>
+                                <div class="record-value">6,723</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">5</div>
+                                <div class="record-info"><h4>Cappie Pondexter</h4><p>Multiple Teams • 2006-2018</p></div>
+                                <div class="record-value">6,208</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">6</div>
+                                <div class="record-info"><h4>Candice Dupree</h4><p>Multiple Teams • 2006-2021</p></div>
+                                <div class="record-value">6,102</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🎁</span> Career Assists Leaders</h2>
+                        <div class="records-grid">
+                            <a href="/players/sue-bird.html" class="record-card">
+                                <div class="record-rank gold">1</div>
+                                <div class="record-info"><h4>Sue Bird</h4><p>Seattle Storm • 2002-2022</p></div>
+                                <div class="record-value">3,234</div>
+                            </a>
+                            <div class="record-card">
+                                <div class="record-rank silver">2</div>
+                                <div class="record-info"><h4>Courtney Vandersloot</h4><p>CHI/NYL • 2011-Present</p></div>
+                                <div class="record-value">2,412</div>
+                            </div>
+                            <a href="/players/diana-taurasi.html" class="record-card">
+                                <div class="record-rank bronze">3</div>
+                                <div class="record-info"><h4>Diana Taurasi</h4><p>Phoenix Mercury • 2004-Present</p></div>
+                                <div class="record-value">2,120</div>
+                            </a>
+                            <div class="record-card">
+                                <div class="record-rank">4</div>
+                                <div class="record-info"><h4>Lindsay Whalen</h4><p>CON/MIN • 2004-2018</p></div>
+                                <div class="record-value">2,023</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">5</div>
+                                <div class="record-info"><h4>Ticha Penicheiro</h4><p>SAC/LA/CHI • 1998-2012</p></div>
+                                <div class="record-value">2,023</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">6</div>
+                                <div class="record-info"><h4>Becky Hammon</h4><p>NYL/SAS • 1999-2014</p></div>
+                                <div class="record-value">1,708</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🏀</span> Career Rebounds Leaders</h2>
+                        <div class="records-grid">
+                            <div class="record-card">
+                                <div class="record-rank gold">1</div>
+                                <div class="record-info"><h4>Sylvia Fowles</h4><p>CHI/MIN • 2008-2022</p></div>
+                                <div class="record-value">4,006</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank silver">2</div>
+                                <div class="record-info"><h4>Rebekkah Brunson</h4><p>SAC/MIN • 2004-2018</p></div>
+                                <div class="record-value">3,356</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank bronze">3</div>
+                                <div class="record-info"><h4>Tamika Catchings</h4><p>Indiana Fever • 2002-2016</p></div>
+                                <div class="record-value">3,316</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">4</div>
+                                <div class="record-info"><h4>Lisa Leslie</h4><p>Los Angeles Sparks • 1997-2009</p></div>
+                                <div class="record-value">3,307</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">5</div>
+                                <div class="record-info"><h4>Tina Charles</h4><p>Multiple Teams • 2010-Present</p></div>
+                                <div class="record-value">3,234</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">6</div>
+                                <div class="record-info"><h4>Candice Dupree</h4><p>Multiple Teams • 2006-2021</p></div>
+                                <div class="record-value">2,916</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🛡️</span> Career Defensive Leaders</h2>
+                        <div class="records-grid">
+                            <div class="record-card">
+                                <div class="record-rank gold">1</div>
+                                <div class="record-info"><h4>Tamika Catchings</h4><p>Indiana Fever • Steals</p></div>
+                                <div class="record-value">1,074</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank gold">1</div>
+                                <div class="record-info"><h4>Margo Dydek</h4><p>Multiple Teams • Blocks</p></div>
+                                <div class="record-value">877</div>
+                            </div>
+                            <a href="/players/diana-taurasi.html" class="record-card">
+                                <div class="record-rank silver">2</div>
+                                <div class="record-info"><h4>Diana Taurasi</h4><p>Phoenix Mercury • Steals</p></div>
+                                <div class="record-value">726</div>
+                            </a>
+                            <div class="record-card">
+                                <div class="record-rank silver">2</div>
+                                <div class="record-info"><h4>Lisa Leslie</h4><p>Los Angeles Sparks • Blocks</p></div>
+                                <div class="record-value">822</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank bronze">3</div>
+                                <div class="record-info"><h4>Alana Beard</h4><p>WAS/LA • Steals</p></div>
+                                <div class="record-value">617</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank bronze">3</div>
+                                <div class="record-info"><h4>Brittney Griner</h4><p>Phoenix Mercury • Blocks</p></div>
+                                <div class="record-value">727</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Season Records -->
+                <div id="season" class="tab-content">
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🔥</span> Single-Season Scoring Records</h2>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Points in a Season</span>
+                                <span class="single-record-value">1,021</span>
+                            </div>
+                            <p class="single-record-details">A'ja Wilson, Las Vegas Aces (2024) • 40 games, 26.9 PPG</p>
+                        </div>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Highest Scoring Average (Season)</span>
+                                <span class="single-record-value">27.0 PPG</span>
+                            </div>
+                            <p class="single-record-details">A'ja Wilson, Las Vegas Aces (2024) • First player to average 27+ PPG</p>
+                        </div>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most 30-Point Games (Season)</span>
+                                <span class="single-record-value">14</span>
+                            </div>
+                            <p class="single-record-details">A'ja Wilson, Las Vegas Aces (2024)</p>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🎁</span> Single-Season Assists Records</h2>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Assists in a Season</span>
+                                <span class="single-record-value">316</span>
+                            </div>
+                            <p class="single-record-details">Courtney Vandersloot, Chicago Sky (2020) • 9.1 APG</p>
+                        </div>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Highest Assist Average (Season)</span>
+                                <span class="single-record-value">10.0 APG</span>
+                            </div>
+                            <p class="single-record-details">Courtney Vandersloot, Chicago Sky (2019)</p>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🎯</span> Single-Season Three-Point Records</h2>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Three-Pointers Made (Season)</span>
+                                <span class="single-record-value">122</span>
+                            </div>
+                            <p class="single-record-details">Kelsey Mitchell, Indiana Fever (2024)</p>
+                        </div>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Highest 3P% (Season, min. 100 made)</span>
+                                <span class="single-record-value">46.7%</span>
+                            </div>
+                            <p class="single-record-details">Elena Delle Donne, Washington Mystics (2019)</p>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🏀</span> Single-Season Rebounding Records</h2>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Rebounds in a Season</span>
+                                <span class="single-record-value">451</span>
+                            </div>
+                            <p class="single-record-details">A'ja Wilson, Las Vegas Aces (2024) • 11.9 RPG</p>
+                        </div>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Highest Rebounding Average (Season)</span>
+                                <span class="single-record-value">11.9 RPG</span>
+                            </div>
+                            <p class="single-record-details">A'ja Wilson, Las Vegas Aces (2024)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single-Game Records -->
+                <div id="game" class="tab-content">
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🔥</span> Single-Game Scoring</h2>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Points in a Game</span>
+                                <span class="single-record-value">53</span>
+                            </div>
+                            <p class="single-record-details">Liz Cambage, Dallas Wings vs. New York Liberty (July 17, 2018)</p>
+                        </div>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Points in a Half</span>
+                                <span class="single-record-value">33</span>
+                            </div>
+                            <p class="single-record-details">Liz Cambage, Dallas Wings (2018, 2nd half)</p>
+                        </div>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Points in a Quarter</span>
+                                <span class="single-record-value">21</span>
+                            </div>
+                            <p class="single-record-details">Multiple players</p>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🎁</span> Single-Game Assists</h2>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Assists in a Game</span>
+                                <span class="single-record-value">18</span>
+                            </div>
+                            <p class="single-record-details">Courtney Vandersloot, Chicago Sky vs. Indiana Fever (August 28, 2020)</p>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🏀</span> Single-Game Rebounds</h2>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Rebounds in a Game</span>
+                                <span class="single-record-value">25</span>
+                            </div>
+                            <p class="single-record-details">Angel Reese, Chicago Sky vs. Las Vegas Aces (August 4, 2024)</p>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🎯</span> Single-Game Three-Pointers</h2>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Three-Pointers in a Game</span>
+                                <span class="single-record-value">9</span>
+                            </div>
+                            <p class="single-record-details">Multiple players (Kelsey Mitchell, Sabrina Ionescu, Diana Taurasi, others)</p>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🛡️</span> Single-Game Defensive</h2>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Blocks in a Game</span>
+                                <span class="single-record-value">10</span>
+                            </div>
+                            <p class="single-record-details">Margo Dydek, Utah Starzz vs. Orlando Miracle (June 7, 2001)</p>
+                        </div>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Steals in a Game</span>
+                                <span class="single-record-value">10</span>
+                            </div>
+                            <p class="single-record-details">Multiple players</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playoff Records -->
+                <div id="playoffs" class="tab-content">
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🏆</span> Career Playoff Leaders</h2>
+                        <div class="records-grid">
+                            <a href="/players/diana-taurasi.html" class="record-card">
+                                <div class="record-rank gold">1</div>
+                                <div class="record-info"><h4>Diana Taurasi</h4><p>Playoff Points</p></div>
+                                <div class="record-value">1,329</div>
+                            </a>
+                            <a href="/players/sue-bird.html" class="record-card">
+                                <div class="record-rank gold">1</div>
+                                <div class="record-info"><h4>Sue Bird</h4><p>Playoff Assists</p></div>
+                                <div class="record-value">378</div>
+                            </a>
+                            <div class="record-card">
+                                <div class="record-rank gold">1</div>
+                                <div class="record-info"><h4>Rebekkah Brunson</h4><p>Playoff Rebounds</p></div>
+                                <div class="record-value">468</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>🔥</span> Playoff Single-Game Records</h2>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Points in a Playoff Game</span>
+                                <span class="single-record-value">47</span>
+                            </div>
+                            <p class="single-record-details">Alyssa Thomas, Connecticut Sun vs. Minnesota Lynx (September 10, 2024)</p>
+                        </div>
+                        <div class="single-record">
+                            <div class="single-record-header">
+                                <span class="single-record-title">Most Points in a Finals Game</span>
+                                <span class="single-record-value">45</span>
+                            </div>
+                            <p class="single-record-details">Jewell Loyd, Seattle Storm vs. Las Vegas Aces (2022)</p>
+                        </div>
+                    </div>
+
+                    <div class="records-section">
+                        <h2 class="section-heading"><span>👑</span> Finals MVP History</h2>
+                        <div class="records-grid">
+                            <div class="record-card">
+                                <div class="record-rank">🏆</div>
+                                <div class="record-info"><h4>2024: Jonquel Jones</h4><p>New York Liberty</p></div>
+                                <div class="record-value">17.8 PPG</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">🏆</div>
+                                <div class="record-info"><h4>2023: A'ja Wilson</h4><p>Las Vegas Aces</p></div>
+                                <div class="record-value">18.5 PPG</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">🏆</div>
+                                <div class="record-info"><h4>2022: Chelsea Gray</h4><p>Las Vegas Aces</p></div>
+                                <div class="record-value">18.3 PPG</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">🏆</div>
+                                <div class="record-info"><h4>2021: Kahleah Copper</h4><p>Chicago Sky</p></div>
+                                <div class="record-value">17.0 PPG</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">🏆</div>
+                                <div class="record-info"><h4>2020: Breanna Stewart</h4><p>Seattle Storm</p></div>
+                                <div class="record-value">28.3 PPG</div>
+                            </div>
+                            <div class="record-card">
+                                <div class="record-rank">🏆</div>
+                                <div class="record-info"><h4>2019: Emma Meesseman</h4><p>Washington Mystics</p></div>
+                                <div class="record-value">17.8 PPG</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <script src="../script.js"></script>
+    <script>
+        function showTab(tabId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            // Remove active from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Show selected tab content
+            document.getElementById(tabId).classList.add('active');
+            // Mark clicked tab as active
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Chicago Sky - Roster, Schedule, Stats | WNBA | HeroBasketball</title>
+    <meta name="description" content="Chicago Sky team page: 2021 WNBA Champions. Home of Angel Reese. Complete roster, schedule, and franchise history.">
+    <meta name="keywords" content="Chicago Sky, WNBA, women's basketball, Angel Reese, 2021 champions, Chicago">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herobasketball.com/teams/chicago-sky/">
+    <meta property="og:title" content="Chicago Sky | HeroBasketball">
+    <meta property="og:description" content="2021 WNBA Champions. Complete roster, schedule, and stats.">
+
+    <link rel="canonical" href="https://herobasketball.com/teams/chicago-sky/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsTeam",
+        "name": "Chicago Sky",
+        "sport": "Basketball",
+        "memberOf": {"@type": "SportsOrganization", "name": "WNBA"},
+        "location": {"@type": "Place", "name": "Chicago, Illinois"},
+        "coach": {"@type": "Person", "name": "Tyler Marsh"},
+        "athlete": [
+            {"@type": "Person", "name": "Angel Reese"},
+            {"@type": "Person", "name": "Chennedy Carter"},
+            {"@type": "Person", "name": "Marina Mabrey"}
+        ],
+        "award": ["2021 WNBA Championship"]
+    }
+    </script>
+
+    <style>
+        .team-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #418FDE 0%, #2A5F9E 50%, #FFCD00 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .team-hero::before { content: '🌆'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.15; }
+        .team-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); }
+        .team-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .team-logo { width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; background: #FFCD00; color: #418FDE; font-size: 3rem; border-radius: 1rem; }
+        .team-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .team-meta { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 1rem; color: rgba(255,255,255,0.9); }
+        .team-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .team-badge { padding: 0.375rem 0.75rem; background: rgba(255, 205, 0, 0.3); border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .team-badge.champ { background: #FFCD00; color: #418FDE; }
+        .team-quick-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); }
+        .quick-stat { text-align: center; }
+        .quick-stat-value { font-family: var(--font-mono); font-size: 1.75rem; font-weight: 700; color: #FFCD00; }
+        .quick-stat-label { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .team-content { padding: 2rem 0 4rem; }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .roster-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .roster-card { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); transition: all 0.2s; text-decoration: none; }
+        .roster-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .roster-number { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #418FDE, #2A5F9E); color: #FFCD00; font-family: var(--font-mono); font-weight: 700; border-radius: 0.5rem; }
+        .roster-info h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); }
+        .roster-info p { font-size: 0.75rem; color: var(--color-gray-500); }
+        .roster-star { color: #FFCD00; margin-left: auto; }
+        .history-card { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .history-card p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .championships { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .championship-badge { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: linear-gradient(135deg, #418FDE, #2A5F9E); color: #FFCD00; border-radius: 0.75rem; font-family: var(--font-display); font-weight: 600; }
+        .rebuild-callout { background: linear-gradient(135deg, rgba(65, 143, 222, 0.1), rgba(255, 205, 0, 0.1)); padding: 1.5rem; border-radius: 1rem; margin-top: 1.5rem; border-left: 4px solid #418FDE; }
+        .rebuild-callout h4 { font-family: var(--font-display); font-weight: 700; color: #418FDE; margin-bottom: 0.5rem; }
+        @media (min-width: 640px) { .team-identity h1 { font-size: 3rem; } .team-quick-stats { grid-template-columns: repeat(4, 1fr); } .roster-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 768px) { .team-header { flex-direction: row; align-items: center; } .team-logo { width: 120px; height: 120px; font-size: 4rem; } }
+        @media (min-width: 1024px) { .roster-grid { grid-template-columns: repeat(4, 1fr); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="../players.html" class="nav-link">Jugadoras</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Jugadoras Destacadas</h4>
+                                    <a href="../players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="../players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="../players/breanna-stewart.html">Breanna Stewart</a>
+                                    <a href="../players/sabrina-ionescu.html">Sabrina Ionescu</a>
+                                    <a href="../players/angel-reese.html">Angel Reese</a>
+                                    <a href="../players.html" class="view-all">Ver Todas las Jugadoras →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="../teams.html" class="nav-link" style="color: var(--color-primary);">Equipos</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Equipos WNBA</h4>
+                                    <a href="las-vegas-aces.html">Las Vegas Aces</a>
+                                    <a href="new-york-liberty.html">New York Liberty</a>
+                                    <a href="indiana-fever.html">Indiana Fever</a>
+                                    <a href="minnesota-lynx.html">Minnesota Lynx</a>
+                                    <a href="connecticut-sun.html">Connecticut Sun</a>
+                                    <a href="../teams.html" class="view-all">Ver Todos los Equipos →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="../leagues/wnba.html" class="nav-link">Ligas</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Ligas</h4>
+                                    <a href="../leagues/wnba.html">WNBA</a>
+                                    <a href="../leagues/ncaa-womens.html">NCAA Women's</a>
+                                    <a href="../leagues/euroleague-women.html">EuroLeague Women</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="../compare.html" class="nav-link">Comparar</a></li>
+                        <li><a href="../training.html" class="nav-link">Entrenamiento</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="../../teams/chicago-sky.html" class="lang-btn" aria-label="English">EN</a>
+                            <a href="chicago-sky.html" class="lang-btn active" aria-label="Español">ES</a>
+                            <a href="../../fr/teams/chicago-sky.html" class="lang-btn" aria-label="Français">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="team-hero">
+            <div class="container">
+                <div class="team-hero-content">
+                    <nav class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/teams.html">Equipos</a><span>/</span><span>Chicago Sky</span></nav>
+                    <div class="team-header">
+                        <div class="team-logo">🌆</div>
+                        <div class="team-identity">
+                            <h1>Chicago Sky</h1>
+                            <div class="team-meta">
+                                <span>📍 Chicago, Illinois</span>
+                                <span>🏟️ Wintrust Arena</span>
+                                <span>🏀 WNBA</span>
+                            </div>
+                            <div class="team-badges">
+                                <span class="team-badge champ">🏆 2021 Champions</span>
+                                <span class="team-badge">💪 Angel Reese Era</span>
+                                <span class="team-badge">🔄 Rebuilding</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-quick-stats">
+                        <div class="quick-stat"><div class="quick-stat-value">1</div><div class="quick-stat-label">Championship</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">2006</div><div class="quick-stat-label">Founded</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">13-27</div><div class="quick-stat-label">2024 Record</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">Marsh</div><div class="quick-stat-label">Head Coach</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading"><span>👥</span> 2024 Roster</h2>
+                    <div class="roster-grid">
+                        <a href="/players/angel-reese.html" class="roster-card">
+                            <div class="roster-number">5</div>
+                            <div class="roster-info"><h4>Angel Reese</h4><p>Forward • 6'3"</p></div>
+                            <span class="roster-star">⭐</span>
+                        </a>
+                        <div class="roster-card">
+                            <div class="roster-number">3</div>
+                            <div class="roster-info"><h4>Chennedy Carter</h4><p>Guard • 5'9"</p></div>
+                            <span class="roster-star">⭐</span>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">2</div>
+                            <div class="roster-info"><h4>Kamilla Cardoso</h4><p>Center • 6'7"</p></div>
+                            <span class="roster-star">⭐</span>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">15</div>
+                            <div class="roster-info"><h4>Marina Mabrey</h4><p>Guard • 5'11"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">24</div>
+                            <div class="roster-info"><h4>Elizabeth Williams</h4><p>Center • 6'3"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">1</div>
+                            <div class="roster-info"><h4>Diamond DeShields</h4><p>Guard • 6'1"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">11</div>
+                            <div class="roster-info"><h4>Dana Evans</h4><p>Guard • 5'6"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">0</div>
+                            <div class="roster-info"><h4>Lindsay Allen</h4><p>Guard • 5'8"</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📖</span> Team History</h2>
+                    <div class="history-card">
+                        <p>The <strong>Chicago Sky</strong> joined the WNBA as an expansion team in 2006 and won their first-ever championship in 2021. The team has become one of the league's most exciting franchises, known for entertaining basketball and star power.</p>
+                        <p>The 2021 championship team featured <strong>Candace Parker</strong> returning to her hometown, <strong>Courtney Vandersloot</strong>, <strong>Allie Quigley</strong>, and Finals MVP <strong>Kahleah Copper</strong>. They defeated the Phoenix Mercury in four games to bring Chicago its first WNBA title.</p>
+                        <p>After that championship core departed, the Sky entered a rebuild in 2024, drafting <strong>Angel Reese</strong> and <strong>Kamilla Cardoso</strong> to build a young, physical frontcourt. Despite a losing record, Reese's record-breaking rookie season brought national attention to the franchise.</p>
+                        <div class="championships">
+                            <div class="championship-badge">🏆 2021 WNBA Champions</div>
+                        </div>
+                        <div class="rebuild-callout">
+                            <h4>🔄 New Era in Chicago</h4>
+                            <p>With Angel Reese breaking the consecutive double-double record and Kamilla Cardoso anchoring the paint, the Sky's young core has Chicago fans excited about the future. The rebuild is underway with two potential franchise cornerstones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <script src="../script.js"></script>
+</body>
+</html>

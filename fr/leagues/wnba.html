@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>WNBA - Teams, Players, Stats & History | HeroBasketball</title>
+    <meta name="description" content="Complete WNBA coverage: All 12 teams, player stats, standings, schedule, and league history. The premier women's professional basketball league.">
+    <meta name="keywords" content="WNBA, women's basketball, professional basketball, WNBA teams, WNBA players, WNBA standings">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herobasketball.com/leagues/wnba/">
+    <meta property="og:title" content="WNBA - Women's National Basketball Association | HeroBasketball">
+    <meta property="og:description" content="Complete coverage of the WNBA: All 12 teams, player stats, and league history.">
+
+    <link rel="canonical" href="https://herobasketball.com/leagues/wnba/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsOrganization",
+        "name": "WNBA",
+        "alternateName": "Women's National Basketball Association",
+        "sport": "Basketball",
+        "url": "https://wnba.com",
+        "foundingDate": "1996",
+        "location": {"@type": "Place", "name": "United States"},
+        "numberOfEmployees": "144",
+        "description": "The premier professional women's basketball league in the world."
+    }
+    </script>
+
+    <style>
+        .league-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #FF6F00 0%, #E65100 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .league-hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .league-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); }
+        .league-header { display: flex; flex-direction: column; gap: 1.5rem; text-align: center; }
+        .league-logo { width: 120px; height: 120px; margin: 0 auto; display: flex; align-items: center; justify-content: center; background: white; border-radius: 50%; font-size: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .league-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .league-identity p { font-size: 1.125rem; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; }
+        .league-stats-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); }
+        .league-stat { text-align: center; }
+        .league-stat-value { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; }
+        .league-stat-label { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .league-content { padding: 2rem 0 4rem; }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .teams-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .team-card { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); transition: all 0.2s; text-decoration: none; }
+        .team-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .team-card-logo { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--color-gray-100); border-radius: 0.5rem; font-size: 1.5rem; }
+        .team-card-info h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); font-size: 0.9375rem; }
+        .team-card-info p { font-size: 0.75rem; color: var(--color-gray-500); }
+        .team-card-record { margin-left: auto; font-family: var(--font-mono); font-size: 0.875rem; color: var(--color-gray-600); }
+        .history-card { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .history-card p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .history-card h3 { font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); margin: 1.5rem 0 1rem; }
+        .champions-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-top: 1rem; }
+        .champion-item { display: flex; justify-content: space-between; padding: 0.75rem; background: var(--color-gray-50); border-radius: 0.5rem; font-size: 0.875rem; }
+        .champion-year { font-family: var(--font-mono); color: var(--color-primary); font-weight: 600; }
+        .champion-team { color: var(--color-gray-700); }
+        @media (min-width: 640px) { .league-identity h1 { font-size: 3rem; } .league-stats-row { grid-template-columns: repeat(4, 1fr); } .teams-grid { grid-template-columns: repeat(3, 1fr); } .champions-list { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 1024px) { .teams-grid { grid-template-columns: repeat(4, 1fr); } .champions-list { grid-template-columns: repeat(4, 1fr); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="../players.html" class="nav-link">Joueuses</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Joueuses Vedettes</h4>
+                                    <a href="../players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="../players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="../players/breanna-stewart.html">Breanna Stewart</a>
+                                    <a href="../players/sabrina-ionescu.html">Sabrina Ionescu</a>
+                                    <a href="../players/angel-reese.html">Angel Reese</a>
+                                    <a href="../players.html" class="view-all">Voir Toutes les Joueuses →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="../teams.html" class="nav-link">Équipes</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Équipes WNBA</h4>
+                                    <a href="../teams/las-vegas-aces.html">Las Vegas Aces</a>
+                                    <a href="../teams/new-york-liberty.html">New York Liberty</a>
+                                    <a href="../teams/indiana-fever.html">Indiana Fever</a>
+                                    <a href="../teams.html" class="view-all">Voir Toutes les Équipes →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="wnba.html" class="nav-link" style="color: var(--color-primary);">Ligues</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Ligues</h4>
+                                    <a href="wnba.html">WNBA</a>
+                                    <a href="ncaa-womens.html">NCAA Women's</a>
+                                    <a href="euroleague-women.html">EuroLeague Women</a>
+                                    <a href="wnba-records.html">WNBA Records</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="../compare.html" class="nav-link">Comparer</a></li>
+                        <li><a href="../training.html" class="nav-link">Entraînement</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="../../leagues/wnba.html" class="lang-btn" aria-label="English">EN</a>
+                            <a href="../../es/leagues/wnba.html" class="lang-btn" aria-label="Español">ES</a>
+                            <a href="wnba.html" class="lang-btn active" aria-label="Français">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="league-hero">
+            <div class="container">
+                <div class="league-hero-content">
+                    <nav class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/#leagues">Ligues</a><span>/</span><span>WNBA</span></nav>
+                    <div class="league-header">
+                        <div class="league-logo">🏀</div>
+                        <div class="league-identity">
+                            <h1>WNBA</h1>
+                            <p>Women's National Basketball Association — The premier professional women's basketball league in the world.</p>
+                        </div>
+                    </div>
+                    <div class="league-stats-row">
+                        <div class="league-stat"><div class="league-stat-value">12</div><div class="league-stat-label">Équipes</div></div>
+                        <div class="league-stat"><div class="league-stat-value">144</div><div class="league-stat-label">Joueuses</div></div>
+                        <div class="league-stat"><div class="league-stat-value">1997</div><div class="league-stat-label">Founded</div></div>
+                        <div class="league-stat"><div class="league-stat-value">🇺🇸</div><div class="league-stat-label">USA</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="league-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading"><span>🏀</span> All Teams</h2>
+                    <div class="teams-grid">
+                        <a href="/teams/las-vegas-aces.html" class="team-card"><div class="team-card-logo">♠️</div><div class="team-card-info"><h4>Las Vegas Aces</h4><p>Western Conference</p></div><span class="team-card-record">27-13</span></a>
+                        <a href="/teams/new-york-liberty.html" class="team-card"><div class="team-card-logo">🗽</div><div class="team-card-info"><h4>New York Liberty</h4><p>Eastern Conference</p></div><span class="team-card-record">32-8</span></a>
+                        <a href="/teams/indiana-fever.html" class="team-card"><div class="team-card-logo">🔥</div><div class="team-card-info"><h4>Indiana Fever</h4><p>Eastern Conference</p></div><span class="team-card-record">20-20</span></a>
+                        <div class="team-card"><div class="team-card-logo">☀️</div><div class="team-card-info"><h4>Connecticut Sun</h4><p>Eastern Conference</p></div><span class="team-card-record">28-12</span></div>
+                        <div class="team-card"><div class="team-card-logo">🌊</div><div class="team-card-info"><h4>Seattle Storm</h4><p>Western Conference</p></div><span class="team-card-record">25-15</span></div>
+                        <div class="team-card"><div class="team-card-logo">🐺</div><div class="team-card-info"><h4>Minnesota Lynx</h4><p>Western Conference</p></div><span class="team-card-record">30-10</span></div>
+                        <div class="team-card"><div class="team-card-logo">🔥</div><div class="team-card-info"><h4>Phoenix Mercury</h4><p>Western Conference</p></div><span class="team-card-record">19-21</span></div>
+                        <div class="team-card"><div class="team-card-logo">🦅</div><div class="team-card-info"><h4>Atlanta Dream</h4><p>Eastern Conference</p></div><span class="team-card-record">15-25</span></div>
+                        <div class="team-card"><div class="team-card-logo">💫</div><div class="team-card-info"><h4>Dallas Wings</h4><p>Western Conference</p></div><span class="team-card-record">9-31</span></div>
+                        <div class="team-card"><div class="team-card-logo">🌴</div><div class="team-card-info"><h4>Los Angeles Sparks</h4><p>Western Conference</p></div><span class="team-card-record">8-32</span></div>
+                        <div class="team-card"><div class="team-card-logo">🌆</div><div class="team-card-info"><h4>Chicago Sky</h4><p>Eastern Conference</p></div><span class="team-card-record">13-27</span></div>
+                        <div class="team-card"><div class="team-card-logo">🏛️</div><div class="team-card-info"><h4>Washington Mystics</h4><p>Eastern Conference</p></div><span class="team-card-record">14-26</span></div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📖</span> About the WNBA</h2>
+                    <div class="history-card">
+                        <p>The <strong>Women's National Basketball Association (WNBA)</strong> is the premier professional women's basketball league in the world. Founded in 1996 as a counterpart to the NBA, the league began play in 1997 with eight teams.</p>
+                        <p>The WNBA has grown to 12 teams and continues to expand. The league has produced legendary players like Lisa Leslie, Diana Taurasi, Sue Bird, and current stars A'ja Wilson and Caitlin Clark. The 2024 season saw unprecedented growth in viewership and attendance.</p>
+                        <h3>🏆 Recent Champions</h3>
+                        <div class="champions-list">
+                            <div class="champion-item"><span class="champion-year">2024</span><span class="champion-team">Liberty</span></div>
+                            <div class="champion-item"><span class="champion-year">2023</span><span class="champion-team">Aces</span></div>
+                            <div class="champion-item"><span class="champion-year">2022</span><span class="champion-team">Aces</span></div>
+                            <div class="champion-item"><span class="champion-year">2021</span><span class="champion-team">Sky</span></div>
+                            <div class="champion-item"><span class="champion-year">2020</span><span class="champion-team">Storm</span></div>
+                            <div class="champion-item"><span class="champion-year">2019</span><span class="champion-team">Mystics</span></div>
+                            <div class="champion-item"><span class="champion-year">2018</span><span class="champion-team">Storm</span></div>
+                            <div class="champion-item"><span class="champion-year">2017</span><span class="champion-team">Lynx</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <script src="../script.js"></script>
+</body>
+</html>
