@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Basketball Glossary - Terms, Stats & Definitions | HeroBasketball</title>
+    <meta name="description" content="Complete basketball glossary with 100+ terms explained. Learn basketball stats like PER, PPG, RPG, and understand plays, positions, and rules.">
+    <meta name="keywords" content="basketball glossary, basketball terms, basketball stats explained, PPG, RPG, APG, PER, basketball dictionary">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herobasketball.com/glossary/">
+    <meta property="og:title" content="Basketball Glossary | HeroBasketball">
+
+    <link rel="canonical" href="https://herobasketball.com/glossary/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DefinedTermSet",
+        "name": "Basketball Glossary",
+        "description": "Comprehensive glossary of basketball terms, statistics, and definitions",
+        "hasDefinedTerm": [
+            {"@type": "DefinedTerm", "name": "PPG", "description": "Points Per Game - Average number of points scored per game"},
+            {"@type": "DefinedTerm", "name": "RPG", "description": "Rebounds Per Game - Average number of rebounds grabbed per game"},
+            {"@type": "DefinedTerm", "name": "APG", "description": "Assists Per Game - Average number of assists recorded per game"},
+            {"@type": "DefinedTerm", "name": "PER", "description": "Player Efficiency Rating - All-in-one rating measuring a player's per-minute productivity"}
+        ]
+    }
+    </script>
+
+    <style>
+        .glossary-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            color: white;
+            text-align: center;
+        }
+        .glossary-hero .section-tag { background: rgba(255,255,255,0.2); color: white; }
+        .glossary-hero .section-title { color: white; font-size: 2.5rem; }
+        .glossary-hero .section-subtitle { color: rgba(255,255,255,0.9); }
+        .alpha-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem; margin-top: 2rem; }
+        .alpha-btn { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.15); color: white; font-family: var(--font-display); font-weight: 600; border-radius: 0.5rem; transition: all 0.2s; }
+        .alpha-btn:hover, .alpha-btn.active { background: white; color: var(--color-primary); }
+        .glossary-content { padding: 3rem 0; }
+        .glossary-section { margin-bottom: 3rem; }
+        .glossary-letter { font-family: var(--font-display); font-weight: 800; font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-primary); }
+        .glossary-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        .glossary-card { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .glossary-term { font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; color: var(--color-gray-900); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .glossary-abbr { font-family: var(--font-mono); font-size: 0.75rem; padding: 0.25rem 0.5rem; background: rgba(91, 44, 111, 0.1); color: var(--color-primary); border-radius: 0.25rem; }
+        .glossary-def { color: var(--color-gray-600); line-height: 1.7; }
+        .glossary-example { margin-top: 0.75rem; padding: 0.75rem; background: var(--color-gray-50); border-radius: 0.5rem; font-size: 0.875rem; color: var(--color-gray-500); }
+        .glossary-example strong { color: var(--color-gray-700); }
+        .category-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .category-pill { padding: 0.5rem 1rem; background: rgba(255,255,255,0.15); color: white; font-size: 0.875rem; font-weight: 600; border-radius: 9999px; transition: all 0.2s; }
+        .category-pill:hover, .category-pill.active { background: white; color: var(--color-primary); }
+        @media (min-width: 640px) { .glossary-hero .section-title { font-size: 3rem; } .glossary-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .glossary-grid { grid-template-columns: repeat(3, 1fr); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="players.html" class="nav-link">Joueuses</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Joueuses Vedettes</h4>
+                                    <a href="players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="players/breanna-stewart.html">Breanna Stewart</a>
+                                    <a href="players/sabrina-ionescu.html">Sabrina Ionescu</a>
+                                    <a href="players/angel-reese.html">Angel Reese</a>
+                                    <a href="players.html" class="view-all">Voir Toutes les Joueuses →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="teams.html" class="nav-link">Équipes</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Équipes WNBA</h4>
+                                    <a href="teams/las-vegas-aces.html">Las Vegas Aces</a>
+                                    <a href="teams/new-york-liberty.html">New York Liberty</a>
+                                    <a href="teams/indiana-fever.html">Indiana Fever</a>
+                                    <a href="teams.html" class="view-all">Voir Toutes les Équipes →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="leagues/wnba.html" class="nav-link">Ligues</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Ligues</h4>
+                                    <a href="leagues/wnba.html">WNBA</a>
+                                    <a href="leagues/ncaa-womens.html">NCAA Women's</a>
+                                    <a href="leagues/euroleague-women.html">EuroLeague Women</a>
+                                    <a href="leagues/wnba-records.html">WNBA Records</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="compare.html" class="nav-link">Comparer</a></li>
+                        <li><a href="training.html" class="nav-link">Entraînement</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="glossary-hero">
+            <div class="container">
+                <span class="section-tag">Reference</span>
+                <h1 class="section-title">Basketball Glossary</h1>
+                <p class="section-subtitle">100+ basketball terms, stats, and definitions explained. From basic concepts to advanced analytics.</p>
+                <div class="category-pills">
+                    <button class="category-pill active">All Terms</button>
+                    <button class="category-pill">Statistics</button>
+                    <button class="category-pill">Positions</button>
+                    <button class="category-pill">Plays</button>
+                    <button class="category-pill">Rules</button>
+                </div>
+                <div class="alpha-nav">
+                    <a href="#A" class="alpha-btn">A</a><a href="#B" class="alpha-btn">B</a><a href="#C" class="alpha-btn">C</a><a href="#D" class="alpha-btn">D</a><a href="#F" class="alpha-btn">F</a><a href="#P" class="alpha-btn">P</a><a href="#R" class="alpha-btn">R</a><a href="#S" class="alpha-btn">S</a><a href="#T" class="alpha-btn">T</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="glossary-content">
+            <div class="container">
+                <div class="glossary-section" id="A">
+                    <div class="glossary-letter">A</div>
+                    <div class="glossary-grid">
+                        <div class="glossary-card">
+                            <div class="glossary-term">Assist <span class="glossary-abbr">AST</span></div>
+                            <div class="glossary-def">A pass that directly leads to a made basket by a teammate. The passer is credited with an assist.</div>
+                            <div class="glossary-example"><strong>Example:</strong> Caitlin Clark led the WNBA with 8.4 APG in 2024.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">APG</div>
+                            <div class="glossary-def">Assists Per Game. The average number of assists a player records per game played.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">Alley-Oop</div>
+                            <div class="glossary-def">A play where one player throws the ball near the basket and a teammate catches it mid-air and scores, usually with a dunk or layup.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-section" id="B">
+                    <div class="glossary-letter">B</div>
+                    <div class="glossary-grid">
+                        <div class="glossary-card">
+                            <div class="glossary-term">Block <span class="glossary-abbr">BLK</span></div>
+                            <div class="glossary-def">When a defensive player legally deflects a shot attempt, preventing it from reaching the basket.</div>
+                            <div class="glossary-example"><strong>Example:</strong> A'ja Wilson averaged 2.6 blocks per game in her MVP season.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">BPG</div>
+                            <div class="glossary-def">Blocks Per Game. The average number of blocked shots a player records per game.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">Box Out</div>
+                            <div class="glossary-def">A rebounding technique where a player positions their body between an opponent and the basket to gain better position for a rebound.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-section" id="C">
+                    <div class="glossary-letter">C</div>
+                    <div class="glossary-grid">
+                        <div class="glossary-card">
+                            <div class="glossary-term">Center <span class="glossary-abbr">C</span></div>
+                            <div class="glossary-def">Typically the tallest player on the team, playing near the basket on offense and defense. Responsible for rebounding, rim protection, and interior scoring.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">Crossover</div>
+                            <div class="glossary-def">A dribbling move where the ball handler quickly switches the ball from one hand to the other in front of their body to change direction.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-section" id="D">
+                    <div class="glossary-letter">D</div>
+                    <div class="glossary-grid">
+                        <div class="glossary-card">
+                            <div class="glossary-term">Double-Double</div>
+                            <div class="glossary-def">When a player reaches double digits in two statistical categories in a single game (e.g., 20 points and 10 rebounds).</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">DPOY</div>
+                            <div class="glossary-def">Defensive Player of the Year. Annual award given to the best defensive player in the league.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-section" id="F">
+                    <div class="glossary-letter">F</div>
+                    <div class="glossary-grid">
+                        <div class="glossary-card">
+                            <div class="glossary-term">Field Goal <span class="glossary-abbr">FG</span></div>
+                            <div class="glossary-def">Any basket scored during regular play, including two-pointers and three-pointers (excluding free throws).</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">FG%</div>
+                            <div class="glossary-def">Field Goal Percentage. The ratio of made field goals to attempted field goals, expressed as a percentage.</div>
+                            <div class="glossary-example"><strong>Formula:</strong> (FGM / FGA) × 100</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">Free Throw <span class="glossary-abbr">FT</span></div>
+                            <div class="glossary-def">An uncontested shot taken from the free throw line (15 feet from the basket), worth one point. Awarded after certain fouls.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-section" id="P">
+                    <div class="glossary-letter">P</div>
+                    <div class="glossary-grid">
+                        <div class="glossary-card">
+                            <div class="glossary-term">PPG</div>
+                            <div class="glossary-def">Points Per Game. The average number of points a player scores per game played.</div>
+                            <div class="glossary-example"><strong>Example:</strong> A'ja Wilson led the WNBA with 26.9 PPG in 2024.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">PER</div>
+                            <div class="glossary-def">Player Efficiency Rating. An all-in-one advanced stat that measures a player's per-minute productivity. League average is 15.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">Point Guard <span class="glossary-abbr">PG</span></div>
+                            <div class="glossary-def">The primary ball handler and playmaker on the team. Responsible for running the offense, calling plays, and distributing the ball.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">Pick and Roll</div>
+                            <div class="glossary-def">An offensive play where a player sets a screen (pick) for the ball handler, then moves toward the basket (roll) to receive a pass.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-section" id="R">
+                    <div class="glossary-letter">R</div>
+                    <div class="glossary-grid">
+                        <div class="glossary-card">
+                            <div class="glossary-term">Rebound <span class="glossary-abbr">REB</span></div>
+                            <div class="glossary-def">Gaining possession of the ball after a missed shot. Can be offensive (after your team's miss) or defensive (after opponent's miss).</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">RPG</div>
+                            <div class="glossary-def">Rebounds Per Game. The average number of rebounds a player grabs per game.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-section" id="S">
+                    <div class="glossary-letter">S</div>
+                    <div class="glossary-grid">
+                        <div class="glossary-card">
+                            <div class="glossary-term">Steal <span class="glossary-abbr">STL</span></div>
+                            <div class="glossary-def">When a defensive player takes the ball away from an offensive player through legal means.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">SPG</div>
+                            <div class="glossary-def">Steals Per Game. The average number of steals a player records per game.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-section" id="T">
+                    <div class="glossary-letter">T</div>
+                    <div class="glossary-grid">
+                        <div class="glossary-card">
+                            <div class="glossary-term">Triple-Double</div>
+                            <div class="glossary-def">When a player reaches double digits in three statistical categories in a single game (e.g., 15 points, 12 rebounds, 10 assists).</div>
+                            <div class="glossary-example"><strong>Example:</strong> Sabrina Ionescu holds the NCAA record with 26 career triple-doubles.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">Three-Pointer <span class="glossary-abbr">3P</span></div>
+                            <div class="glossary-def">A field goal made from beyond the three-point arc, worth three points. The WNBA three-point line is 22 feet 1.75 inches at the top.</div>
+                        </div>
+                        <div class="glossary-card">
+                            <div class="glossary-term">Turnover <span class="glossary-abbr">TO</span></div>
+                            <div class="glossary-def">When the offensive team loses possession of the ball to the defense without attempting a shot.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Seattle Storm - Roster, Schedule, Stats | WNBA | HeroBasketball</title>
+    <meta name="description" content="Seattle Storm team page: 4-time WNBA Champions (2004, 2010, 2018, 2020). Complete roster, schedule, and stats for the legendary franchise.">
+    <meta name="keywords" content="Seattle Storm, WNBA, women's basketball, Jewell Loyd, Sue Bird, Lauren Jackson, WNBA champions">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herobasketball.com/teams/seattle-storm/">
+    <meta property="og:title" content="Seattle Storm | HeroBasketball">
+    <meta property="og:description" content="4-time WNBA Champions. Complete roster, schedule, and stats.">
+
+    <link rel="canonical" href="https://herobasketball.com/teams/seattle-storm/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsTeam",
+        "name": "Seattle Storm",
+        "sport": "Basketball",
+        "memberOf": {"@type": "SportsOrganization", "name": "WNBA"},
+        "location": {"@type": "Place", "name": "Seattle, Washington"},
+        "coach": {"@type": "Person", "name": "Noelle Quinn"},
+        "athlete": [
+            {"@type": "Person", "name": "Jewell Loyd"},
+            {"@type": "Person", "name": "Nneka Ogwumike"},
+            {"@type": "Person", "name": "Skylar Diggins-Smith"}
+        ],
+        "award": ["2004 WNBA Championship", "2010 WNBA Championship", "2018 WNBA Championship", "2020 WNBA Championship"]
+    }
+    </script>
+
+    <style>
+        .team-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #2C5234 0%, #1A3320 50%, #FFC425 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .team-hero::before { content: '⛈️'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.15; }
+        .team-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); }
+        .team-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .team-logo { width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; background: #FFC425; color: #2C5234; font-size: 3rem; border-radius: 1rem; }
+        .team-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .team-meta { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 1rem; color: rgba(255,255,255,0.9); }
+        .team-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .team-badge { padding: 0.375rem 0.75rem; background: rgba(255, 196, 37, 0.3); border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .team-badge.legacy { background: #FFC425; color: #2C5234; }
+        .team-quick-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); }
+        .quick-stat { text-align: center; }
+        .quick-stat-value { font-family: var(--font-mono); font-size: 1.75rem; font-weight: 700; color: #FFC425; }
+        .quick-stat-label { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .team-content { padding: 2rem 0 4rem; }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .roster-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .roster-card { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); transition: all 0.2s; }
+        .roster-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .roster-number { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2C5234, #1A3320); color: #FFC425; font-family: var(--font-mono); font-weight: 700; border-radius: 0.5rem; }
+        .roster-info h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); }
+        .roster-info p { font-size: 0.75rem; color: var(--color-gray-500); }
+        .roster-star { color: #2C5234; margin-left: auto; }
+        .history-card { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .history-card p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .championships { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .championship-badge { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: linear-gradient(135deg, #2C5234, #1A3320); color: #FFC425; border-radius: 0.75rem; font-family: var(--font-display); font-weight: 600; }
+        .retired-numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+        .retired-number { text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(44, 82, 52, 0.1), rgba(255, 196, 37, 0.1)); border-radius: 0.75rem; }
+        .retired-number .number { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; color: #2C5234; }
+        .retired-number .name { font-size: 0.75rem; color: var(--color-gray-600); margin-top: 0.25rem; }
+        @media (min-width: 640px) { .team-identity h1 { font-size: 3rem; } .team-quick-stats { grid-template-columns: repeat(4, 1fr); } .roster-grid { grid-template-columns: repeat(3, 1fr); } .retired-numbers { grid-template-columns: repeat(4, 1fr); } }
+        @media (min-width: 768px) { .team-header { flex-direction: row; align-items: center; } .team-logo { width: 120px; height: 120px; font-size: 4rem; } }
+        @media (min-width: 1024px) { .roster-grid { grid-template-columns: repeat(4, 1fr); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="../players.html" class="nav-link">Jugadoras</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Jugadoras Destacadas</h4>
+                                    <a href="../players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="../players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="../players/breanna-stewart.html">Breanna Stewart</a>
+                                    <a href="../players/sabrina-ionescu.html">Sabrina Ionescu</a>
+                                    <a href="../players/angel-reese.html">Angel Reese</a>
+                                    <a href="../players.html" class="view-all">Ver Todas las Jugadoras →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="../teams.html" class="nav-link" style="color: var(--color-primary);">Equipos</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Equipos WNBA</h4>
+                                    <a href="las-vegas-aces.html">Las Vegas Aces</a>
+                                    <a href="new-york-liberty.html">New York Liberty</a>
+                                    <a href="indiana-fever.html">Indiana Fever</a>
+                                    <a href="minnesota-lynx.html">Minnesota Lynx</a>
+                                    <a href="connecticut-sun.html">Connecticut Sun</a>
+                                    <a href="../teams.html" class="view-all">Ver Todos los Equipos →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="../leagues/wnba.html" class="nav-link">Ligas</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Ligas</h4>
+                                    <a href="../leagues/wnba.html">WNBA</a>
+                                    <a href="../leagues/ncaa-womens.html">NCAA Women's</a>
+                                    <a href="../leagues/euroleague-women.html">EuroLeague Women</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="../compare.html" class="nav-link">Comparar</a></li>
+                        <li><a href="../training.html" class="nav-link">Entrenamiento</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="../../teams/seattle-storm.html" class="lang-btn" aria-label="English">EN</a>
+                            <a href="seattle-storm.html" class="lang-btn active" aria-label="Español">ES</a>
+                            <a href="../../fr/teams/seattle-storm.html" class="lang-btn" aria-label="Français">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="team-hero">
+            <div class="container">
+                <div class="team-hero-content">
+                    <nav class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/#teams">Equipos</a><span>/</span><span>Seattle Storm</span></nav>
+                    <div class="team-header">
+                        <div class="team-logo">⛈️</div>
+                        <div class="team-identity">
+                            <h1>Seattle Storm</h1>
+                            <div class="team-meta">
+                                <span>📍 Seattle, Washington</span>
+                                <span>🏟️ Climate Pledge Arena</span>
+                                <span>🏀 WNBA</span>
+                            </div>
+                            <div class="team-badges">
+                                <span class="team-badge legacy">🏛️ Legendary Franchise</span>
+                                <span class="team-badge">🏆 4x Champions</span>
+                                <span class="team-badge">⭐ Sue Bird's Team</span>
+                                <span class="team-badge">🌲 Pacific Northwest</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-quick-stats">
+                        <div class="quick-stat"><div class="quick-stat-value">4</div><div class="quick-stat-label">Championships</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">2000</div><div class="quick-stat-label">Founded</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">25-15</div><div class="quick-stat-label">2024 Record</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">Quinn</div><div class="quick-stat-label">Head Coach</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading"><span>👥</span> 2024 Roster</h2>
+                    <div class="roster-grid">
+                        <div class="roster-card">
+                            <div class="roster-number">24</div>
+                            <div class="roster-info"><h4>Jewell Loyd</h4><p>Guard • 5'10"</p></div>
+                            <span class="roster-star">⭐</span>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">42</div>
+                            <div class="roster-info"><h4>Nneka Ogwumike</h4><p>Forward • 6'2"</p></div>
+                            <span class="roster-star">⭐</span>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">4</div>
+                            <div class="roster-info"><h4>Skylar Diggins-Smith</h4><p>Guard • 5'9"</p></div>
+                            <span class="roster-star">⭐</span>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">30</div>
+                            <div class="roster-info"><h4>Ezi Magbegor</h4><p>Center • 6'4"</p></div>
+                            <span class="roster-star">⭐</span>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">8</div>
+                            <div class="roster-info"><h4>Sami Whitcomb</h4><p>Guard • 5'11"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">5</div>
+                            <div class="roster-info"><h4>Gabby Williams</h4><p>Guard • 5'11"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">21</div>
+                            <div class="roster-info"><h4>Mercedes Russell</h4><p>Center • 6'5"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">11</div>
+                            <div class="roster-info"><h4>Jordan Horston</h4><p>Guard • 6'2"</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📖</span> Team History</h2>
+                    <div class="history-card">
+                        <p>The <strong>Seattle Storm</strong> are one of the WNBA's most decorated franchises, winning four championships across three different eras. Founded in 2000, the Storm quickly became a powerhouse thanks to legendary players like <strong>Lauren Jackson</strong> and <strong>Sue Bird</strong>.</p>
+                        <p>The first two titles came in 2004 and 2010 with the Jackson-Bird duo. After a rebuilding period, the Storm reloaded with <strong>Breanna Stewart</strong> (now with NY Liberty) and won back-to-back championships in 2018 and 2020.</p>
+                        <p>Now led by scoring champion <strong>Jewell Loyd</strong> and coached by former Storm player <strong>Noelle Quinn</strong>, Seattle continues its tradition of excellence. The team plays at Climate Pledge Arena, one of the most innovative venues in sports.</p>
+                        <div class="championships">
+                            <div class="championship-badge">🏆 2004 Champions</div>
+                            <div class="championship-badge">🏆 2010 Champions</div>
+                            <div class="championship-badge">🏆 2018 Champions</div>
+                            <div class="championship-badge">🏆 2020 Champions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>🏛️</span> Retired Numbers</h2>
+                    <div class="retired-numbers">
+                        <div class="retired-number">
+                            <div class="number">#10</div>
+                            <div class="name">Sue Bird</div>
+                        </div>
+                        <div class="retired-number">
+                            <div class="number">#15</div>
+                            <div class="name">Lauren Jackson</div>
+                        </div>
+                        <div class="retired-number">
+                            <div class="number">#21</div>
+                            <div class="name">Betty Lennox</div>
+                        </div>
+                        <div class="retired-number">
+                            <div class="number">#7</div>
+                            <div class="name">Tina Thompson</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <script src="../script.js"></script>
+</body>
+</html>

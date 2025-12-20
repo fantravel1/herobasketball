@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary Meta Tags -->
+    <title>Women's Basketball Players - 5,000+ Player Profiles | HeroBasketball</title>
+    <meta name="title" content="Women's Basketball Players - 5,000+ Player Profiles | HeroBasketball">
+    <meta name="description" content="Browse 5,000+ women's basketball player profiles with comprehensive stats, career history, and achievements. WNBA, NCAA, EuroLeague, and international players.">
+    <meta name="keywords" content="women's basketball players, WNBA players, NCAA women's basketball roster, female basketball stars, basketball player stats">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herobasketball.com/players/">
+    <meta property="og:title" content="Women's Basketball Players - 5,000+ Profiles | HeroBasketball">
+    <meta property="og:description" content="Browse 5,000+ women's basketball player profiles with comprehensive stats and career history.">
+    <meta property="og:image" content="https://herobasketball.com/images/players-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://herobasketball.com/players/">
+    <meta property="twitter:title" content="Women's Basketball Players | HeroBasketball">
+
+    <link rel="canonical" href="https://herobasketball.com/players/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://herobasketball.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Players",
+                "item": "https://herobasketball.com/players/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Collection Page Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Women's Basketball Players",
+        "description": "Comprehensive directory of 5,000+ women's basketball players from leagues worldwide.",
+        "url": "https://herobasketball.com/players/",
+        "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": 5000,
+            "itemListElement": [
+                {
+                    "@type": "Person",
+                    "name": "A'ja Wilson",
+                    "jobTitle": "Professional Basketball Player",
+                    "affiliation": {
+                        "@type": "SportsTeam",
+                        "name": "Las Vegas Aces"
+                    }
+                },
+                {
+                    "@type": "Person",
+                    "name": "Caitlin Clark",
+                    "jobTitle": "Professional Basketball Player",
+                    "affiliation": {
+                        "@type": "SportsTeam",
+                        "name": "Indiana Fever"
+                    }
+                },
+                {
+                    "@type": "Person",
+                    "name": "Breanna Stewart",
+                    "jobTitle": "Professional Basketball Player",
+                    "affiliation": {
+                        "@type": "SportsTeam",
+                        "name": "New York Liberty"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <style>
+        /* Page-specific styles */
+        .page-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, rgba(91, 44, 111, 0.08), rgba(212, 172, 13, 0.05));
+        }
+
+        .page-hero .container {
+            text-align: center;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--color-gray-500);
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--color-primary);
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .page-title {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2.5rem;
+            color: var(--color-gray-900);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.125rem;
+            color: var(--color-gray-600);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            margin: -30px auto 3rem;
+            max-width: 900px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .filter-search {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .filter-search input {
+            flex: 1;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--color-gray-200);
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .filter-search input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .filter-dropdowns {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-select {
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--color-gray-200);
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
+            background: white;
+            color: var(--color-gray-700);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-width: 140px;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        /* Player Grid */
+        .players-grid-section {
+            padding: 0 0 4rem;
+        }
+
+        .grid-header {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .results-count {
+            font-size: 0.875rem;
+            color: var(--color-gray-500);
+        }
+
+        .view-toggle {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .view-btn {
+            padding: 0.5rem;
+            border: 1px solid var(--color-gray-200);
+            border-radius: 0.5rem;
+            color: var(--color-gray-400);
+            transition: all 0.2s ease;
+        }
+
+        .view-btn:hover,
+        .view-btn.active {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            background: rgba(91, 44, 111, 0.05);
+        }
+
+        .players-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .player-list-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.25s ease;
+        }
+
+        .player-list-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .player-list-avatar {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            color: white;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .player-list-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .player-list-name {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--color-gray-900);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .player-list-meta {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--color-gray-500);
+        }
+
+        .player-list-stats {
+            display: none;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .player-list-stat {
+            padding: 0.5rem;
+        }
+
+        .player-list-stat-value {
+            font-family: var(--font-mono);
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--color-gray-900);
+        }
+
+        .player-list-stat-label {
+            font-size: 0.625rem;
+            color: var(--color-gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .player-list-link {
+            padding: 0.625rem 1rem;
+            background: var(--color-gray-100);
+            color: var(--color-primary);
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 0.875rem;
+            border-radius: 0.5rem;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+
+        .player-list-link:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .page-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--color-gray-200);
+            border-radius: 0.5rem;
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--color-gray-600);
+            transition: all 0.2s ease;
+        }
+
+        .page-btn:hover,
+        .page-btn.active {
+            border-color: var(--color-primary);
+            background: var(--color-primary);
+            color: white;
+        }
+
+        /* Alphabet Filter */
+        .alpha-filter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .alpha-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--color-gray-500);
+            border-radius: 0.375rem;
+            transition: all 0.15s ease;
+        }
+
+        .alpha-btn:hover,
+        .alpha-btn.active {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        @media (min-width: 640px) {
+            .page-title {
+                font-size: 3rem;
+            }
+
+            .filter-bar {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .filter-search {
+                flex: 1;
+            }
+
+            .grid-header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .players-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .player-list-stats {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .players-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🏀</span>
+                    <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="hamburger"></span>
+                </button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="players.html" class="nav-link" style="color: var(--color-primary);">Jugadoras</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Jugadoras Destacadas</h4>
+                                    <a href="players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="players/breanna-stewart.html">Breanna Stewart</a>
+                                    <a href="players/sabrina-ionescu.html">Sabrina Ionescu</a>
+                                    <a href="players/angel-reese.html">Angel Reese</a>
+                                </div>
+                                <div class="dropdown-section">
+                                    <h4>Más Estrellas</h4>
+                                    <a href="players/diana-taurasi.html">Diana Taurasi</a>
+                                    <a href="players/kelsey-plum.html">Kelsey Plum</a>
+                                    <a href="players/chelsea-gray.html">Chelsea Gray</a>
+                                    <a href="players/napheesa-collier.html">Napheesa Collier</a>
+                                    <a href="players.html" class="view-all">Ver Todas las Jugadoras →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="teams.html" class="nav-link">Equipos</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Equipos WNBA</h4>
+                                    <a href="teams/las-vegas-aces.html">Las Vegas Aces</a>
+                                    <a href="teams/new-york-liberty.html">New York Liberty</a>
+                                    <a href="teams/minnesota-lynx.html">Minnesota Lynx</a>
+                                    <a href="teams/connecticut-sun.html">Connecticut Sun</a>
+                                    <a href="teams/indiana-fever.html">Indiana Fever</a>
+                                    <a href="teams.html" class="view-all">Ver Todos los Equipos →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="leagues/wnba.html" class="nav-link">Ligas</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Ligas</h4>
+                                    <a href="leagues/wnba.html">WNBA</a>
+                                    <a href="leagues/ncaa-womens.html">NCAA Women's</a>
+                                    <a href="leagues/euroleague-women.html">EuroLeague Women</a>
+                                    <a href="leagues/wnba-records.html">WNBA Records</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="compare.html" class="nav-link">Comparar</a></li>
+                        <li><a href="training.html" class="nav-link">Entrenamiento</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="../players.html" class="lang-btn" aria-label="English">EN</a>
+                            <a href="players.html" class="lang-btn active" aria-label="Español">ES</a>
+                            <a href="../fr/players.html" class="lang-btn" aria-label="Français">FR</a>
+                        </div>
+                        <button class="search-btn" aria-label="Search">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span>/</span>
+                    <span>Jugadoras</span>
+                </nav>
+                <h1 class="page-title">Women's Basketball Players</h1>
+                <p class="page-subtitle">Browse 5,000+ player profiles from WNBA, NCAA, EuroLeague, and leagues worldwide. Find stats, career history, and achievements.</p>
+            </div>
+        </section>
+
+        <!-- Filter Bar -->
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-search">
+                    <input type="search" placeholder="Search players..." aria-label="Search players">
+                    <button class="btn btn-primary">Search</button>
+                </div>
+                <div class="filter-dropdowns">
+                    <select class="filter-select" aria-label="Filter by league">
+                        <option value="">All Leagues</option>
+                        <option value="wnba">WNBA</option>
+                        <option value="ncaa">NCAA D1</option>
+                        <option value="euroleague">EuroLeague</option>
+                        <option value="lfb">LFB</option>
+                        <option value="liga-femenina">Liga Femenina</option>
+                    </select>
+                    <select class="filter-select" aria-label="Filter by position">
+                        <option value="">All Positions</option>
+                        <option value="pg">Point Guard</option>
+                        <option value="sg">Shooting Guard</option>
+                        <option value="sf">Small Forward</option>
+                        <option value="pf">Power Forward</option>
+                        <option value="c">Center</option>
+                    </select>
+                    <select class="filter-select" aria-label="Filter by country">
+                        <option value="">All Countries</option>
+                        <option value="us">United States</option>
+                        <option value="au">Australia</option>
+                        <option value="fr">France</option>
+                        <option value="es">Spain</option>
+                        <option value="cn">China</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Players Grid Section -->
+        <section class="players-grid-section">
+            <div class="container">
+                <!-- Alphabet Filter -->
+                <div class="alpha-filter" aria-label="Filter by letter">
+                    <button class="alpha-btn active">All</button>
+                    <button class="alpha-btn">A</button>
+                    <button class="alpha-btn">B</button>
+                    <button class="alpha-btn">C</button>
+                    <button class="alpha-btn">D</button>
+                    <button class="alpha-btn">E</button>
+                    <button class="alpha-btn">F</button>
+                    <button class="alpha-btn">G</button>
+                    <button class="alpha-btn">H</button>
+                    <button class="alpha-btn">I</button>
+                    <button class="alpha-btn">J</button>
+                    <button class="alpha-btn">K</button>
+                    <button class="alpha-btn">L</button>
+                    <button class="alpha-btn">M</button>
+                    <button class="alpha-btn">N</button>
+                    <button class="alpha-btn">O</button>
+                    <button class="alpha-btn">P</button>
+                    <button class="alpha-btn">Q</button>
+                    <button class="alpha-btn">R</button>
+                    <button class="alpha-btn">S</button>
+                    <button class="alpha-btn">T</button>
+                    <button class="alpha-btn">U</button>
+                    <button class="alpha-btn">V</button>
+                    <button class="alpha-btn">W</button>
+                    <button class="alpha-btn">X</button>
+                    <button class="alpha-btn">Y</button>
+                    <button class="alpha-btn">Z</button>
+                </div>
+
+                <div class="grid-header">
+                    <span class="results-count">Showing <strong>5,247</strong> players</span>
+                    <div class="view-toggle">
+                        <button class="view-btn active" aria-label="List view">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="8" y1="6" x2="21" y2="6"></line>
+                                <line x1="8" y1="12" x2="21" y2="12"></line>
+                                <line x1="8" y1="18" x2="21" y2="18"></line>
+                                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                            </svg>
+                        </button>
+                        <button class="view-btn" aria-label="Grid view">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="players-list">
+                    <article class="player-list-card">
+                        <div class="player-list-avatar">AW</div>
+                        <div class="player-list-info">
+                            <h2 class="player-list-name">A'ja Wilson</h2>
+                            <div class="player-list-meta">
+                                <span>Las Vegas Aces</span>
+                                <span>•</span>
+                                <span>Center</span>
+                            </div>
+                        </div>
+                        <div class="player-list-stats">
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">26.9</div>
+                                <div class="player-list-stat-label">PPG</div>
+                            </div>
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">11.9</div>
+                                <div class="player-list-stat-label">RPG</div>
+                            </div>
+                        </div>
+                        <a href="/players/aja-wilson/" class="player-list-link">View</a>
+                    </article>
+
+                    <article class="player-list-card">
+                        <div class="player-list-avatar">CC</div>
+                        <div class="player-list-info">
+                            <h2 class="player-list-name">Caitlin Clark</h2>
+                            <div class="player-list-meta">
+                                <span>Indiana Fever</span>
+                                <span>•</span>
+                                <span>Point Guard</span>
+                            </div>
+                        </div>
+                        <div class="player-list-stats">
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">19.2</div>
+                                <div class="player-list-stat-label">PPG</div>
+                            </div>
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">8.4</div>
+                                <div class="player-list-stat-label">APG</div>
+                            </div>
+                        </div>
+                        <a href="/players/caitlin-clark/" class="player-list-link">View</a>
+                    </article>
+
+                    <article class="player-list-card">
+                        <div class="player-list-avatar">BS</div>
+                        <div class="player-list-info">
+                            <h2 class="player-list-name">Breanna Stewart</h2>
+                            <div class="player-list-meta">
+                                <span>New York Liberty</span>
+                                <span>•</span>
+                                <span>Forward</span>
+                            </div>
+                        </div>
+                        <div class="player-list-stats">
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">20.4</div>
+                                <div class="player-list-stat-label">PPG</div>
+                            </div>
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">8.5</div>
+                                <div class="player-list-stat-label">RPG</div>
+                            </div>
+                        </div>
+                        <a href="/players/breanna-stewart/" class="player-list-link">View</a>
+                    </article>
+
+                    <article class="player-list-card">
+                        <div class="player-list-avatar">SI</div>
+                        <div class="player-list-info">
+                            <h2 class="player-list-name">Sabrina Ionescu</h2>
+                            <div class="player-list-meta">
+                                <span>New York Liberty</span>
+                                <span>•</span>
+                                <span>Guard</span>
+                            </div>
+                        </div>
+                        <div class="player-list-stats">
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">18.2</div>
+                                <div class="player-list-stat-label">PPG</div>
+                            </div>
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">6.2</div>
+                                <div class="player-list-stat-label">APG</div>
+                            </div>
+                        </div>
+                        <a href="/players/sabrina-ionescu/" class="player-list-link">View</a>
+                    </article>
+
+                    <article class="player-list-card">
+                        <div class="player-list-avatar">NE</div>
+                        <div class="player-list-info">
+                            <h2 class="player-list-name">Napheesa Collier</h2>
+                            <div class="player-list-meta">
+                                <span>Minnesota Lynx</span>
+                                <span>•</span>
+                                <span>Forward</span>
+                            </div>
+                        </div>
+                        <div class="player-list-stats">
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">20.4</div>
+                                <div class="player-list-stat-label">PPG</div>
+                            </div>
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">9.7</div>
+                                <div class="player-list-stat-label">RPG</div>
+                            </div>
+                        </div>
+                        <a href="/players/napheesa-collier/" class="player-list-link">View</a>
+                    </article>
+
+                    <article class="player-list-card">
+                        <div class="player-list-avatar">KM</div>
+                        <div class="player-list-info">
+                            <h2 class="player-list-name">Kelsey Mitchell</h2>
+                            <div class="player-list-meta">
+                                <span>Indiana Fever</span>
+                                <span>•</span>
+                                <span>Guard</span>
+                            </div>
+                        </div>
+                        <div class="player-list-stats">
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">17.7</div>
+                                <div class="player-list-stat-label">PPG</div>
+                            </div>
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">2.5</div>
+                                <div class="player-list-stat-label">APG</div>
+                            </div>
+                        </div>
+                        <a href="/players/kelsey-mitchell/" class="player-list-link">View</a>
+                    </article>
+
+                    <article class="player-list-card">
+                        <div class="player-list-avatar">JL</div>
+                        <div class="player-list-info">
+                            <h2 class="player-list-name">Jewell Loyd</h2>
+                            <div class="player-list-meta">
+                                <span>Seattle Storm</span>
+                                <span>•</span>
+                                <span>Guard</span>
+                            </div>
+                        </div>
+                        <div class="player-list-stats">
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">19.7</div>
+                                <div class="player-list-stat-label">PPG</div>
+                            </div>
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">4.3</div>
+                                <div class="player-list-stat-label">APG</div>
+                            </div>
+                        </div>
+                        <a href="/players/jewell-loyd/" class="player-list-link">View</a>
+                    </article>
+
+                    <article class="player-list-card">
+                        <div class="player-list-avatar">AM</div>
+                        <div class="player-list-info">
+                            <h2 class="player-list-name">Alyssa Thomas</h2>
+                            <div class="player-list-meta">
+                                <span>Connecticut Sun</span>
+                                <span>•</span>
+                                <span>Forward</span>
+                            </div>
+                        </div>
+                        <div class="player-list-stats">
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">11.7</div>
+                                <div class="player-list-stat-label">PPG</div>
+                            </div>
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">8.5</div>
+                                <div class="player-list-stat-label">APG</div>
+                            </div>
+                        </div>
+                        <a href="/players/alyssa-thomas/" class="player-list-link">View</a>
+                    </article>
+
+                    <article class="player-list-card">
+                        <div class="player-list-avatar">DJ</div>
+                        <div class="player-list-info">
+                            <h2 class="player-list-name">DeWanna Bonner</h2>
+                            <div class="player-list-meta">
+                                <span>Connecticut Sun</span>
+                                <span>•</span>
+                                <span>Forward</span>
+                            </div>
+                        </div>
+                        <div class="player-list-stats">
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">15.3</div>
+                                <div class="player-list-stat-label">PPG</div>
+                            </div>
+                            <div class="player-list-stat">
+                                <div class="player-list-stat-value">5.8</div>
+                                <div class="player-list-stat-label">RPG</div>
+                            </div>
+                        </div>
+                        <a href="/players/dewanna-bonner/" class="player-list-link">View</a>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <nav class="pagination" aria-label="Pagination">
+                    <button class="page-btn" aria-label="Previous page">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">...</button>
+                    <button class="page-btn">175</button>
+                    <button class="page-btn" aria-label="Next page">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">🏀</span>
+                        <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                    </a>
+                    <p class="footer-tagline">The ultimate free resource for women's basketball worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Explore</h4>
+                        <ul class="footer-list">
+                            <li><a href="/players.html">Jugadoras</a></li>
+                            <li><a href="/#teams">Equipos</a></li>
+                            <li><a href="/#leagues">Ligas</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Resources</h4>
+                        <ul class="footer-list">
+                            <li><a href="/#training">Entrenamiento</a></li>
+                            <li><a href="/#stats">Stats</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Alphabet filter functionality
+        document.querySelectorAll('.alpha-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

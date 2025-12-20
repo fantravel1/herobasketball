@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>NCAA Women's Basketball | Top Programs, Players, March Madness | HeroBasketball</title>
+    <meta name="description" content="NCAA Women's Basketball coverage: Top programs like South Carolina, UConn, Iowa. March Madness brackets, player profiles, and recruiting news.">
+    <meta name="keywords" content="NCAA women's basketball, college basketball, March Madness, South Carolina, UConn, Iowa, Dawn Staley">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herobasketball.com/leagues/ncaa-womens/">
+    <meta property="og:title" content="NCAA Women's Basketball | HeroBasketball">
+    <meta property="og:description" content="Complete coverage of NCAA women's basketball.">
+
+    <link rel="canonical" href="https://herobasketball.com/leagues/ncaa-womens/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsOrganization",
+        "name": "NCAA Women's Basketball",
+        "sport": "Basketball",
+        "description": "National Collegiate Athletic Association Women's Basketball"
+    }
+    </script>
+
+    <style>
+        .ncaa-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #00843D 0%, #005A2B 50%, #FFD700 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .ncaa-hero::before { content: '🎓'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.15; }
+        .ncaa-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); }
+        .ncaa-header h1 { font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .ncaa-subtitle { font-size: 1.125rem; color: rgba(255,255,255,0.9); max-width: 600px; }
+        .ncaa-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); }
+        .ncaa-stat { text-align: center; }
+        .ncaa-stat-value { font-family: var(--font-mono); font-size: 1.75rem; font-weight: 700; }
+        .ncaa-stat-label { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .ncaa-content { padding: 2rem 0 4rem; }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--color-gray-900); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 3px solid #00843D; }
+        .programs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .program-card { padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); transition: all 0.2s; }
+        .program-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .program-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+        .program-logo { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border-radius: 0.75rem; }
+        .program-info h3 { font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); }
+        .program-info p { font-size: 0.75rem; color: var(--color-gray-500); }
+        .program-stats { display: flex; gap: 1.5rem; font-size: 0.875rem; color: var(--color-gray-600); }
+        .program-stat { display: flex; flex-direction: column; }
+        .program-stat-value { font-family: var(--font-mono); font-weight: 700; color: var(--color-gray-900); }
+        .march-madness { background: linear-gradient(135deg, rgba(0, 132, 61, 0.1), rgba(255, 215, 0, 0.1)); padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .march-madness h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .champions-grid { display: grid; gap: 0.75rem; }
+        .champion-row { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1rem; background: white; border-radius: 0.5rem; }
+        .champion-year { font-family: var(--font-mono); font-weight: 700; color: #00843D; width: 50px; }
+        .champion-team { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); flex: 1; }
+        .champion-score { font-size: 0.875rem; color: var(--color-gray-500); }
+        .conference-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+        .conference-badge { padding: 0.5rem 1rem; background: white; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: var(--color-gray-600); border: 1px solid var(--color-gray-200); }
+        /* Program colors */
+        .program-south-carolina .program-logo { background: linear-gradient(135deg, #73000A, #570007); color: white; }
+        .program-uconn .program-logo { background: linear-gradient(135deg, #0E1A3C, #000E2F); color: white; }
+        .program-iowa .program-logo { background: linear-gradient(135deg, #FFCD00, #E5B800); color: #000; }
+        .program-stanford .program-logo { background: linear-gradient(135deg, #8C1515, #6B0F0F); color: white; }
+        .program-lsu .program-logo { background: linear-gradient(135deg, #461D7C, #FDD023); color: white; }
+        .program-notre-dame .program-logo { background: linear-gradient(135deg, #0C2340, #C99700); color: white; }
+        .program-baylor .program-logo { background: linear-gradient(135deg, #154734, #FFB81C); color: white; }
+        .program-texas .program-logo { background: linear-gradient(135deg, #BF5700, #9E4800); color: white; }
+        @media (min-width: 640px) { .ncaa-header h1 { font-size: 3rem; } .ncaa-stats { grid-template-columns: repeat(4, 1fr); } .programs-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .programs-grid { grid-template-columns: repeat(4, 1fr); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="../players.html" class="nav-link">Jugadoras</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Jugadoras Destacadas</h4>
+                                    <a href="../players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="../players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="../players/breanna-stewart.html">Breanna Stewart</a>
+                                    <a href="../players/sabrina-ionescu.html">Sabrina Ionescu</a>
+                                    <a href="../players/angel-reese.html">Angel Reese</a>
+                                    <a href="../players.html" class="view-all">Ver Todas las Jugadoras →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="../teams.html" class="nav-link">Equipos</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Equipos WNBA</h4>
+                                    <a href="../teams/las-vegas-aces.html">Las Vegas Aces</a>
+                                    <a href="../teams/new-york-liberty.html">New York Liberty</a>
+                                    <a href="../teams/indiana-fever.html">Indiana Fever</a>
+                                    <a href="../teams.html" class="view-all">Ver Todos los Equipos →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="wnba.html" class="nav-link" style="color: var(--color-primary);">Ligas</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Ligas</h4>
+                                    <a href="wnba.html">WNBA</a>
+                                    <a href="ncaa-womens.html">NCAA Women's</a>
+                                    <a href="euroleague-women.html">EuroLeague Women</a>
+                                    <a href="wnba-records.html">WNBA Records</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="../compare.html" class="nav-link">Comparar</a></li>
+                        <li><a href="../training.html" class="nav-link">Entrenamiento</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="../../leagues/ncaa-womens.html" class="lang-btn" aria-label="English">EN</a>
+                            <a href="ncaa-womens.html" class="lang-btn active" aria-label="Español">ES</a>
+                            <a href="../../fr/leagues/ncaa-womens.html" class="lang-btn" aria-label="Français">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="ncaa-hero">
+            <div class="container">
+                <div class="ncaa-hero-content">
+                    <nav class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/#leagues">Ligas</a><span>/</span><span>NCAA Women's</span></nav>
+                    <div class="ncaa-header">
+                        <h1>🎓 NCAA Women's Basketball</h1>
+                        <p class="ncaa-subtitle">The premier development league for women's basketball. Where future WNBA stars are made, records are broken, and March Madness dreams come true.</p>
+                    </div>
+                    <div class="ncaa-stats">
+                        <div class="ncaa-stat"><div class="ncaa-stat-value">351</div><div class="ncaa-stat-label">D1 Programs</div></div>
+                        <div class="ncaa-stat"><div class="ncaa-stat-value">32</div><div class="ncaa-stat-label">Conferences</div></div>
+                        <div class="ncaa-stat"><div class="ncaa-stat-value">68</div><div class="ncaa-stat-label">March Madness</div></div>
+                        <div class="ncaa-stat"><div class="ncaa-stat-value">12.9M</div><div class="ncaa-stat-label">2024 Final Viewers</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ncaa-content">
+            <div class="container">
+                <div class="march-madness">
+                    <h3>🏆 Recent NCAA Champions</h3>
+                    <div class="champions-grid">
+                        <div class="champion-row">
+                            <span class="champion-year">2024</span>
+                            <span class="champion-team">South Carolina Gamecocks</span>
+                            <span class="champion-score">vs. Iowa 87-75</span>
+                        </div>
+                        <div class="champion-row">
+                            <span class="champion-year">2023</span>
+                            <span class="champion-team">LSU Tigers</span>
+                            <span class="champion-score">vs. Iowa 102-85</span>
+                        </div>
+                        <div class="champion-row">
+                            <span class="champion-year">2022</span>
+                            <span class="champion-team">South Carolina Gamecocks</span>
+                            <span class="champion-score">vs. UConn 64-49</span>
+                        </div>
+                        <div class="champion-row">
+                            <span class="champion-year">2021</span>
+                            <span class="champion-team">Stanford Cardinal</span>
+                            <span class="champion-score">vs. Arizona 54-53</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>🏫</span> Top Programs</h2>
+                    <div class="programs-grid">
+                        <div class="program-card program-south-carolina">
+                            <div class="program-header">
+                                <div class="program-logo">🐔</div>
+                                <div class="program-info">
+                                    <h3>South Carolina</h3>
+                                    <p>Dawn Staley • SEC</p>
+                                </div>
+                            </div>
+                            <div class="program-stats">
+                                <div class="program-stat"><span class="program-stat-value">3</span><span>Titles</span></div>
+                                <div class="program-stat"><span class="program-stat-value">#1</span><span>2024 Rank</span></div>
+                            </div>
+                        </div>
+
+                        <div class="program-card program-uconn">
+                            <div class="program-header">
+                                <div class="program-logo">🐺</div>
+                                <div class="program-info">
+                                    <h3>UConn</h3>
+                                    <p>Geno Auriemma • Big East</p>
+                                </div>
+                            </div>
+                            <div class="program-stats">
+                                <div class="program-stat"><span class="program-stat-value">11</span><span>Titles</span></div>
+                                <div class="program-stat"><span class="program-stat-value">🐐</span><span>Dynasty</span></div>
+                            </div>
+                        </div>
+
+                        <div class="program-card program-stanford">
+                            <div class="program-header">
+                                <div class="program-logo">🌲</div>
+                                <div class="program-info">
+                                    <h3>Stanford</h3>
+                                    <p>Tara VanDerveer (ret.) • ACC</p>
+                                </div>
+                            </div>
+                            <div class="program-stats">
+                                <div class="program-stat"><span class="program-stat-value">3</span><span>Titles</span></div>
+                                <div class="program-stat"><span class="program-stat-value">1,216</span><span>Wins</span></div>
+                            </div>
+                        </div>
+
+                        <div class="program-card program-lsu">
+                            <div class="program-header">
+                                <div class="program-logo">🐯</div>
+                                <div class="program-info">
+                                    <h3>LSU</h3>
+                                    <p>Kim Mulkey • SEC</p>
+                                </div>
+                            </div>
+                            <div class="program-stats">
+                                <div class="program-stat"><span class="program-stat-value">1</span><span>Titles</span></div>
+                                <div class="program-stat"><span class="program-stat-value">2023</span><span>Champs</span></div>
+                            </div>
+                        </div>
+
+                        <div class="program-card program-iowa">
+                            <div class="program-header">
+                                <div class="program-logo">🦅</div>
+                                <div class="program-info">
+                                    <h3>Iowa</h3>
+                                    <p>Jan Jensen • Big Ten</p>
+                                </div>
+                            </div>
+                            <div class="program-stats">
+                                <div class="program-stat"><span class="program-stat-value">0</span><span>Titles</span></div>
+                                <div class="program-stat"><span class="program-stat-value">2x</span><span>Runner-up</span></div>
+                            </div>
+                        </div>
+
+                        <div class="program-card program-notre-dame">
+                            <div class="program-header">
+                                <div class="program-logo">☘️</div>
+                                <div class="program-info">
+                                    <h3>Notre Dame</h3>
+                                    <p>Niele Ivey • ACC</p>
+                                </div>
+                            </div>
+                            <div class="program-stats">
+                                <div class="program-stat"><span class="program-stat-value">2</span><span>Titles</span></div>
+                                <div class="program-stat"><span class="program-stat-value">9</span><span>Final Fours</span></div>
+                            </div>
+                        </div>
+
+                        <div class="program-card program-baylor">
+                            <div class="program-header">
+                                <div class="program-logo">🐻</div>
+                                <div class="program-info">
+                                    <h3>Baylor</h3>
+                                    <p>Nicki Collen • Big 12</p>
+                                </div>
+                            </div>
+                            <div class="program-stats">
+                                <div class="program-stat"><span class="program-stat-value">3</span><span>Titles</span></div>
+                                <div class="program-stat"><span class="program-stat-value">5</span><span>Final Fours</span></div>
+                            </div>
+                        </div>
+
+                        <div class="program-card program-texas">
+                            <div class="program-header">
+                                <div class="program-logo">🤘</div>
+                                <div class="program-info">
+                                    <h3>Texas</h3>
+                                    <p>Vic Schaefer • SEC</p>
+                                </div>
+                            </div>
+                            <div class="program-stats">
+                                <div class="program-stat"><span class="program-stat-value">1</span><span>Title</span></div>
+                                <div class="program-stat"><span class="program-stat-value">1986</span><span>Champs</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>🏅</span> All-Time National Championship Leaders</h2>
+                    <div style="background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md);">
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-gray-100);">
+                                <span style="font-size: 1.5rem;">🥇</span>
+                                <span style="font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); flex: 1;">UConn Huskies</span>
+                                <span style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: var(--color-primary);">11 Titles</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-gray-100);">
+                                <span style="font-size: 1.5rem;">🥈</span>
+                                <span style="font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); flex: 1;">Tennessee Lady Vols</span>
+                                <span style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: var(--color-gray-700);">8 Titles</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-gray-100);">
+                                <span style="font-size: 1.5rem;">🥉</span>
+                                <span style="font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); flex: 1;">Stanford Cardinal</span>
+                                <span style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: var(--color-gray-600);">3 Titles</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-gray-100);">
+                                <span style="font-size: 1.5rem;">🥉</span>
+                                <span style="font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); flex: 1;">South Carolina Gamecocks</span>
+                                <span style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: var(--color-gray-600);">3 Titles</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <span style="font-size: 1.5rem;">🥉</span>
+                                <span style="font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); flex: 1;">Baylor Bears</span>
+                                <span style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: var(--color-gray-600);">3 Titles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>🏛️</span> Power Conferences</h2>
+                    <div class="conference-badges">
+                        <span class="conference-badge">SEC (16 teams)</span>
+                        <span class="conference-badge">Big Ten (18 teams)</span>
+                        <span class="conference-badge">ACC (15 teams)</span>
+                        <span class="conference-badge">Big 12 (16 teams)</span>
+                        <span class="conference-badge">Big East (11 teams)</span>
+                        <span class="conference-badge">Pac-12 (4 teams)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <script src="../script.js"></script>
+</body>
+</html>

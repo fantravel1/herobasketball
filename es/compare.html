@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Player Comparison Tool | Compare WNBA Stars | HeroBasketball</title>
+    <meta name="description" content="Compare WNBA players head-to-head. Stats, awards, and career achievements side by side. A'ja Wilson vs Breanna Stewart and more.">
+    <meta name="keywords" content="WNBA player comparison, compare players, basketball stats, head to head">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/compare/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        .compare-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #2D1B4E 50%, var(--color-secondary) 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .compare-hero::before { content: '⚔️'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 10rem; opacity: 0.1; }
+        .compare-hero-content { position: relative; z-index: 1; text-align: center; }
+        .compare-header h1 { font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .compare-subtitle { font-size: 1.125rem; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; }
+        .compare-content { padding: 2rem 0 4rem; }
+
+        /* Comparison Card */
+        .comparison-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: stretch;
+        }
+        .player-side {
+            padding: 2rem;
+            text-align: center;
+        }
+        .player-side.left { background: linear-gradient(135deg, #C8102E, #A00D24); color: white; }
+        .player-side.right { background: linear-gradient(135deg, #6ECEB2, #4AA892); color: white; }
+        .player-avatar {
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+        .player-name { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; margin-bottom: 0.25rem; }
+        .player-team { font-size: 0.875rem; opacity: 0.9; }
+        .vs-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-gray-900);
+            color: white;
+            padding: 0 1.5rem;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+
+        /* Stats Comparison */
+        .stats-comparison { padding: 2rem; }
+        .stat-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-gray-100);
+        }
+        .stat-row:last-child { border-bottom: none; }
+        .stat-value {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .stat-value.left { text-align: right; color: #C8102E; }
+        .stat-value.right { text-align: left; color: #4AA892; }
+        .stat-value.winner { transform: scale(1.1); }
+        .stat-bar-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            height: 2rem;
+        }
+        .stat-bar {
+            height: 100%;
+            border-radius: 0.25rem;
+            transition: width 0.5s ease;
+        }
+        .stat-bar.left { background: linear-gradient(90deg, transparent, #C8102E); margin-left: auto; }
+        .stat-bar.right { background: linear-gradient(90deg, #4AA892, transparent); }
+        .stat-label {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--color-gray-600);
+            text-transform: uppercase;
+            background: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+        }
+        .stat-middle {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .stat-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--color-gray-500);
+            text-transform: uppercase;
+            text-align: center;
+            background: var(--color-gray-100);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+        }
+
+        /* Awards Comparison */
+        .awards-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 0 2rem 2rem;
+        }
+        .awards-column h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--color-gray-900);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .award-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .award-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.375rem 0.75rem;
+            background: var(--color-gray-100);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--color-gray-700);
+        }
+        .award-badge.gold { background: linear-gradient(135deg, #FFD700, #FFA500); color: #8B4513; }
+
+        /* Popular Comparisons */
+        .popular-section { margin-top: 3rem; }
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--color-gray-900);
+            margin-bottom: 1.5rem;
+        }
+        .comparisons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .comparison-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .comparison-link:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .comparison-avatars {
+            display: flex;
+            align-items: center;
+        }
+        .mini-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: white;
+            border: 2px solid white;
+        }
+        .mini-avatar:nth-child(2) { margin-left: -12px; }
+        .comparison-info { flex: 1; }
+        .comparison-info h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); font-size: 0.875rem; }
+        .comparison-info p { font-size: 0.75rem; color: var(--color-gray-500); }
+        .comparison-arrow { color: var(--color-gray-400); }
+
+        @media (min-width: 640px) { .compare-header h1 { font-size: 3rem; } .comparisons-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 640px) { .comparison-header { grid-template-columns: 1fr; } .vs-divider { padding: 1rem; } .stat-row { grid-template-columns: 1fr 1fr 1fr; } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="players.html" class="nav-link">Jugadoras</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Jugadoras Destacadas</h4>
+                                    <a href="players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="players/breanna-stewart.html">Breanna Stewart</a>
+                                    <a href="players/sabrina-ionescu.html">Sabrina Ionescu</a>
+                                    <a href="players/angel-reese.html">Angel Reese</a>
+                                    <a href="players.html" class="view-all">Ver Todas las Jugadoras →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="teams.html" class="nav-link">Equipos</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Equipos WNBA</h4>
+                                    <a href="teams/las-vegas-aces.html">Las Vegas Aces</a>
+                                    <a href="teams/new-york-liberty.html">New York Liberty</a>
+                                    <a href="teams/indiana-fever.html">Indiana Fever</a>
+                                    <a href="teams.html" class="view-all">Ver Todos los Equipos →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="leagues/wnba.html" class="nav-link">Ligas</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Ligas</h4>
+                                    <a href="leagues/wnba.html">WNBA</a>
+                                    <a href="leagues/ncaa-womens.html">NCAA Women's</a>
+                                    <a href="leagues/euroleague-women.html">EuroLeague Women</a>
+                                    <a href="leagues/wnba-records.html">WNBA Records</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="compare.html" class="nav-link">Comparar</a></li>
+                        <li><a href="training.html" class="nav-link">Entrenamiento</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="compare-hero">
+            <div class="container">
+                <div class="compare-hero-content">
+                    <div class="compare-header">
+                        <h1>⚔️ Player Comparison</h1>
+                        <p class="compare-subtitle">Compare WNBA stars head-to-head. Stats, awards, and career achievements side by side.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="compare-content">
+            <div class="container">
+                <!-- Featured Comparison: A'ja Wilson vs Breanna Stewart -->
+                <div class="comparison-card">
+                    <div class="comparison-header">
+                        <div class="player-side left">
+                            <div class="player-avatar">AW</div>
+                            <div class="player-name">A'ja Wilson</div>
+                            <div class="player-team">Las Vegas Aces</div>
+                        </div>
+                        <div class="vs-divider">VS</div>
+                        <div class="player-side right">
+                            <div class="player-avatar">BS</div>
+                            <div class="player-name">Breanna Stewart</div>
+                            <div class="player-team">New York Liberty</div>
+                        </div>
+                    </div>
+
+                    <div class="stats-comparison">
+                        <div class="stat-row">
+                            <div class="stat-value left winner">26.9</div>
+                            <div class="stat-middle"><span class="stat-name">PPG (2024)</span></div>
+                            <div class="stat-value right">20.4</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-value left winner">11.9</div>
+                            <div class="stat-middle"><span class="stat-name">RPG</span></div>
+                            <div class="stat-value right">8.5</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-value left">2.3</div>
+                            <div class="stat-middle"><span class="stat-name">APG</span></div>
+                            <div class="stat-value right winner">3.5</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-value left winner">2.6</div>
+                            <div class="stat-middle"><span class="stat-name">BPG</span></div>
+                            <div class="stat-value right">1.5</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-value left">2</div>
+                            <div class="stat-middle"><span class="stat-name">Championships</span></div>
+                            <div class="stat-value right winner">3</div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-value left winner">3</div>
+                            <div class="stat-middle"><span class="stat-name">MVPs</span></div>
+                            <div class="stat-value right">2</div>
+                        </div>
+                    </div>
+
+                    <div class="awards-comparison">
+                        <div class="awards-column">
+                            <h4><span>🏆</span> A'ja Wilson Awards</h4>
+                            <div class="award-list">
+                                <span class="award-badge gold">3x MVP</span>
+                                <span class="award-badge gold">2x Champion</span>
+                                <span class="award-badge">2x DPOY</span>
+                                <span class="award-badge">6x All-Star</span>
+                                <span class="award-badge">Olympic Gold</span>
+                            </div>
+                        </div>
+                        <div class="awards-column">
+                            <h4><span>🏆</span> Breanna Stewart Awards</h4>
+                            <div class="award-list">
+                                <span class="award-badge gold">2x MVP</span>
+                                <span class="award-badge gold">3x Champion</span>
+                                <span class="award-badge">2x Finals MVP</span>
+                                <span class="award-badge">5x All-Star</span>
+                                <span class="award-badge">3x Olympic Gold</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Comparisons -->
+                <div class="popular-section">
+                    <h2 class="section-heading"><span>🔥</span> Popular Comparisons</h2>
+                    <div class="comparisons-grid">
+                        <a href="#" class="comparison-link">
+                            <div class="comparison-avatars">
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #002D62, #FDBB30);">CC</div>
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #418FDE, #FFCD00);">AR</div>
+                            </div>
+                            <div class="comparison-info">
+                                <h4>Caitlin Clark vs Angel Reese</h4>
+                                <p>The NCAA Rivalry Continues</p>
+                            </div>
+                            <span class="comparison-arrow">→</span>
+                        </a>
+                        <a href="#" class="comparison-link">
+                            <div class="comparison-avatars">
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #1D1160, #E56020);">DT</div>
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #2C5234, #FFC425);">SB</div>
+                            </div>
+                            <div class="comparison-info">
+                                <h4>Diana Taurasi vs Sue Bird</h4>
+                                <p>GOAT Point Guard Debate</p>
+                            </div>
+                            <span class="comparison-arrow">→</span>
+                        </a>
+                        <a href="#" class="comparison-link">
+                            <div class="comparison-avatars">
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #6ECEB2, #4AA892);">SI</div>
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #000, #B4975A);">KP</div>
+                            </div>
+                            <div class="comparison-info">
+                                <h4>Sabrina Ionescu vs Kelsey Plum</h4>
+                                <p>Elite Guards Face Off</p>
+                            </div>
+                            <span class="comparison-arrow">→</span>
+                        </a>
+                        <a href="#" class="comparison-link">
+                            <div class="comparison-avatars">
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #236192, #79BC43);">NC</div>
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #C8102E, #A00D24);">AW</div>
+                            </div>
+                            <div class="comparison-info">
+                                <h4>Napheesa Collier vs A'ja Wilson</h4>
+                                <p>MVP Race 2024</p>
+                            </div>
+                            <span class="comparison-arrow">→</span>
+                        </a>
+                        <a href="#" class="comparison-link">
+                            <div class="comparison-avatars">
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #2C5234, #FFC425);">JL</div>
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #1D1160, #E56020);">KC</div>
+                            </div>
+                            <div class="comparison-info">
+                                <h4>Jewell Loyd vs Kahleah Copper</h4>
+                                <p>Elite Two-Way Wings</p>
+                            </div>
+                            <span class="comparison-arrow">→</span>
+                        </a>
+                        <a href="#" class="comparison-link">
+                            <div class="comparison-avatars">
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #1D1160, #E56020);">BG</div>
+                                <div class="mini-avatar" style="background: linear-gradient(135deg, #C8102E, #A00D24);">AW</div>
+                            </div>
+                            <div class="comparison-info">
+                                <h4>Brittney Griner vs A'ja Wilson</h4>
+                                <p>Dominant Big Comparison</p>
+                            </div>
+                            <span class="comparison-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
