@@ -169,11 +169,55 @@
 
                 <div class="nav-menu" id="nav-menu">
                     <ul class="nav-links">
-                        <li><a href="#players" class="nav-link">Players</a></li>
-                        <li><a href="#teams" class="nav-link">Teams</a></li>
-                        <li><a href="#leagues" class="nav-link">Leagues</a></li>
-                        <li><a href="#stats" class="nav-link">Stats</a></li>
-                        <li><a href="#training" class="nav-link">Training</a></li>
+                        <li class="nav-dropdown">
+                            <a href="players.html" class="nav-link">Players</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Featured Players</h4>
+                                    <a href="players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="players/breanna-stewart.html">Breanna Stewart</a>
+                                    <a href="players/sabrina-ionescu.html">Sabrina Ionescu</a>
+                                    <a href="players/angel-reese.html">Angel Reese</a>
+                                </div>
+                                <div class="dropdown-section">
+                                    <h4>More Stars</h4>
+                                    <a href="players/diana-taurasi.html">Diana Taurasi</a>
+                                    <a href="players/kelsey-plum.html">Kelsey Plum</a>
+                                    <a href="players/chelsea-gray.html">Chelsea Gray</a>
+                                    <a href="players/napheesa-collier.html">Napheesa Collier</a>
+                                    <a href="players.html" class="view-all">View All Players →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="teams.html" class="nav-link">Teams</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>WNBA Teams</h4>
+                                    <a href="teams/las-vegas-aces.html">Las Vegas Aces</a>
+                                    <a href="teams/new-york-liberty.html">New York Liberty</a>
+                                    <a href="teams/minnesota-lynx.html">Minnesota Lynx</a>
+                                    <a href="teams/connecticut-sun.html">Connecticut Sun</a>
+                                    <a href="teams/indiana-fever.html">Indiana Fever</a>
+                                    <a href="teams.html" class="view-all">View All Teams →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="leagues/wnba.html" class="nav-link">Leagues</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Leagues</h4>
+                                    <a href="leagues/wnba.html">WNBA</a>
+                                    <a href="leagues/ncaa-womens.html">NCAA Women's</a>
+                                    <a href="leagues/euroleague-women.html">EuroLeague Women</a>
+                                    <a href="leagues/wnba-records.html">WNBA Records</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="compare.html" class="nav-link">Compare</a></li>
+                        <li><a href="training.html" class="nav-link">Training</a></li>
                     </ul>
                     <div class="nav-actions">
                         <div class="language-selector">
@@ -269,7 +313,7 @@
                                 <span>•</span>
                                 <span>144 Players</span>
                             </div>
-                            <a href="/leagues/wnba/" class="league-link" aria-label="Explore WNBA">
+                            <a href="leagues/wnba.html" class="league-link" aria-label="Explore WNBA">
                                 Explore
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -280,12 +324,12 @@
                     <article class="league-card" data-league="ncaa">
                         <div class="league-card-inner">
                             <div class="league-icon">🎓</div>
-                            <h3 class="league-name">NCAA</h3>
+                            <h3 class="league-name">NCAA Women's</h3>
                             <p class="league-desc">College basketball excellence</p>
                             <div class="league-stats">
                                 <span>361 D1 Teams</span>
                             </div>
-                            <a href="/leagues/ncaa/" class="league-link" aria-label="Explore NCAA">
+                            <a href="leagues/ncaa-womens.html" class="league-link" aria-label="Explore NCAA">
                                 Explore
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -301,7 +345,7 @@
                             <div class="league-stats">
                                 <span>16 Teams</span>
                             </div>
-                            <a href="/leagues/euroleague/" class="league-link" aria-label="Explore EuroLeague Women">
+                            <a href="leagues/euroleague-women.html" class="league-link" aria-label="Explore EuroLeague Women">
                                 Explore
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -309,15 +353,15 @@
                             </a>
                         </div>
                     </article>
-                    <article class="league-card" data-league="ligafemenina">
+                    <article class="league-card" data-league="records">
                         <div class="league-card-inner">
-                            <div class="league-icon">🇪🇸</div>
-                            <h3 class="league-name">Liga Femenina</h3>
-                            <p class="league-desc">Spain's top women's league</p>
+                            <div class="league-icon">🏆</div>
+                            <h3 class="league-name">WNBA Records</h3>
+                            <p class="league-desc">All-time records and achievements</p>
                             <div class="league-stats">
-                                <span>14 Teams</span>
+                                <span>Historical Stats</span>
                             </div>
-                            <a href="/leagues/liga-femenina/" class="league-link" aria-label="Explore Liga Femenina">
+                            <a href="leagues/wnba-records.html" class="league-link" aria-label="Explore WNBA Records">
                                 Explore
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -325,15 +369,15 @@
                             </a>
                         </div>
                     </article>
-                    <article class="league-card" data-league="lfb">
+                    <article class="league-card" data-league="compare">
                         <div class="league-card-inner">
-                            <div class="league-icon">🇫🇷</div>
-                            <h3 class="league-name">LFB</h3>
-                            <p class="league-desc">Ligue Féminine de Basketball</p>
+                            <div class="league-icon">📊</div>
+                            <h3 class="league-name">Player Compare</h3>
+                            <p class="league-desc">Head-to-head player comparison tool</p>
                             <div class="league-stats">
-                                <span>12 Teams</span>
+                                <span>Compare Stats</span>
                             </div>
-                            <a href="/leagues/lfb/" class="league-link" aria-label="Explore LFB">
+                            <a href="compare.html" class="league-link" aria-label="Compare Players">
                                 Explore
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -341,15 +385,15 @@
                             </a>
                         </div>
                     </article>
-                    <article class="league-card" data-league="wcba">
+                    <article class="league-card" data-league="glossary">
                         <div class="league-card-inner">
-                            <div class="league-icon">🇨🇳</div>
-                            <h3 class="league-name">WCBA</h3>
-                            <p class="league-desc">Women's Chinese Basketball Association</p>
+                            <div class="league-icon">📖</div>
+                            <h3 class="league-name">Glossary</h3>
+                            <p class="league-desc">Basketball terms explained</p>
                             <div class="league-stats">
-                                <span>17 Teams</span>
+                                <span>100+ Terms</span>
                             </div>
-                            <a href="/leagues/wcba/" class="league-link" aria-label="Explore WCBA">
+                            <a href="glossary.html" class="league-link" aria-label="View Glossary">
                                 Explore
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -359,8 +403,8 @@
                     </article>
                 </div>
                 <div class="leagues-more">
-                    <a href="/leagues/" class="btn btn-outline">
-                        View All 150+ Leagues
+                    <a href="teams.html" class="btn btn-outline">
+                        View All 12 WNBA Teams
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
@@ -420,7 +464,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/players/aja-wilson/" class="player-link" aria-label="View A'ja Wilson profile">View Profile</a>
+                        <a href="players/aja-wilson.html" class="player-link" aria-label="View A'ja Wilson profile">View Profile</a>
                     </article>
 
                     <article class="player-card">
@@ -442,14 +486,14 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/players/caitlin-clark/" class="player-link" aria-label="View Caitlin Clark profile">View Profile</a>
+                        <a href="players/caitlin-clark.html" class="player-link" aria-label="View Caitlin Clark profile">View Profile</a>
                     </article>
 
                     <article class="player-card">
                         <div class="player-card-bg"></div>
                         <div class="player-info">
                             <div class="player-avatar">
-                                <div class="avatar-placeholder">BR</div>
+                                <div class="avatar-placeholder">BS</div>
                             </div>
                             <h3 class="player-name">Breanna Stewart</h3>
                             <p class="player-team">New York Liberty</p>
@@ -464,14 +508,14 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/players/breanna-stewart/" class="player-link" aria-label="View Breanna Stewart profile">View Profile</a>
+                        <a href="players/breanna-stewart.html" class="player-link" aria-label="View Breanna Stewart profile">View Profile</a>
                     </article>
 
                     <article class="player-card">
                         <div class="player-card-bg"></div>
                         <div class="player-info">
                             <div class="player-avatar">
-                                <div class="avatar-placeholder">SR</div>
+                                <div class="avatar-placeholder">SI</div>
                             </div>
                             <h3 class="player-name">Sabrina Ionescu</h3>
                             <p class="player-team">New York Liberty</p>
@@ -486,7 +530,51 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/players/sabrina-ionescu/" class="player-link" aria-label="View Sabrina Ionescu profile">View Profile</a>
+                        <a href="players/sabrina-ionescu.html" class="player-link" aria-label="View Sabrina Ionescu profile">View Profile</a>
+                    </article>
+
+                    <article class="player-card">
+                        <div class="player-card-bg"></div>
+                        <div class="player-info">
+                            <div class="player-avatar">
+                                <div class="avatar-placeholder">AR</div>
+                            </div>
+                            <h3 class="player-name">Angel Reese</h3>
+                            <p class="player-team">Chicago Sky</p>
+                            <div class="player-stats-mini">
+                                <div class="stat">
+                                    <span class="stat-value">13.6</span>
+                                    <span class="stat-key">PPG</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">13.1</span>
+                                    <span class="stat-key">RPG</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="players/angel-reese.html" class="player-link" aria-label="View Angel Reese profile">View Profile</a>
+                    </article>
+
+                    <article class="player-card">
+                        <div class="player-card-bg"></div>
+                        <div class="player-info">
+                            <div class="player-avatar">
+                                <div class="avatar-placeholder">NC</div>
+                            </div>
+                            <h3 class="player-name">Napheesa Collier</h3>
+                            <p class="player-team">Minnesota Lynx</p>
+                            <div class="player-stats-mini">
+                                <div class="stat">
+                                    <span class="stat-value">20.4</span>
+                                    <span class="stat-key">PPG</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">9.7</span>
+                                    <span class="stat-key">RPG</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="players/napheesa-collier.html" class="player-link" aria-label="View Napheesa Collier profile">View Profile</a>
                     </article>
                 </div>
 
@@ -507,7 +595,7 @@
                 </div>
 
                 <div class="players-more">
-                    <a href="/players/" class="btn btn-primary">
+                    <a href="players.html" class="btn btn-primary">
                         Browse All Players
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -636,7 +724,7 @@
                             <span class="training-level">Beginner</span>
                             <span class="training-time">15 min read</span>
                         </div>
-                        <a href="/training/shooting-fundamentals/" class="training-link">Start Learning</a>
+                        <a href="training.html" class="training-link">Start Learning</a>
                     </article>
                     <article class="training-card">
                         <div class="training-icon">⚡</div>
@@ -646,7 +734,7 @@
                             <span class="training-level">Intermediate</span>
                             <span class="training-time">20 min read</span>
                         </div>
-                        <a href="/training/ball-handling/" class="training-link">Start Learning</a>
+                        <a href="training.html" class="training-link">Start Learning</a>
                     </article>
                     <article class="training-card">
                         <div class="training-icon">🏃‍♀️</div>
@@ -656,11 +744,11 @@
                             <span class="training-level">All Levels</span>
                             <span class="training-time">30 min read</span>
                         </div>
-                        <a href="/training/conditioning/" class="training-link">Start Learning</a>
+                        <a href="training.html" class="training-link">Start Learning</a>
                     </article>
                 </div>
                 <div class="training-more">
-                    <a href="/training/" class="btn btn-outline">
+                    <a href="training.html" class="btn btn-outline">
                         View All Training Guides
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -709,7 +797,7 @@
                             We're building the definitive global resource — free, trilingual, and designed for the modern fan. Every player. Every team. Every story.
                         </p>
                         <div class="about-cta">
-                            <a href="/about/" class="btn btn-secondary">Learn More About Us</a>
+                            <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
                         </div>
                     </div>
                     <div class="about-stats">
@@ -768,37 +856,38 @@
                     <div class="footer-column">
                         <h4 class="footer-heading">Explore</h4>
                         <ul class="footer-list">
-                            <li><a href="/players/">Players</a></li>
-                            <li><a href="/teams/">Teams</a></li>
-                            <li><a href="/leagues/">Leagues</a></li>
-                            <li><a href="/stats/">Statistics</a></li>
-                            <li><a href="/history/">History</a></li>
+                            <li><a href="players.html">Players</a></li>
+                            <li><a href="teams.html">Teams</a></li>
+                            <li><a href="leagues/wnba.html">WNBA</a></li>
+                            <li><a href="leagues/wnba-records.html">Records</a></li>
+                            <li><a href="compare.html">Compare</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Leagues</h4>
+                        <ul class="footer-list">
+                            <li><a href="leagues/wnba.html">WNBA</a></li>
+                            <li><a href="leagues/ncaa-womens.html">NCAA Women's</a></li>
+                            <li><a href="leagues/euroleague-women.html">EuroLeague Women</a></li>
+                            <li><a href="leagues/wnba-records.html">WNBA Records</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h4 class="footer-heading">Resources</h4>
                         <ul class="footer-list">
-                            <li><a href="/training/">Training Guides</a></li>
-                            <li><a href="/glossary/">Glossary</a></li>
-                            <li><a href="/records/">Records</a></li>
-                            <li><a href="/pathways/">Career Pathways</a></li>
+                            <li><a href="training.html">Training Guides</a></li>
+                            <li><a href="glossary.html">Glossary</a></li>
+                            <li><a href="about.html">About Us</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4 class="footer-heading">Company</h4>
+                        <h4 class="footer-heading">Featured Players</h4>
                         <ul class="footer-list">
-                            <li><a href="/about/">About Us</a></li>
-                            <li><a href="/contact/">Contact</a></li>
-                            <li><a href="/partners/">Partners</a></li>
-                            <li><a href="/careers/">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Legal</h4>
-                        <ul class="footer-list">
-                            <li><a href="/privacy/">Privacy Policy</a></li>
-                            <li><a href="/terms/">Terms of Service</a></li>
-                            <li><a href="/cookies/">Cookie Policy</a></li>
+                            <li><a href="players/aja-wilson.html">A'ja Wilson</a></li>
+                            <li><a href="players/caitlin-clark.html">Caitlin Clark</a></li>
+                            <li><a href="players/breanna-stewart.html">Breanna Stewart</a></li>
+                            <li><a href="players/angel-reese.html">Angel Reese</a></li>
+                            <li><a href="players/diana-taurasi.html">Diana Taurasi</a></li>
                         </ul>
                     </div>
                 </div>
