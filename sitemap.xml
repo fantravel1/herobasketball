@@ -5,7 +5,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://herobasketball.com/</loc>
-        <lastmod>2025-12-19</lastmod>
+        <lastmod>2025-12-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://herobasketball.com/"/>
@@ -17,7 +17,15 @@
     <!-- Players Directory -->
     <url>
         <loc>https://herobasketball.com/players.html</loc>
-        <lastmod>2025-12-19</lastmod>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Teams Directory -->
+    <url>
+        <loc>https://herobasketball.com/teams.html</loc>
+        <lastmod>2025-12-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
@@ -25,23 +33,143 @@
     <!-- Training Hub -->
     <url>
         <loc>https://herobasketball.com/training.html</loc>
-        <lastmod>2025-12-19</lastmod>
+        <lastmod>2025-12-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- Glossary -->
+    <url>
+        <loc>https://herobasketball.com/glossary.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
     <!-- About Page -->
     <url>
         <loc>https://herobasketball.com/about.html</loc>
-        <lastmod>2025-12-19</lastmod>
+        <lastmod>2025-12-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+
+    <!-- League Pages -->
+    <url>
+        <loc>https://herobasketball.com/leagues/wnba.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/leagues/wnba-records.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/leagues/ncaa-womens.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/leagues/euroleague-women.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 
     <!-- Player Profiles -->
     <url>
         <loc>https://herobasketball.com/players/aja-wilson.html</loc>
-        <lastmod>2025-12-19</lastmod>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/players/caitlin-clark.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/players/breanna-stewart.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/players/sabrina-ionescu.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/players/diana-taurasi.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/players/sue-bird.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/players/angel-reese.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Team Pages -->
+    <url>
+        <loc>https://herobasketball.com/teams/las-vegas-aces.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/teams/new-york-liberty.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/teams/indiana-fever.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/teams/connecticut-sun.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/teams/minnesota-lynx.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/teams/seattle-storm.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/teams/phoenix-mercury.html</loc>
+        <lastmod>2025-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://herobasketball.com/teams/chicago-sky.html</loc>
+        <lastmod>2025-12-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -49,7 +177,7 @@
     <!-- Spanish Version -->
     <url>
         <loc>https://herobasketball.com/es/</loc>
-        <lastmod>2025-12-19</lastmod>
+        <lastmod>2025-12-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://herobasketball.com/"/>
@@ -60,7 +188,7 @@
     <!-- French Version -->
     <url>
         <loc>https://herobasketball.com/fr/</loc>
-        <lastmod>2025-12-19</lastmod>
+        <lastmod>2025-12-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://herobasketball.com/"/>

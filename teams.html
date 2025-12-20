@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>All Basketball Teams | WNBA, NBA, NCAA, EuroLeague | HeroBasketball</title>
+    <meta name="description" content="Complete directory of basketball teams worldwide. WNBA franchises, NBA teams, NCAA programs, and international clubs. Find rosters, stats, and history.">
+    <meta name="keywords" content="basketball teams, WNBA teams, NBA teams, NCAA basketball, women's basketball, men's basketball">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herobasketball.com/teams/">
+    <meta property="og:title" content="All Basketball Teams | HeroBasketball">
+    <meta property="og:description" content="Complete directory of basketball teams worldwide.">
+
+    <link rel="canonical" href="https://herobasketball.com/teams/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Basketball Teams Directory",
+        "description": "Complete directory of basketball teams worldwide",
+        "isPartOf": {"@type": "WebSite", "name": "HeroBasketball"}
+    }
+    </script>
+
+    <style>
+        .teams-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .teams-hero::before { content: '🏟️'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.1; }
+        .teams-hero-content { position: relative; z-index: 1; }
+        .teams-header h1 { font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .teams-subtitle { font-size: 1.125rem; color: rgba(255,255,255,0.9); max-width: 600px; }
+        .teams-stats { display: flex; gap: 2rem; margin-top: 2rem; }
+        .teams-stat { text-align: center; }
+        .teams-stat-value { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; }
+        .teams-stat-label { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .teams-content { padding: 2rem 0 4rem; }
+        .league-section { margin-bottom: 3rem; }
+        .league-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 3px solid; }
+        .league-header.wnba { border-color: #E85F0E; }
+        .league-header.nba { border-color: #1D428A; }
+        .league-header.ncaa { border-color: #00843D; }
+        .league-header.euro { border-color: #003DA5; }
+        .league-title { display: flex; align-items: center; gap: 0.75rem; }
+        .league-title h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--color-gray-900); }
+        .league-badge { padding: 0.25rem 0.75rem; background: var(--color-gray-100); border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: var(--color-gray-600); }
+        .teams-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .team-card { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); transition: all 0.2s; text-decoration: none; }
+        .team-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .team-logo { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border-radius: 0.75rem; flex-shrink: 0; }
+        .team-info { flex: 1; min-width: 0; }
+        .team-info h3 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .team-info p { font-size: 0.75rem; color: var(--color-gray-500); }
+        .team-arrow { color: var(--color-gray-400); font-size: 1.25rem; }
+        .conference-divider { grid-column: 1 / -1; padding: 0.75rem 0; margin: 0.5rem 0; }
+        .conference-divider span { font-family: var(--font-display); font-weight: 600; font-size: 0.875rem; color: var(--color-gray-500); text-transform: uppercase; letter-spacing: 0.05em; }
+        /* Team-specific colors */
+        .team-aces .team-logo { background: linear-gradient(135deg, #000, #1a1a1a); color: #B4975A; }
+        .team-storm .team-logo { background: linear-gradient(135deg, #2C5234, #1A3320); color: #FFC425; }
+        .team-liberty .team-logo { background: linear-gradient(135deg, #6ECEB2, #4AA892); color: white; }
+        .team-lynx .team-logo { background: linear-gradient(135deg, #236192, #164060); color: #79BC43; }
+        .team-fever .team-logo { background: linear-gradient(135deg, #002D62, #001F42); color: #FDBB30; }
+        .team-sun .team-logo { background: linear-gradient(135deg, #0A2240, #041525); color: #F05023; }
+        .team-mercury .team-logo { background: linear-gradient(135deg, #1D1160, #E56020); color: white; }
+        .team-sky .team-logo { background: linear-gradient(135deg, #418FDE, #FFCD00); color: white; }
+        .team-mystics .team-logo { background: linear-gradient(135deg, #E03A3E, #002B5C); color: white; }
+        .team-sparks .team-logo { background: linear-gradient(135deg, #552583, #FDB927); color: white; }
+        .team-dream .team-logo { background: linear-gradient(135deg, #C8102E, #418FDE); color: white; }
+        .team-wings .team-logo { background: linear-gradient(135deg, #C4D600, #002B5C); color: white; }
+        .coming-soon { opacity: 0.6; pointer-events: none; }
+        .coming-soon .team-arrow { display: none; }
+        .coming-soon::after { content: 'Soon'; font-size: 0.625rem; padding: 0.125rem 0.5rem; background: var(--color-gray-200); color: var(--color-gray-500); border-radius: 9999px; font-weight: 600; }
+        @media (min-width: 640px) { .teams-header h1 { font-size: 3rem; } .teams-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 1024px) { .teams-grid { grid-template-columns: repeat(4, 1fr); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="/players.html" class="nav-link">Players</a></li>
+                        <li><a href="/teams.html" class="nav-link" style="color: var(--color-primary);">Teams</a></li>
+                        <li><a href="/#leagues" class="nav-link">Leagues</a></li>
+                        <li><a href="/training.html" class="nav-link">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="teams-hero">
+            <div class="container">
+                <div class="teams-hero-content">
+                    <div class="teams-header">
+                        <h1>🏟️ All Teams</h1>
+                        <p class="teams-subtitle">Explore basketball teams from around the world. From WNBA franchises to international clubs, find rosters, stats, and team history.</p>
+                    </div>
+                    <div class="teams-stats">
+                        <div class="teams-stat">
+                            <div class="teams-stat-value">12</div>
+                            <div class="teams-stat-label">WNBA Teams</div>
+                        </div>
+                        <div class="teams-stat">
+                            <div class="teams-stat-value">30</div>
+                            <div class="teams-stat-label">NBA Teams</div>
+                        </div>
+                        <div class="teams-stat">
+                            <div class="teams-stat-value">350+</div>
+                            <div class="teams-stat-label">NCAA D1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="teams-content">
+            <div class="container">
+                <!-- WNBA Teams -->
+                <div class="league-section">
+                    <div class="league-header wnba">
+                        <div class="league-title">
+                            <span style="font-size: 1.5rem;">🏀</span>
+                            <h2>WNBA Teams</h2>
+                        </div>
+                        <span class="league-badge">12 Teams</span>
+                    </div>
+                    <div class="teams-grid">
+                        <div class="conference-divider"><span>Eastern Conference</span></div>
+
+                        <a href="/teams/new-york-liberty.html" class="team-card team-liberty">
+                            <div class="team-logo">🗽</div>
+                            <div class="team-info"><h3>New York Liberty</h3><p>Brooklyn, NY • 2024 Champs</p></div>
+                            <span class="team-arrow">→</span>
+                        </a>
+                        <a href="/teams/connecticut-sun.html" class="team-card team-sun">
+                            <div class="team-logo">☀️</div>
+                            <div class="team-info"><h3>Connecticut Sun</h3><p>Uncasville, CT</p></div>
+                            <span class="team-arrow">→</span>
+                        </a>
+                        <a href="/teams/indiana-fever.html" class="team-card team-fever">
+                            <div class="team-logo">🔥</div>
+                            <div class="team-info"><h3>Indiana Fever</h3><p>Indianapolis, IN</p></div>
+                            <span class="team-arrow">→</span>
+                        </a>
+                        <div class="team-card team-sky coming-soon">
+                            <div class="team-logo">🌆</div>
+                            <div class="team-info"><h3>Chicago Sky</h3><p>Chicago, IL</p></div>
+                        </div>
+                        <div class="team-card team-mystics coming-soon">
+                            <div class="team-logo">🌟</div>
+                            <div class="team-info"><h3>Washington Mystics</h3><p>Washington, DC</p></div>
+                        </div>
+                        <div class="team-card team-dream coming-soon">
+                            <div class="team-logo">💭</div>
+                            <div class="team-info"><h3>Atlanta Dream</h3><p>Atlanta, GA</p></div>
+                        </div>
+
+                        <div class="conference-divider"><span>Western Conference</span></div>
+
+                        <a href="/teams/las-vegas-aces.html" class="team-card team-aces">
+                            <div class="team-logo">♠️</div>
+                            <div class="team-info"><h3>Las Vegas Aces</h3><p>Las Vegas, NV • 2x Champs</p></div>
+                            <span class="team-arrow">→</span>
+                        </a>
+                        <a href="/teams/minnesota-lynx.html" class="team-card team-lynx">
+                            <div class="team-logo">🐱</div>
+                            <div class="team-info"><h3>Minnesota Lynx</h3><p>Minneapolis, MN • 4x Champs</p></div>
+                            <span class="team-arrow">→</span>
+                        </a>
+                        <a href="/teams/seattle-storm.html" class="team-card team-storm">
+                            <div class="team-logo">⛈️</div>
+                            <div class="team-info"><h3>Seattle Storm</h3><p>Seattle, WA • 4x Champs</p></div>
+                            <span class="team-arrow">→</span>
+                        </a>
+                        <div class="team-card team-mercury coming-soon">
+                            <div class="team-logo">☿️</div>
+                            <div class="team-info"><h3>Phoenix Mercury</h3><p>Phoenix, AZ</p></div>
+                        </div>
+                        <div class="team-card team-sparks coming-soon">
+                            <div class="team-logo">⚡</div>
+                            <div class="team-info"><h3>Los Angeles Sparks</h3><p>Los Angeles, CA</p></div>
+                        </div>
+                        <div class="team-card team-wings coming-soon">
+                            <div class="team-logo">🦅</div>
+                            <div class="team-info"><h3>Dallas Wings</h3><p>Arlington, TX</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NBA Coming Soon -->
+                <div class="league-section">
+                    <div class="league-header nba">
+                        <div class="league-title">
+                            <span style="font-size: 1.5rem;">🏀</span>
+                            <h2>NBA Teams</h2>
+                        </div>
+                        <span class="league-badge">Coming Soon</span>
+                    </div>
+                    <div style="background: var(--color-gray-50); padding: 2rem; border-radius: 1rem; text-align: center;">
+                        <p style="font-size: 2rem; margin-bottom: 0.5rem;">🚧</p>
+                        <p style="color: var(--color-gray-600);">NBA team pages are coming soon! We're building comprehensive coverage of all 30 NBA franchises.</p>
+                    </div>
+                </div>
+
+                <!-- NCAA Coming Soon -->
+                <div class="league-section">
+                    <div class="league-header ncaa">
+                        <div class="league-title">
+                            <span style="font-size: 1.5rem;">🎓</span>
+                            <h2>NCAA Programs</h2>
+                        </div>
+                        <span class="league-badge">Coming Soon</span>
+                    </div>
+                    <div style="background: var(--color-gray-50); padding: 2rem; border-radius: 1rem; text-align: center;">
+                        <p style="font-size: 2rem; margin-bottom: 0.5rem;">📚</p>
+                        <p style="color: var(--color-gray-600);">Top college basketball programs coming soon! From UConn to South Carolina, Stanford to Iowa.</p>
+                    </div>
+                </div>
+
+                <!-- EuroLeague Coming Soon -->
+                <div class="league-section">
+                    <div class="league-header euro">
+                        <div class="league-title">
+                            <span style="font-size: 1.5rem;">🌍</span>
+                            <h2>International Clubs</h2>
+                        </div>
+                        <span class="league-badge">Coming Soon</span>
+                    </div>
+                    <div style="background: var(--color-gray-50); padding: 2rem; border-radius: 1rem; text-align: center;">
+                        <p style="font-size: 2rem; margin-bottom: 0.5rem;">🌐</p>
+                        <p style="color: var(--color-gray-600);">EuroLeague Women and international club teams coming soon! Explore basketball beyond North America.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
