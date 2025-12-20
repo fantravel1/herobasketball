@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Los Angeles Sparks - Roster, Schedule, Stats | WNBA | HeroBasketball</title>
+    <meta name="description" content="Los Angeles Sparks team page: 3-time WNBA Champions. Legendary franchise featuring Lisa Leslie, Candace Parker history. Complete roster and stats.">
+    <meta name="keywords" content="Los Angeles Sparks, WNBA, women's basketball, LA Sparks, Lisa Leslie, Candace Parker, WNBA champions">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/teams/los-angeles-sparks/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsTeam",
+        "name": "Los Angeles Sparks",
+        "sport": "Basketball",
+        "memberOf": {"@type": "SportsOrganization", "name": "WNBA"},
+        "location": {"@type": "Place", "name": "Los Angeles, California"},
+        "athlete": [
+            {"@type": "Person", "name": "Dearica Hamby"},
+            {"@type": "Person", "name": "Rickea Jackson"},
+            {"@type": "Person", "name": "Aari McDonald"}
+        ],
+        "award": ["2001 WNBA Championship", "2002 WNBA Championship", "2016 WNBA Championship"]
+    }
+    </script>
+
+    <style>
+        .team-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #552583 0%, #3D1A5F 50%, #FDB927 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .team-hero::before { content: '⚡'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.15; }
+        .team-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); }
+        .team-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .team-logo { width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; background: #FDB927; color: #552583; font-size: 3rem; border-radius: 1rem; }
+        .team-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .team-meta { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 1rem; color: rgba(255,255,255,0.9); }
+        .team-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .team-badge { padding: 0.375rem 0.75rem; background: rgba(253, 185, 39, 0.3); border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .team-badge.legacy { background: #FDB927; color: #552583; }
+        .team-quick-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); }
+        .quick-stat { text-align: center; }
+        .quick-stat-value { font-family: var(--font-mono); font-size: 1.75rem; font-weight: 700; color: #FDB927; }
+        .quick-stat-label { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .team-content { padding: 2rem 0 4rem; }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .roster-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .roster-card { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); transition: all 0.2s; }
+        .roster-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .roster-number { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #552583, #FDB927); color: white; font-family: var(--font-mono); font-weight: 700; border-radius: 0.5rem; }
+        .roster-info h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); }
+        .roster-info p { font-size: 0.75rem; color: var(--color-gray-500); }
+        .roster-star { color: #552583; margin-left: auto; }
+        .history-card { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .history-card p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .championships { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .championship-badge { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: linear-gradient(135deg, #552583, #3D1A5F); color: #FDB927; border-radius: 0.75rem; font-family: var(--font-display); font-weight: 600; }
+        .legends-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; }
+        .legend-card { padding: 1rem; background: linear-gradient(135deg, rgba(85, 37, 131, 0.1), rgba(253, 185, 39, 0.1)); border-radius: 0.75rem; text-align: center; }
+        .legend-card .number { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; color: #552583; }
+        .legend-card .name { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); }
+        .legend-card .note { font-size: 0.75rem; color: var(--color-gray-500); }
+        @media (min-width: 640px) { .team-identity h1 { font-size: 3rem; } .team-quick-stats { grid-template-columns: repeat(4, 1fr); } .roster-grid { grid-template-columns: repeat(3, 1fr); } .legends-grid { grid-template-columns: repeat(4, 1fr); } }
+        @media (min-width: 768px) { .team-header { flex-direction: row; align-items: center; } .team-logo { width: 120px; height: 120px; font-size: 4rem; } }
+        @media (min-width: 1024px) { .roster-grid { grid-template-columns: repeat(4, 1fr); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="/players.html" class="nav-link">Players</a></li>
+                        <li><a href="/teams.html" class="nav-link" style="color: var(--color-primary);">Teams</a></li>
+                        <li><a href="/#leagues" class="nav-link">Leagues</a></li>
+                        <li><a href="/training.html" class="nav-link">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="team-hero">
+            <div class="container">
+                <div class="team-hero-content">
+                    <nav class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/teams.html">Teams</a><span>/</span><span>Los Angeles Sparks</span></nav>
+                    <div class="team-header">
+                        <div class="team-logo">⚡</div>
+                        <div class="team-identity">
+                            <h1>Los Angeles Sparks</h1>
+                            <div class="team-meta">
+                                <span>📍 Los Angeles, California</span>
+                                <span>🏟️ Crypto.com Arena</span>
+                                <span>🏀 WNBA</span>
+                            </div>
+                            <div class="team-badges">
+                                <span class="team-badge legacy">🏛️ Legendary Franchise</span>
+                                <span class="team-badge">🏆 3x Champions</span>
+                                <span class="team-badge">🌟 Original 8</span>
+                                <span class="team-badge">🎬 Hollywood</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-quick-stats">
+                        <div class="quick-stat"><div class="quick-stat-value">3</div><div class="quick-stat-label">Championships</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">1997</div><div class="quick-stat-label">Founded</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">8-32</div><div class="quick-stat-label">2024 Record</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">Brondello</div><div class="quick-stat-label">Head Coach</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading"><span>👥</span> 2024 Roster</h2>
+                    <div class="roster-grid">
+                        <div class="roster-card">
+                            <div class="roster-number">1</div>
+                            <div class="roster-info"><h4>Dearica Hamby</h4><p>Forward • 6'3"</p></div>
+                            <span class="roster-star">⭐</span>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">2</div>
+                            <div class="roster-info"><h4>Rickea Jackson</h4><p>Forward • 6'2"</p></div>
+                            <span class="roster-star">⭐</span>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">3</div>
+                            <div class="roster-info"><h4>Aari McDonald</h4><p>Guard • 5'6"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">14</div>
+                            <div class="roster-info"><h4>Layshia Clarendon</h4><p>Guard • 5'9"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">21</div>
+                            <div class="roster-info"><h4>Stephanie Watts</h4><p>Guard • 5'9"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">5</div>
+                            <div class="roster-info"><h4>Kia Nurse</h4><p>Guard • 6'0"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">23</div>
+                            <div class="roster-info"><h4>Azurá Stevens</h4><p>Forward • 6'6"</p></div>
+                        </div>
+                        <div class="roster-card">
+                            <div class="roster-number">12</div>
+                            <div class="roster-info"><h4>Li Yueru</h4><p>Center • 6'7"</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📖</span> Team History</h2>
+                    <div class="history-card">
+                        <p>The <strong>Los Angeles Sparks</strong> are one of the WNBA's original eight franchises, founded in 1997. With three championships and a legacy of legendary players, the Sparks have helped define women's professional basketball.</p>
+                        <p>The early 2000s dynasty featured <strong>Lisa Leslie</strong>, the first woman to dunk in a WNBA game, leading back-to-back championships in 2001 and 2002. <strong>Candace Parker</strong> later brought a third title in 2016 with a Finals MVP performance against the Minnesota Lynx.</p>
+                        <p>Currently rebuilding with young talent like <strong>Rickea Jackson</strong> and veteran leader <strong>Dearica Hamby</strong>, the Sparks are working to return to championship contention. Playing in Hollywood, the franchise continues to attract attention and cultivate the next generation of stars.</p>
+                        <div class="championships">
+                            <div class="championship-badge">🏆 2001 Champions</div>
+                            <div class="championship-badge">🏆 2002 Champions</div>
+                            <div class="championship-badge">🏆 2016 Champions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>🏛️</span> Franchise Legends</h2>
+                    <div class="legends-grid">
+                        <div class="legend-card">
+                            <div class="number">#9</div>
+                            <div class="name">Lisa Leslie</div>
+                            <div class="note">3x MVP • 2x Champ</div>
+                        </div>
+                        <div class="legend-card">
+                            <div class="number">#3</div>
+                            <div class="name">Candace Parker</div>
+                            <div class="note">2x MVP • 2016 Finals MVP</div>
+                        </div>
+                        <div class="legend-card">
+                            <div class="number">#10</div>
+                            <div class="name">Nneka Ogwumike</div>
+                            <div class="note">2016 MVP • Captain</div>
+                        </div>
+                        <div class="legend-card">
+                            <div class="number">#25</div>
+                            <div class="name">Penny Taylor</div>
+                            <div class="note">2001-02 Champion</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <script src="../script.js"></script>
+</body>
+</html>
