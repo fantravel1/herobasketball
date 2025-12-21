@@ -909,6 +909,149 @@ section {
 }
 
 /* =====================================================
+   Championship Section
+   ===================================================== */
+.championship-section {
+    background: linear-gradient(135deg, rgba(91, 44, 111, 0.03), rgba(212, 172, 13, 0.03));
+}
+
+.championship-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+.champ-highlight-card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+    transition: all var(--transition-base);
+}
+
+.champ-highlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.champ-trophy {
+    font-size: 3rem;
+}
+
+.champ-info {
+    flex: 1;
+}
+
+.champ-label {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    background: rgba(91, 44, 111, 0.1);
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--text-xs);
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-2);
+}
+
+.champ-team {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: var(--text-xl);
+    color: var(--color-gray-900);
+    margin: 0 0 var(--space-2) 0;
+}
+
+.champ-detail {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+    margin: 0 0 var(--space-1) 0;
+}
+
+.champ-mvp {
+    font-size: var(--text-sm);
+    color: var(--color-gray-600);
+    margin: 0;
+}
+
+.champ-mvp strong {
+    color: var(--color-primary);
+}
+
+.btn-sm {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+}
+
+/* =====================================================
+   Schedule Section
+   ===================================================== */
+.schedule-section {
+    background: var(--color-gray-50);
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+.schedule-card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.schedule-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.schedule-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-4);
+}
+
+.schedule-card h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    color: var(--color-gray-900);
+    margin: 0 0 var(--space-2) 0;
+}
+
+.schedule-card p {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+    margin: 0 0 var(--space-4) 0;
+}
+
+.schedule-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    transition: gap var(--transition-fast);
+}
+
+.schedule-link:hover {
+    gap: var(--space-3);
+}
+
+/* =====================================================
    Players Section
    ===================================================== */
 .player-categories {
@@ -1739,6 +1882,14 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .championship-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .schedule-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .players-showcase {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1826,6 +1977,15 @@ section {
 
     .leagues-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .championship-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .champ-highlight-card {
+        flex-direction: column;
+        text-align: center;
     }
 
     .league-featured {
