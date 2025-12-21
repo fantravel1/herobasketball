@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>WNBA Awards History - MVP, DPOY, ROY Winners | HeroBasketball</title>
+    <meta name="description" content="Complete WNBA awards history. See every MVP, Defensive Player of the Year, Rookie of the Year, and Finals MVP winner from 1997 to present.">
+    <meta name="keywords" content="WNBA MVP, WNBA awards, WNBA Defensive Player of the Year, WNBA Rookie of the Year, WNBA Finals MVP">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/awards/">
+    <link rel="alternate" hreflang="en" href="https://herobasketball.com/awards/">
+    <link rel="alternate" hreflang="es" href="https://herobasketball.com/es/awards/">
+    <link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/awards/">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .awards-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #FFD700 0%, #B8860B 50%, #5B2C6F 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .awards-hero::before { content: '🏆'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 10rem; opacity: 0.15; }
+        .awards-hero-content { position: relative; z-index: 1; text-align: center; }
+        .awards-header h1 { font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .awards-subtitle { font-size: 1.125rem; color: rgba(255,255,255,0.95); max-width: 600px; margin: 0 auto; }
+        .awards-content { padding: 2rem 0 4rem; }
+
+        /* Award Category Tabs */
+        .award-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .award-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--color-gray-200);
+            border-radius: 2rem;
+            background: white;
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--color-gray-700);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .award-tab:hover {
+            border-color: #FFD700;
+            color: #B8860B;
+        }
+        .award-tab.active {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border-color: #FFD700;
+            color: #5B3000;
+        }
+
+        /* Awards Grid */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Award Card */
+        .award-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+        .award-card-header {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            padding: 1.25rem 1.5rem;
+            color: #5B3000;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .award-card-header h3 {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.25rem;
+            margin: 0;
+        }
+        .award-icon { font-size: 1.75rem; }
+
+        /* Winner List */
+        .winner-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .winner-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--color-gray-100);
+            transition: background 0.2s ease;
+        }
+        .winner-item:hover { background: var(--color-gray-50); }
+        .winner-item:last-child { border-bottom: none; }
+
+        .winner-year {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: 1rem;
+            color: #B8860B;
+            width: 60px;
+            flex-shrink: 0;
+        }
+        .winner-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.875rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .winner-info { flex: 1; }
+        .winner-name {
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--color-gray-900);
+            margin: 0;
+        }
+        .winner-name a { color: inherit; text-decoration: none; }
+        .winner-name a:hover { color: var(--color-primary); }
+        .winner-team { font-size: 0.75rem; color: var(--color-gray-500); }
+        .winner-count {
+            font-family: var(--font-mono);
+            font-weight: 600;
+            font-size: 0.75rem;
+            color: white;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            padding: 0.25rem 0.5rem;
+            border-radius: 1rem;
+        }
+
+        /* Featured Winner */
+        .featured-winner {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,165,0,0.05));
+            padding: 2rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border: 2px solid rgba(255,215,0,0.3);
+        }
+        .featured-winner h2 {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--color-gray-900);
+            margin-bottom: 0.5rem;
+        }
+        .featured-winner-label {
+            font-size: 0.875rem;
+            color: #B8860B;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .featured-winner-name {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 2rem;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .featured-winner-team {
+            color: var(--color-gray-600);
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .awards-grid { grid-template-columns: 1fr; }
+            .award-tab { padding: 0.5rem 1rem; font-size: 0.875rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🏀</span>
+                    <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                </a>
+
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="players.html" class="nav-link">Players</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Featured Players</h4>
+                                    <a href="players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="players/breanna-stewart.html">Breanna Stewart</a>
+                                    <a href="players.html" class="view-all">View All Players →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="teams.html" class="nav-link">Teams</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>WNBA Teams</h4>
+                                    <a href="teams/las-vegas-aces.html">Las Vegas Aces</a>
+                                    <a href="teams/new-york-liberty.html">New York Liberty</a>
+                                    <a href="teams.html" class="view-all">View All Teams →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="leagues/wnba.html" class="nav-link">Leagues</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Leagues</h4>
+                                    <a href="leagues/wnba.html">WNBA</a>
+                                    <a href="leagues/ncaa-womens.html">NCAA Women's</a>
+                                    <a href="awards.html">WNBA Awards</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="stats.html" class="nav-link">Stats</a></li>
+                        <li><a href="compare.html" class="nav-link">Compare</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="awards.html" class="lang-btn active">EN</a>
+                            <a href="es/awards.html" class="lang-btn">ES</a>
+                            <a href="fr/awards.html" class="lang-btn">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="awards-hero">
+            <div class="container awards-hero-content">
+                <div class="awards-header">
+                    <h1>WNBA Awards History</h1>
+                    <p class="awards-subtitle">Celebrating excellence: Every MVP, DPOY, ROY, and Finals MVP winner in WNBA history</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Content -->
+        <section class="awards-content">
+            <div class="container">
+                <!-- Featured 2024 MVP -->
+                <div class="featured-winner">
+                    <p class="featured-winner-label">🏆 2024 WNBA Most Valuable Player</p>
+                    <p class="featured-winner-name">A'ja Wilson</p>
+                    <p class="featured-winner-team">Las Vegas Aces • 2nd MVP Award</p>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="award-tabs">
+                    <button class="award-tab active">All Awards</button>
+                    <button class="award-tab">MVP</button>
+                    <button class="award-tab">DPOY</button>
+                    <button class="award-tab">ROY</button>
+                    <button class="award-tab">Finals MVP</button>
+                </div>
+
+                <!-- Awards Grid -->
+                <div class="awards-grid">
+                    <!-- MVP Award -->
+                    <div class="award-card">
+                        <div class="award-card-header">
+                            <span class="award-icon">🏆</span>
+                            <h3>Most Valuable Player (MVP)</h3>
+                        </div>
+                        <ul class="winner-list">
+                            <li class="winner-item">
+                                <span class="winner-year">2024</span>
+                                <div class="winner-avatar">AW</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/aja-wilson.html">A'ja Wilson</a></p>
+                                    <span class="winner-team">Las Vegas Aces</span>
+                                </div>
+                                <span class="winner-count">2x</span>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2023</span>
+                                <div class="winner-avatar">BS</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/breanna-stewart.html">Breanna Stewart</a></p>
+                                    <span class="winner-team">New York Liberty</span>
+                                </div>
+                                <span class="winner-count">2x</span>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2022</span>
+                                <div class="winner-avatar">AW</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/aja-wilson.html">A'ja Wilson</a></p>
+                                    <span class="winner-team">Las Vegas Aces</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2021</span>
+                                <div class="winner-avatar">JJ</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/jonquel-jones.html">Jonquel Jones</a></p>
+                                    <span class="winner-team">Connecticut Sun</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2020</span>
+                                <div class="winner-avatar">AW</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/aja-wilson.html">A'ja Wilson</a></p>
+                                    <span class="winner-team">Las Vegas Aces</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2019</span>
+                                <div class="winner-avatar">EDD</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Elena Delle Donne</p>
+                                    <span class="winner-team">Washington Mystics</span>
+                                </div>
+                                <span class="winner-count">2x</span>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2018</span>
+                                <div class="winner-avatar">BS</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/breanna-stewart.html">Breanna Stewart</a></p>
+                                    <span class="winner-team">Seattle Storm</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2017</span>
+                                <div class="winner-avatar">SS</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Sylvia Fowles</p>
+                                    <span class="winner-team">Minnesota Lynx</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2016</span>
+                                <div class="winner-avatar">NO</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/nneka-ogwumike.html">Nneka Ogwumike</a></p>
+                                    <span class="winner-team">Los Angeles Sparks</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2015</span>
+                                <div class="winner-avatar">EDD</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Elena Delle Donne</p>
+                                    <span class="winner-team">Chicago Sky</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Defensive Player of the Year -->
+                    <div class="award-card">
+                        <div class="award-card-header">
+                            <span class="award-icon">🛡️</span>
+                            <h3>Defensive Player of the Year</h3>
+                        </div>
+                        <ul class="winner-list">
+                            <li class="winner-item">
+                                <span class="winner-year">2024</span>
+                                <div class="winner-avatar">AW</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/aja-wilson.html">A'ja Wilson</a></p>
+                                    <span class="winner-team">Las Vegas Aces</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2023</span>
+                                <div class="winner-avatar">AW</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/aja-wilson.html">A'ja Wilson</a></p>
+                                    <span class="winner-team">Las Vegas Aces</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2022</span>
+                                <div class="winner-avatar">AT</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/alyssa-thomas.html">Alyssa Thomas</a></p>
+                                    <span class="winner-team">Connecticut Sun</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2021</span>
+                                <div class="winner-avatar">SF</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Sylvia Fowles</p>
+                                    <span class="winner-team">Minnesota Lynx</span>
+                                </div>
+                                <span class="winner-count">4x</span>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2020</span>
+                                <div class="winner-avatar">CS</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Candace Parker</p>
+                                    <span class="winner-team">Los Angeles Sparks</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2019</span>
+                                <div class="winner-avatar">NC</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/napheesa-collier.html">Natasha Howard</a></p>
+                                    <span class="winner-team">Seattle Storm</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2018</span>
+                                <div class="winner-avatar">SF</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Sylvia Fowles</p>
+                                    <span class="winner-team">Minnesota Lynx</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2017</span>
+                                <div class="winner-avatar">AT</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/alyssa-thomas.html">Alana Beard</a></p>
+                                    <span class="winner-team">Los Angeles Sparks</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Rookie of the Year -->
+                    <div class="award-card">
+                        <div class="award-card-header">
+                            <span class="award-icon">⭐</span>
+                            <h3>Rookie of the Year</h3>
+                        </div>
+                        <ul class="winner-list">
+                            <li class="winner-item">
+                                <span class="winner-year">2024</span>
+                                <div class="winner-avatar">CC</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/caitlin-clark.html">Caitlin Clark</a></p>
+                                    <span class="winner-team">Indiana Fever</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2023</span>
+                                <div class="winner-avatar">AB</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/aliyah-boston.html">Aliyah Boston</a></p>
+                                    <span class="winner-team">Indiana Fever</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2022</span>
+                                <div class="winner-avatar">RH</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Rhyne Howard</p>
+                                    <span class="winner-team">Atlanta Dream</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2021</span>
+                                <div class="winner-avatar">MC</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Michaela Onyenwere</p>
+                                    <span class="winner-team">New York Liberty</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2020</span>
+                                <div class="winner-avatar">CI</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Crystal Dangerfield</p>
+                                    <span class="winner-team">Minnesota Lynx</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2019</span>
+                                <div class="winner-avatar">NC</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/napheesa-collier.html">Napheesa Collier</a></p>
+                                    <span class="winner-team">Minnesota Lynx</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2018</span>
+                                <div class="winner-avatar">AW</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/aja-wilson.html">A'ja Wilson</a></p>
+                                    <span class="winner-team">Las Vegas Aces</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2017</span>
+                                <div class="winner-avatar">AG</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Allisha Gray</p>
+                                    <span class="winner-team">Dallas Wings</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2016</span>
+                                <div class="winner-avatar">BS</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/breanna-stewart.html">Breanna Stewart</a></p>
+                                    <span class="winner-team">Seattle Storm</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2015</span>
+                                <div class="winner-avatar">JL</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/jewell-loyd.html">Jewell Loyd</a></p>
+                                    <span class="winner-team">Seattle Storm</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Finals MVP -->
+                    <div class="award-card">
+                        <div class="award-card-header">
+                            <span class="award-icon">💍</span>
+                            <h3>Finals MVP</h3>
+                        </div>
+                        <ul class="winner-list">
+                            <li class="winner-item">
+                                <span class="winner-year">2024</span>
+                                <div class="winner-avatar">JJ</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/jonquel-jones.html">Jonquel Jones</a></p>
+                                    <span class="winner-team">New York Liberty</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2023</span>
+                                <div class="winner-avatar">AW</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/aja-wilson.html">A'ja Wilson</a></p>
+                                    <span class="winner-team">Las Vegas Aces</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2022</span>
+                                <div class="winner-avatar">CG</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/chelsea-gray.html">Chelsea Gray</a></p>
+                                    <span class="winner-team">Las Vegas Aces</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2021</span>
+                                <div class="winner-avatar">KM</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Kahleah Copper</p>
+                                    <span class="winner-team">Chicago Sky</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2020</span>
+                                <div class="winner-avatar">BS</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/breanna-stewart.html">Breanna Stewart</a></p>
+                                    <span class="winner-team">Seattle Storm</span>
+                                </div>
+                                <span class="winner-count">2x</span>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2019</span>
+                                <div class="winner-avatar">EB</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Emma Meesseman</p>
+                                    <span class="winner-team">Washington Mystics</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2018</span>
+                                <div class="winner-avatar">BS</div>
+                                <div class="winner-info">
+                                    <p class="winner-name"><a href="players/breanna-stewart.html">Breanna Stewart</a></p>
+                                    <span class="winner-team">Seattle Storm</span>
+                                </div>
+                            </li>
+                            <li class="winner-item">
+                                <span class="winner-year">2017</span>
+                                <div class="winner-avatar">SF</div>
+                                <div class="winner-info">
+                                    <p class="winner-name">Sylvia Fowles</p>
+                                    <span class="winner-team">Minnesota Lynx</span>
+                                </div>
+                                <span class="winner-count">2x</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">🏀</span>
+                        <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                    </a>
+                    <p class="footer-tagline">The ultimate free resource for women's basketball worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="players.html">Players</a></li>
+                            <li><a href="teams.html">Teams</a></li>
+                            <li><a href="stats.html">Stats Leaders</a></li>
+                            <li><a href="awards.html">WNBA Awards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="compare.html">Compare Players</a></li>
+                            <li><a href="training.html">Training Guides</a></li>
+                            <li><a href="glossary.html">Glossary</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Languages</h4>
+                        <ul>
+                            <li><a href="awards.html">English</a></li>
+                            <li><a href="es/awards.html">Español</a></li>
+                            <li><a href="fr/awards.html">Français</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HeroBasketball. Free and open to all.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
