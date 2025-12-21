@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Women's Basketball Coaches - Top WNBA & NCAA Coaches | HeroBasketball</title>
+    <meta name="description" content="Discover the top women's basketball coaches in WNBA and NCAA. From championship winners to legendary figures who shaped the game.">
+    <meta name="keywords" content="women's basketball coaches, WNBA coaches, NCAA women's basketball coaches, female basketball coaches, Becky Hammon, Dawn Staley">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herobasketball.com/coaches/">
+    <meta property="og:title" content="Women's Basketball Coaches | HeroBasketball">
+    <meta property="og:description" content="Discover the top women's basketball coaches in WNBA and NCAA.">
+
+    <link rel="canonical" href="https://herobasketball.com/coaches/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Women's Basketball Coaches",
+        "description": "Directory of top women's basketball coaches from WNBA and NCAA",
+        "isPartOf": {"@type": "WebSite", "name": "HeroBasketball"}
+    }
+    </script>
+
+    <style>
+        .coaches-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #2C3E50 0%, #1a252f 50%, #0d1318 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .coaches-hero::before {
+            content: '👔';
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10rem;
+            opacity: 0.1;
+        }
+        .coaches-hero-content { position: relative; z-index: 1; }
+        .coaches-header h1 { font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .coaches-subtitle { font-size: 1.125rem; color: rgba(255,255,255,0.9); max-width: 600px; }
+        .coaches-stats { display: flex; gap: 2rem; margin-top: 2rem; }
+        .coaches-stat { text-align: center; }
+        .coaches-stat-value { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; }
+        .coaches-stat-label { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+
+        .coaches-content { padding: 2rem 0 4rem; background: var(--color-gray-50); }
+        .league-section { margin-bottom: 3rem; }
+        .league-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 3px solid; }
+        .league-header.wnba { border-color: #E85F0E; }
+        .league-header.ncaa { border-color: #00843D; }
+        .league-header.legends { border-color: #FFD700; }
+        .league-title { display: flex; align-items: center; gap: 0.75rem; }
+        .league-title h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--color-gray-900); }
+        .league-badge { padding: 0.25rem 0.75rem; background: var(--color-gray-100); border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: var(--color-gray-600); }
+
+        .coaches-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+
+        .coach-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .coach-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+        .coach-avatar {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.25rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .coach-info { flex: 1; min-width: 0; }
+        .coach-info h3 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); margin-bottom: 0.25rem; }
+        .coach-info .coach-team { font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 0.5rem; }
+        .coach-badges { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+        .coach-badge-small {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            background: var(--color-gray-100);
+            border-radius: 9999px;
+            font-size: 0.625rem;
+            font-weight: 600;
+            color: var(--color-gray-600);
+        }
+        .coach-badge-small.champion { background: #FFF3CD; color: #856404; }
+
+        .coach-arrow { color: var(--color-gray-400); font-size: 1.25rem; }
+
+        /* Team-specific colors for avatars */
+        .coach-aces .coach-avatar { background: linear-gradient(135deg, #C8102E, #a30d25); color: white; }
+        .coach-liberty .coach-avatar { background: linear-gradient(135deg, #6ECEB2, #4AA892); color: white; }
+        .coach-lynx .coach-avatar { background: linear-gradient(135deg, #236192, #164060); color: white; }
+        .coach-south-carolina .coach-avatar { background: linear-gradient(135deg, #73000A, #5a0008); color: white; }
+        .coach-lsu .coach-avatar { background: linear-gradient(135deg, #461D7C, #371563); color: #FDD023; }
+        .coach-notre-dame .coach-avatar { background: linear-gradient(135deg, #0C2340, #091a2e); color: #C99700; }
+        .coach-duke .coach-avatar { background: linear-gradient(135deg, #003087, #002366); color: white; }
+        .coach-maryland .coach-avatar { background: linear-gradient(135deg, #E21833, #c41429); color: #FFD200; }
+        .coach-tennessee .coach-avatar { background: linear-gradient(135deg, #FF8200, #e67300); color: white; }
+        .coach-stanford .coach-avatar { background: linear-gradient(135deg, #8C1515, #751212); color: white; }
+
+        @media (min-width: 640px) {
+            .coaches-header h1 { font-size: 3rem; }
+            .coaches-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1024px) {
+            .coaches-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .coaches-header h1 { font-size: 1.75rem; }
+            .coaches-hero::before { font-size: 4rem; opacity: 0.08; }
+            .coaches-stats { gap: 1rem; }
+            .coaches-stat-value { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="players.html" class="nav-link">Players</a></li>
+                        <li><a href="teams.html" class="nav-link">Teams</a></li>
+                        <li><a href="coaches.html" class="nav-link" style="color: var(--color-primary);">Coaches</a></li>
+                        <li><a href="stats.html" class="nav-link">Stats</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="index.html" class="lang-btn active" aria-label="English">EN</a>
+                            <a href="es/index.html" class="lang-btn" aria-label="Español">ES</a>
+                            <a href="fr/index.html" class="lang-btn" aria-label="Français">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="coaches-hero">
+            <div class="container">
+                <div class="coaches-hero-content">
+                    <div class="coaches-header">
+                        <h1>👔 Women's Basketball Coaches</h1>
+                        <p class="coaches-subtitle">Meet the leaders shaping women's basketball. Championship winners, hall of famers, and the next generation of coaching legends.</p>
+                    </div>
+                    <div class="coaches-stats">
+                        <div class="coaches-stat">
+                            <div class="coaches-stat-value">10</div>
+                            <div class="coaches-stat-label">Featured Coaches</div>
+                        </div>
+                        <div class="coaches-stat">
+                            <div class="coaches-stat-value">20+</div>
+                            <div class="coaches-stat-label">Championships</div>
+                        </div>
+                        <div class="coaches-stat">
+                            <div class="coaches-stat-value">3,000+</div>
+                            <div class="coaches-stat-label">Combined Wins</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="coaches-content">
+            <div class="container">
+                <!-- WNBA Coaches -->
+                <div class="league-section">
+                    <div class="league-header wnba">
+                        <div class="league-title">
+                            <span style="font-size: 1.5rem;">🏀</span>
+                            <h2>WNBA Coaches</h2>
+                        </div>
+                        <span class="league-badge">3 Coaches</span>
+                    </div>
+                    <div class="coaches-grid">
+                        <a href="coaches/becky-hammon.html" class="coach-card coach-aces">
+                            <div class="coach-avatar">BH</div>
+                            <div class="coach-info">
+                                <h3>Becky Hammon</h3>
+                                <p class="coach-team">Las Vegas Aces</p>
+                                <div class="coach-badges">
+                                    <span class="coach-badge-small champion">🏆 2x WNBA Champion</span>
+                                    <span class="coach-badge-small">🏀 Hall of Fame</span>
+                                </div>
+                            </div>
+                            <span class="coach-arrow">→</span>
+                        </a>
+
+                        <a href="coaches/sandy-brondello.html" class="coach-card coach-liberty">
+                            <div class="coach-avatar">SB</div>
+                            <div class="coach-info">
+                                <h3>Sandy Brondello</h3>
+                                <p class="coach-team">New York Liberty</p>
+                                <div class="coach-badges">
+                                    <span class="coach-badge-small champion">🏆 2024 WNBA Champion</span>
+                                    <span class="coach-badge-small">🇦🇺 Australian Icon</span>
+                                </div>
+                            </div>
+                            <span class="coach-arrow">→</span>
+                        </a>
+
+                        <a href="coaches/cheryl-reeve.html" class="coach-card coach-lynx">
+                            <div class="coach-avatar">CR</div>
+                            <div class="coach-info">
+                                <h3>Cheryl Reeve</h3>
+                                <p class="coach-team">Minnesota Lynx</p>
+                                <div class="coach-badges">
+                                    <span class="coach-badge-small champion">🏆 4x WNBA Champion</span>
+                                    <span class="coach-badge-small">👔 Winningest Coach</span>
+                                </div>
+                            </div>
+                            <span class="coach-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NCAA Coaches -->
+                <div class="league-section">
+                    <div class="league-header ncaa">
+                        <div class="league-title">
+                            <span style="font-size: 1.5rem;">🎓</span>
+                            <h2>NCAA Coaches</h2>
+                        </div>
+                        <span class="league-badge">5 Coaches</span>
+                    </div>
+                    <div class="coaches-grid">
+                        <a href="coaches/dawn-staley.html" class="coach-card coach-south-carolina">
+                            <div class="coach-avatar">DS</div>
+                            <div class="coach-info">
+                                <h3>Dawn Staley</h3>
+                                <p class="coach-team">South Carolina Gamecocks</p>
+                                <div class="coach-badges">
+                                    <span class="coach-badge-small champion">🏆 3x NCAA Champion</span>
+                                    <span class="coach-badge-small">🥇 Olympic Gold</span>
+                                </div>
+                            </div>
+                            <span class="coach-arrow">→</span>
+                        </a>
+
+                        <a href="coaches/kim-mulkey.html" class="coach-card coach-lsu">
+                            <div class="coach-avatar">KM</div>
+                            <div class="coach-info">
+                                <h3>Kim Mulkey</h3>
+                                <p class="coach-team">LSU Tigers</p>
+                                <div class="coach-badges">
+                                    <span class="coach-badge-small champion">🏆 4x NCAA Champion</span>
+                                    <span class="coach-badge-small">🏛️ Hall of Fame</span>
+                                </div>
+                            </div>
+                            <span class="coach-arrow">→</span>
+                        </a>
+
+                        <a href="coaches/niele-ivey.html" class="coach-card coach-notre-dame">
+                            <div class="coach-avatar">NI</div>
+                            <div class="coach-info">
+                                <h3>Niele Ivey</h3>
+                                <p class="coach-team">Notre Dame Fighting Irish</p>
+                                <div class="coach-badges">
+                                    <span class="coach-badge-small">🏀 Former WNBA Player</span>
+                                    <span class="coach-badge-small">⭐ Rising Star</span>
+                                </div>
+                            </div>
+                            <span class="coach-arrow">→</span>
+                        </a>
+
+                        <a href="coaches/brenda-frese.html" class="coach-card coach-maryland">
+                            <div class="coach-avatar">BF</div>
+                            <div class="coach-info">
+                                <h3>Brenda Frese</h3>
+                                <p class="coach-team">Maryland Terrapins</p>
+                                <div class="coach-badges">
+                                    <span class="coach-badge-small champion">🏆 2006 NCAA Champion</span>
+                                    <span class="coach-badge-small">👔 7x Big Ten COY</span>
+                                </div>
+                            </div>
+                            <span class="coach-arrow">→</span>
+                        </a>
+
+                        <a href="coaches/kara-lawson.html" class="coach-card coach-duke">
+                            <div class="coach-avatar">KL</div>
+                            <div class="coach-info">
+                                <h3>Kara Lawson</h3>
+                                <p class="coach-team">Duke Blue Devils</p>
+                                <div class="coach-badges">
+                                    <span class="coach-badge-small">🏆 WNBA Champion (Player)</span>
+                                    <span class="coach-badge-small">🥇 Olympic Gold</span>
+                                </div>
+                            </div>
+                            <span class="coach-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Legends -->
+                <div class="league-section">
+                    <div class="league-header legends">
+                        <div class="league-title">
+                            <span style="font-size: 1.5rem;">👑</span>
+                            <h2>Coaching Legends</h2>
+                        </div>
+                        <span class="league-badge">2 Legends</span>
+                    </div>
+                    <div class="coaches-grid">
+                        <a href="coaches/pat-summitt.html" class="coach-card coach-tennessee">
+                            <div class="coach-avatar">PS</div>
+                            <div class="coach-info">
+                                <h3>Pat Summitt</h3>
+                                <p class="coach-team">Tennessee Lady Vols • 1952-2016</p>
+                                <div class="coach-badges">
+                                    <span class="coach-badge-small champion">🏆 8x NCAA Champion</span>
+                                    <span class="coach-badge-small">🎖️ Medal of Freedom</span>
+                                </div>
+                            </div>
+                            <span class="coach-arrow">→</span>
+                        </a>
+
+                        <a href="coaches/tara-vanderveer.html" class="coach-card coach-stanford">
+                            <div class="coach-avatar">TV</div>
+                            <div class="coach-info">
+                                <h3>Tara VanDerveer</h3>
+                                <p class="coach-team">Stanford Cardinal • Retired 2024</p>
+                                <div class="coach-badges">
+                                    <span class="coach-badge-small champion">🏆 3x NCAA Champion</span>
+                                    <span class="coach-badge-small">👑 1,216 Wins (Record)</span>
+                                </div>
+                            </div>
+                            <span class="coach-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 HeroBasketball. Celebrating women's basketball worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
