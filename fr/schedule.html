@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Calendrier Basketball Féminin - Matchs Aujourd'hui | HeroBasketball</title>
+    <meta name="description" content="Calendrier complet du basketball féminin pour la WNBA, NCAA et ligues internationales. Matchs du jour, prochaines rencontres et calendriers de saison.">
+    <meta name="keywords" content="calendrier basketball féminin, matchs WNBA aujourd'hui, basketball féminin aujourd'hui, calendrier WNBA">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/fr/schedule/">
+    <link rel="alternate" hreflang="en" href="https://herobasketball.com/schedule/">
+    <link rel="alternate" hreflang="es" href="https://herobasketball.com/es/schedule/">
+    <link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/schedule/">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        .schedule-hero {
+            position: relative;
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #0d2137 50%, #071520 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .schedule-hero::before {
+            content: '📅';
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10rem;
+            opacity: 0.1;
+        }
+        .schedule-hero-content { position: relative; z-index: 1; text-align: center; }
+        .schedule-header h1 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        .schedule-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto; }
+        .schedule-content { padding: 3rem 0 4rem; background: var(--color-gray-50); }
+
+        .today-banner {
+            background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(16,185,129,0.05));
+            border: 2px solid rgba(16,185,129,0.3);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .today-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: #059669;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        .today-title {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 2rem;
+            color: var(--color-gray-900);
+            margin-bottom: 0.5rem;
+        }
+        .today-note { color: var(--color-gray-600); font-size: 1rem; }
+
+        .schedule-section-title {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--color-gray-900);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .season-info {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+        .season-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .season-item h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: var(--color-gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .season-item p {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--color-gray-900);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .schedule-hero::before { font-size: 4rem; opacity: 0.08; }
+            .schedule-header h1 { font-size: 1.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/fr/" class="logo">
+                    <span class="logo-icon">🏀</span>
+                    <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                </a>
+
+                <button class="nav-toggle" aria-label="Basculer le menu de navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="players.html" class="nav-link">Joueuses</a></li>
+                        <li><a href="teams.html" class="nav-link">Équipes</a></li>
+                        <li><a href="schedule.html" class="nav-link" style="color: var(--color-primary);">Calendrier</a></li>
+                        <li><a href="stats.html" class="nav-link">Statistiques</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="../schedule.html" class="lang-btn" aria-label="English">EN</a>
+                            <a href="../es/schedule.html" class="lang-btn" aria-label="Español">ES</a>
+                            <a href="schedule.html" class="lang-btn active" aria-label="Français">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="schedule-hero">
+            <div class="container">
+                <div class="schedule-hero-content">
+                    <div class="schedule-header">
+                        <h1>Calendrier Basketball Féminin</h1>
+                    </div>
+                    <p class="schedule-subtitle">Trouvez les matchs de basketball féminin d'aujourd'hui, les prochaines rencontres et les calendriers complets de la WNBA, NCAA et ligues internationales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="schedule-content">
+            <div class="container">
+                <div class="today-banner">
+                    <div class="today-label">Basketball Féminin Aujourd'hui</div>
+                    <h2 class="today-title">Matchs de Basketball Féminin Aujourd'hui</h2>
+                    <p class="today-note">Consultez pendant la saison pour les horaires et résultats en direct</p>
+                </div>
+
+                <h3 class="schedule-section-title">🏀 Calendrier WNBA 2025</h3>
+                <div class="season-info">
+                    <div class="season-grid">
+                        <div class="season-item">
+                            <h4>Saison Régulière</h4>
+                            <p>Mai - Septembre 2025</p>
+                        </div>
+                        <div class="season-item">
+                            <h4>Playoffs</h4>
+                            <p>Septembre - Octobre 2025</p>
+                        </div>
+                        <div class="season-item">
+                            <h4>All-Star Game</h4>
+                            <p>Juillet 2025</p>
+                        </div>
+                        <div class="season-item">
+                            <h4>Finales WNBA</h4>
+                            <p>Octobre 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="schedule-section-title" style="margin-top: 3rem;">🎓 Tournoi NCAA 2025</h3>
+                <div class="season-info">
+                    <div class="season-grid">
+                        <div class="season-item">
+                            <h4>Selection Sunday</h4>
+                            <p>16 Mars 2025</p>
+                        </div>
+                        <div class="season-item">
+                            <h4>Premier Tour</h4>
+                            <p>21-22 Mars 2025</p>
+                        </div>
+                        <div class="season-item">
+                            <h4>Final Four</h4>
+                            <p>4 Avril 2025</p>
+                        </div>
+                        <div class="season-item">
+                            <h4>Championnat</h4>
+                            <p>6 Avril 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 HeroBasketball. Célébrant le basketball féminin dans le monde entier.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
