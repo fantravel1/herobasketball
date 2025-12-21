@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>All Basketball Teams | WNBA, NBA, NCAA, EuroLeague | HeroBasketball</title>
-    <meta name="description" content="Complete directory of basketball teams worldwide. WNBA franchises, NBA teams, NCAA programs, and international clubs. Find rosters, stats, and history.">
-    <meta name="keywords" content="basketball teams, WNBA teams, NBA teams, NCAA basketball, women's basketball, men's basketball">
+    <title>Toutes les Équipes de Basketball | WNBA, NBA, NCAA, EuroLigue | HeroBasketball</title>
+    <meta name="description" content="Répertoire complet des équipes de basketball du monde entier. Franchises WNBA, équipes NBA, programmes NCAA et clubs internationaux. Trouvez effectifs, statistiques et historique.">
+    <meta name="keywords" content="équipes basketball, équipes WNBA, équipes NBA, basketball NCAA, basketball féminin, basketball masculin">
     <meta name="robots" content="index, follow">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://herobasketball.com/teams/">
-    <meta property="og:title" content="All Basketball Teams | HeroBasketball">
-    <meta property="og:description" content="Complete directory of basketball teams worldwide.">
+    <meta property="og:url" content="https://herobasketball.com/fr/teams/">
+    <meta property="og:title" content="Toutes les Équipes de Basketball | HeroBasketball">
+    <meta property="og:description" content="Répertoire complet des équipes de basketball du monde entier.">
 
-    <link rel="canonical" href="https://herobasketball.com/teams/">
+    <link rel="canonical" href="https://herobasketball.com/fr/teams/">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
     <meta name="theme-color" content="#5B2C6F">
 
@@ -27,20 +27,15 @@
     {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "Basketball Teams Directory",
-        "description": "Complete directory of basketball teams worldwide",
-        "isPartOf": {"@type": "WebSite", "name": "HeroBasketball"}
+        "name": "Répertoire des Équipes de Basketball",
+        "description": "Répertoire complet des équipes de basketball du monde entier",
+        "isPartOf": {"@type": "WebSite", "name": "HeroBasketball"},
+        "inLanguage": "fr"
     }
     </script>
 
     <style>
-        .teams-hero {
-            position: relative;
-            padding: 100px 0 60px;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            color: white;
-            overflow: hidden;
-        }
+        .teams-hero { position: relative; padding: 100px 0 60px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white; overflow: hidden; }
         .teams-hero::before { content: '🏟️'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.1; }
         .teams-hero-content { position: relative; z-index: 1; }
         .teams-header h1 { font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; margin-bottom: 0.5rem; }
@@ -69,7 +64,6 @@
         .team-arrow { color: var(--color-gray-400); font-size: 1.25rem; }
         .conference-divider { grid-column: 1 / -1; padding: 0.75rem 0; margin: 0.5rem 0; }
         .conference-divider span { font-family: var(--font-display); font-weight: 600; font-size: 0.875rem; color: var(--color-gray-500); text-transform: uppercase; letter-spacing: 0.05em; }
-        /* Team-specific colors */
         .team-aces .team-logo { background: linear-gradient(135deg, #000, #1a1a1a); color: #B4975A; }
         .team-storm .team-logo { background: linear-gradient(135deg, #2C5234, #1A3320); color: #FFC425; }
         .team-liberty .team-logo { background: linear-gradient(135deg, #6ECEB2, #4AA892); color: white; }
@@ -82,21 +76,24 @@
         .team-sparks .team-logo { background: linear-gradient(135deg, #552583, #FDB927); color: white; }
         .team-dream .team-logo { background: linear-gradient(135deg, #C8102E, #418FDE); color: white; }
         .team-wings .team-logo { background: linear-gradient(135deg, #C4D600, #002B5C); color: white; }
-        .coming-soon { opacity: 0.6; pointer-events: none; }
-        .coming-soon .team-arrow { display: none; }
-        .coming-soon::after { content: 'Soon'; font-size: 0.625rem; padding: 0.125rem 0.5rem; background: var(--color-gray-200); color: var(--color-gray-500); border-radius: 9999px; font-weight: 600; }
         @media (min-width: 640px) { .teams-header h1 { font-size: 3rem; } .teams-grid { grid-template-columns: repeat(3, 1fr); } }
         @media (min-width: 1024px) { .teams-grid { grid-template-columns: repeat(4, 1fr); } }
+    
+        @media (max-width: 768px) {
+            .teams-header h1 { font-size: 1.75rem; }
+            .teams-hero::before { font-size: 4rem; opacity: 0.08; }
+            .teams-header h1 { font-size: 1.75rem; }
+        }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <a href="index.html" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false"><span class="hamburger"></span></button>
                 <div class="nav-menu" id="nav-menu">
                     <ul class="nav-links">
                         <li class="nav-dropdown">
@@ -116,6 +113,7 @@
                                     <a href="players/kelsey-plum.html">Kelsey Plum</a>
                                     <a href="players/chelsea-gray.html">Chelsea Gray</a>
                                     <a href="players/napheesa-collier.html">Napheesa Collier</a>
+                                    <a href="../legends.html">Légendes WNBA</a>
                                     <a href="players.html" class="view-all">Voir Toutes les Joueuses →</a>
                                 </div>
                             </div>
@@ -140,12 +138,23 @@
                                 <div class="dropdown-section">
                                     <h4>Ligues</h4>
                                     <a href="leagues/wnba.html">WNBA</a>
-                                    <a href="leagues/ncaa-womens.html">NCAA Women's</a>
-                                    <a href="leagues/euroleague-women.html">EuroLeague Women</a>
-                                    <a href="leagues/wnba-records.html">WNBA Records</a>
+                                    <a href="leagues/ncaa-womens.html">NCAA Féminin</a>
+                                    <a href="leagues/euroleague-women.html">EuroLigue Féminine</a>
+                                    <a href="leagues/wnba-records.html">Records WNBA</a>
+                                </div>
+                                <div class="dropdown-section">
+                                    <h4>Histoire</h4>
+                                    <a href="../championships.html">Championnats</a>
+                                    <a href="../allstar.html">Match des Étoiles</a>
+                                    <a href="../olympics.html">Jeux Olympiques</a>
+                                    <a href="../awards.html">Prix WNBA</a>
+                                    <a href="../draft.html">Histoire de la Draft</a>
+                                    <a href="../legends.html">Légendes</a>
+                                    <a href="rookies.html">Rookies de l'Année</a>
                                 </div>
                             </div>
                         </li>
+                        <li><a href="stats.html" class="nav-link">Statistiques</a></li>
                         <li><a href="compare.html" class="nav-link">Comparer</a></li>
                         <li><a href="training.html" class="nav-link">Entraînement</a></li>
                     </ul>
@@ -166,8 +175,8 @@
             <div class="container">
                 <div class="teams-hero-content">
                     <div class="teams-header">
-                        <h1>🏟️ All Teams</h1>
-                        <p class="teams-subtitle">Explore basketball teams from around the world. From WNBA franchises to international clubs, find rosters, stats, and team history.</p>
+                        <h1>🏟️ Toutes les Équipes</h1>
+                        <p class="teams-subtitle">Explorez les équipes de basketball du monde entier. Des franchises WNBA aux clubs internationaux, trouvez effectifs, statistiques et historique des équipes.</p>
                     </div>
                     <div class="teams-stats">
                         <div class="teams-stat">
@@ -176,7 +185,7 @@
                         </div>
                         <div class="teams-stat">
                             <div class="teams-stat-value">30</div>
-                            <div class="teams-stat-label">NBA Teams</div>
+                            <div class="teams-stat-label">Équipes NBA</div>
                         </div>
                         <div class="teams-stat">
                             <div class="teams-stat-value">350+</div>
@@ -189,77 +198,76 @@
 
         <section class="teams-content">
             <div class="container">
-                <!-- WNBA Teams -->
                 <div class="league-section">
                     <div class="league-header wnba">
                         <div class="league-title">
                             <span style="font-size: 1.5rem;">🏀</span>
                             <h2>Équipes WNBA</h2>
                         </div>
-                        <span class="league-badge">12 Teams</span>
+                        <span class="league-badge">12 Équipes</span>
                     </div>
                     <div class="teams-grid">
-                        <div class="conference-divider"><span>Eastern Conference</span></div>
+                        <div class="conference-divider"><span>Conférence Est</span></div>
 
-                        <a href="/teams/new-york-liberty.html" class="team-card team-liberty">
+                        <a href="teams/new-york-liberty.html" class="team-card team-liberty">
                             <div class="team-logo">🗽</div>
-                            <div class="team-info"><h3>New York Liberty</h3><p>Brooklyn, NY • 2024 Champs</p></div>
+                            <div class="team-info"><h3>New York Liberty</h3><p>Brooklyn, NY • Championnes 2024</p></div>
                             <span class="team-arrow">→</span>
                         </a>
-                        <a href="/teams/connecticut-sun.html" class="team-card team-sun">
+                        <a href="teams/connecticut-sun.html" class="team-card team-sun">
                             <div class="team-logo">☀️</div>
                             <div class="team-info"><h3>Connecticut Sun</h3><p>Uncasville, CT</p></div>
                             <span class="team-arrow">→</span>
                         </a>
-                        <a href="/teams/indiana-fever.html" class="team-card team-fever">
+                        <a href="teams/indiana-fever.html" class="team-card team-fever">
                             <div class="team-logo">🔥</div>
                             <div class="team-info"><h3>Indiana Fever</h3><p>Indianapolis, IN</p></div>
                             <span class="team-arrow">→</span>
                         </a>
-                        <a href="/teams/chicago-sky.html" class="team-card team-sky">
+                        <a href="teams/chicago-sky.html" class="team-card team-sky">
                             <div class="team-logo">🌆</div>
-                            <div class="team-info"><h3>Chicago Sky</h3><p>Chicago, IL • 2021 Champs</p></div>
+                            <div class="team-info"><h3>Chicago Sky</h3><p>Chicago, IL • Championnes 2021</p></div>
                             <span class="team-arrow">→</span>
                         </a>
-                        <a href="/teams/washington-mystics.html" class="team-card team-mystics">
+                        <a href="teams/washington-mystics.html" class="team-card team-mystics">
                             <div class="team-logo">🌟</div>
-                            <div class="team-info"><h3>Washington Mystics</h3><p>Washington, DC • 2019 Champs</p></div>
+                            <div class="team-info"><h3>Washington Mystics</h3><p>Washington, DC • Championnes 2019</p></div>
                             <span class="team-arrow">→</span>
                         </a>
-                        <a href="/teams/atlanta-dream.html" class="team-card team-dream">
+                        <a href="teams/atlanta-dream.html" class="team-card team-dream">
                             <div class="team-logo">💭</div>
                             <div class="team-info"><h3>Atlanta Dream</h3><p>Atlanta, GA</p></div>
                             <span class="team-arrow">→</span>
                         </a>
 
-                        <div class="conference-divider"><span>Western Conference</span></div>
+                        <div class="conference-divider"><span>Conférence Ouest</span></div>
 
-                        <a href="/teams/las-vegas-aces.html" class="team-card team-aces">
+                        <a href="teams/las-vegas-aces.html" class="team-card team-aces">
                             <div class="team-logo">♠️</div>
-                            <div class="team-info"><h3>Las Vegas Aces</h3><p>Las Vegas, NV • 2x Champs</p></div>
+                            <div class="team-info"><h3>Las Vegas Aces</h3><p>Las Vegas, NV • 2x Championnes</p></div>
                             <span class="team-arrow">→</span>
                         </a>
-                        <a href="/teams/minnesota-lynx.html" class="team-card team-lynx">
+                        <a href="teams/minnesota-lynx.html" class="team-card team-lynx">
                             <div class="team-logo">🐱</div>
-                            <div class="team-info"><h3>Minnesota Lynx</h3><p>Minneapolis, MN • 4x Champs</p></div>
+                            <div class="team-info"><h3>Minnesota Lynx</h3><p>Minneapolis, MN • 4x Championnes</p></div>
                             <span class="team-arrow">→</span>
                         </a>
-                        <a href="/teams/seattle-storm.html" class="team-card team-storm">
+                        <a href="teams/seattle-storm.html" class="team-card team-storm">
                             <div class="team-logo">⛈️</div>
-                            <div class="team-info"><h3>Seattle Storm</h3><p>Seattle, WA • 4x Champs</p></div>
+                            <div class="team-info"><h3>Seattle Storm</h3><p>Seattle, WA • 4x Championnes</p></div>
                             <span class="team-arrow">→</span>
                         </a>
-                        <a href="/teams/phoenix-mercury.html" class="team-card team-mercury">
+                        <a href="teams/phoenix-mercury.html" class="team-card team-mercury">
                             <div class="team-logo">☿️</div>
-                            <div class="team-info"><h3>Phoenix Mercury</h3><p>Phoenix, AZ • 3x Champs</p></div>
+                            <div class="team-info"><h3>Phoenix Mercury</h3><p>Phoenix, AZ • 3x Championnes</p></div>
                             <span class="team-arrow">→</span>
                         </a>
-                        <a href="/teams/los-angeles-sparks.html" class="team-card team-sparks">
+                        <a href="teams/los-angeles-sparks.html" class="team-card team-sparks">
                             <div class="team-logo">⚡</div>
-                            <div class="team-info"><h3>Los Angeles Sparks</h3><p>Los Angeles, CA • 3x Champs</p></div>
+                            <div class="team-info"><h3>Los Angeles Sparks</h3><p>Los Angeles, CA • 3x Championnes</p></div>
                             <span class="team-arrow">→</span>
                         </a>
-                        <a href="/teams/dallas-wings.html" class="team-card team-wings">
+                        <a href="teams/dallas-wings.html" class="team-card team-wings">
                             <div class="team-logo">🦅</div>
                             <div class="team-info"><h3>Dallas Wings</h3><p>Arlington, TX</p></div>
                             <span class="team-arrow">→</span>
@@ -267,55 +275,84 @@
                     </div>
                 </div>
 
-                <!-- NBA Coming Soon -->
                 <div class="league-section">
                     <div class="league-header nba">
                         <div class="league-title">
                             <span style="font-size: 1.5rem;">🏀</span>
-                            <h2>NBA Teams</h2>
+                            <h2>Équipes NBA</h2>
                         </div>
-                        <span class="league-badge">Coming Soon</span>
+                        <span class="league-badge">Bientôt Disponible</span>
                     </div>
                     <div style="background: var(--color-gray-50); padding: 2rem; border-radius: 1rem; text-align: center;">
                         <p style="font-size: 2rem; margin-bottom: 0.5rem;">🚧</p>
-                        <p style="color: var(--color-gray-600);">NBA team pages are coming soon! We're building comprehensive coverage of all 30 NBA franchises.</p>
+                        <p style="color: var(--color-gray-600);">Les pages des équipes NBA arrivent bientôt ! Nous construisons une couverture complète des 30 franchises NBA.</p>
                     </div>
                 </div>
 
-                <!-- NCAA Coming Soon -->
                 <div class="league-section">
                     <div class="league-header ncaa">
                         <div class="league-title">
                             <span style="font-size: 1.5rem;">🎓</span>
-                            <h2>NCAA Programs</h2>
+                            <h2>Programmes NCAA</h2>
                         </div>
-                        <span class="league-badge">Coming Soon</span>
+                        <span class="league-badge">Bientôt Disponible</span>
                     </div>
                     <div style="background: var(--color-gray-50); padding: 2rem; border-radius: 1rem; text-align: center;">
                         <p style="font-size: 2rem; margin-bottom: 0.5rem;">📚</p>
-                        <p style="color: var(--color-gray-600);">Top college basketball programs coming soon! From UConn to South Carolina, Stanford to Iowa.</p>
+                        <p style="color: var(--color-gray-600);">Les meilleurs programmes de basketball universitaire arrivent bientôt ! De UConn à South Carolina, Stanford et Iowa.</p>
                     </div>
                 </div>
 
-                <!-- EuroLeague Coming Soon -->
                 <div class="league-section">
                     <div class="league-header euro">
                         <div class="league-title">
                             <span style="font-size: 1.5rem;">🌍</span>
-                            <h2>International Clubs</h2>
+                            <h2>Clubs Internationaux</h2>
                         </div>
-                        <span class="league-badge">Coming Soon</span>
+                        <span class="league-badge">Bientôt Disponible</span>
                     </div>
                     <div style="background: var(--color-gray-50); padding: 2rem; border-radius: 1rem; text-align: center;">
                         <p style="font-size: 2rem; margin-bottom: 0.5rem;">🌐</p>
-                        <p style="color: var(--color-gray-600);">EuroLeague Women and international club teams coming soon! Explore basketball beyond North America.</p>
+                        <p style="color: var(--color-gray-600);">EuroLigue Féminine et clubs internationaux bientôt disponibles ! Explorez le basketball au-delà de l'Amérique du Nord.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
-    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">🏀</span>
+                        <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                    </a>
+                    <p class="footer-tagline">La référence gratuite ultime pour le basketball féminin mondial.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Explorer</h4>
+                        <ul class="footer-list">
+                            <li><a href="players.html">Joueuses</a></li>
+                            <li><a href="teams.html">Équipes</a></li>
+                            <li><a href="leagues/wnba.html">Ligues</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Ressources</h4>
+                        <ul class="footer-list">
+                            <li><a href="training.html">Entraînement</a></li>
+                            <li><a href="compare.html">Statistiques</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 HeroBasketball. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
 </body>
 </html>

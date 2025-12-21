@@ -45,6 +45,11 @@
         .award-info p { font-size: 0.75rem; color: var(--color-gray-500); }
         @media (min-width: 640px) { .player-identity h1 { font-size: 3rem; } .player-quick-stats { grid-template-columns: repeat(5, 1fr); } .info-grid { grid-template-columns: repeat(4, 1fr); } }
         @media (min-width: 768px) { .player-header { flex-direction: row; align-items: center; } .player-avatar-large { width: 150px; height: 150px; font-size: 3rem; } .awards-grid { grid-template-columns: repeat(3, 1fr); } }
+    
+        @media (max-width: 768px) {
+            .player-hero::before { font-size: 4rem; opacity: 0.08; }
+            .player-header h1 { font-size: 1.75rem; }
+        }
     </style>
 </head>
 <body>

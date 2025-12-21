@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>WNBA Legends - Hall of Fame & All-Time Greats | HeroBasketball</title>
+    <meta name="description" content="Celebrate the greatest players in women's basketball history. WNBA Hall of Famers, retired legends, and all-time greats who shaped the game.">
+    <meta name="keywords" content="WNBA legends, WNBA Hall of Fame, women's basketball history, greatest WNBA players">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/legends/">
+    <link rel="alternate" hreflang="en" href="https://herobasketball.com/legends/">
+    <link rel="alternate" hreflang="es" href="https://herobasketball.com/es/legends/">
+    <link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/legends/">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .legends-hero {
+            position: relative;
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #2c1654 0%, #1a0d36 50%, #0d0620 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .legends-hero::before {
+            content: '👑';
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10rem;
+            opacity: 0.1;
+        }
+        .legends-hero-content { position: relative; z-index: 1; text-align: center; }
+        .legends-header h1 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .legends-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; }
+        .legends-content { padding: 3rem 0 4rem; background: var(--color-gray-50); }
+
+        /* Legend Card */
+        .legends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .legend-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .legend-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        .legend-card-header {
+            position: relative;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            color: white;
+        }
+        .legend-card-header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: white;
+            border-radius: 50% 50% 0 0;
+        }
+        .legend-avatar {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2.5rem;
+            border: 4px solid rgba(255,255,255,0.3);
+        }
+        .legend-name {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin: 0;
+            text-align: center;
+        }
+        .legend-name a { color: inherit; text-decoration: none; }
+        .legend-era {
+            text-align: center;
+            font-size: 0.875rem;
+            opacity: 0.9;
+            margin-top: 0.25rem;
+        }
+
+        .legend-card-body {
+            padding: 2rem;
+            padding-top: 1.5rem;
+        }
+        .legend-tagline {
+            text-align: center;
+            font-style: italic;
+            color: var(--color-gray-600);
+            margin-bottom: 1.5rem;
+            font-size: 0.9375rem;
+        }
+        .legend-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .legend-stat {
+            text-align: center;
+        }
+        .legend-stat-value {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+        }
+        .legend-stat-label {
+            font-size: 0.75rem;
+            color: var(--color-gray-500);
+            text-transform: uppercase;
+        }
+
+        .legend-accolades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .accolade-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: linear-gradient(135deg, rgba(91,44,111,0.1), rgba(91,44,111,0.05));
+            color: var(--color-primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 1rem;
+            border: 1px solid rgba(91,44,111,0.2);
+        }
+        .accolade-badge.gold {
+            background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,165,0,0.1));
+            color: #8B6914;
+            border-color: rgba(255,215,0,0.3);
+        }
+
+        /* Hall of Fame Banner */
+        .hof-banner {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #5B3000;
+            text-align: center;
+            padding: 1rem;
+            font-family: var(--font-display);
+            font-weight: 700;
+        }
+
+        /* Featured Legend */
+        .featured-legend {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,165,0,0.05));
+            border: 2px solid rgba(255,215,0,0.3);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .featured-legend h2 {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: #8B6914;
+            margin-bottom: 1rem;
+        }
+        .featured-legend-name {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 2rem;
+            color: var(--color-gray-900);
+            margin-bottom: 0.5rem;
+        }
+        .featured-legend-quote {
+            font-style: italic;
+            color: var(--color-gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .legends-header h1 { font-size: 1.75rem; }
+            .legends-hero::before { font-size: 4rem; opacity: 0.08; }
+            .legends-grid { grid-template-columns: 1fr; }
+            .legends-header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🏀</span>
+                    <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                </a>
+
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="players.html" class="nav-link">Players</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Featured Players</h4>
+                                    <a href="players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="legends.html">WNBA Legends</a>
+                                    <a href="players.html" class="view-all">View All Players →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="teams.html" class="nav-link">Teams</a>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="leagues/wnba.html" class="nav-link">Leagues</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>History</h4>
+                                    <a href="championships.html">Championships</a>
+                                    <a href="allstar.html">All-Star Games</a>
+                                    <a href="olympics.html">Olympics</a>
+                                    <a href="awards.html">WNBA Awards</a>
+                                    <a href="draft.html">Draft History</a>
+                                    <a href="legends.html">Legends</a>
+                                    <a href="rookies.html">Rookies</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="stats.html" class="nav-link">Stats</a></li>
+                        <li><a href="compare.html" class="nav-link">Compare</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="legends.html" class="lang-btn active">EN</a>
+                            <a href="es/legends.html" class="lang-btn">ES</a>
+                            <a href="fr/legends.html" class="lang-btn">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="legends-hero">
+            <div class="container legends-hero-content">
+                <div class="legends-header">
+                    <h1>👑 WNBA Legends</h1>
+                    <p class="legends-subtitle">Celebrating the greatest players who built the foundation of women's professional basketball</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legends Content -->
+        <section class="legends-content">
+            <div class="container">
+                <!-- Featured Legend -->
+                <div class="featured-legend">
+                    <h2>🏆 All-Time WNBA Points Leader</h2>
+                    <p class="featured-legend-name">Diana Taurasi</p>
+                    <p class="featured-legend-quote">"I've been blessed to play this game for as long as I have, and I'm not done yet."</p>
+                </div>
+
+                <!-- Legends Grid -->
+                <div class="legends-grid">
+                    <!-- Diana Taurasi -->
+                    <article class="legend-card">
+                        <div class="legend-card-header">
+                            <div class="legend-avatar">DT</div>
+                            <h3 class="legend-name"><a href="players/diana-taurasi.html">Diana Taurasi</a></h3>
+                            <p class="legend-era">Phoenix Mercury • 2004-Present</p>
+                        </div>
+                        <div class="legend-card-body">
+                            <p class="legend-tagline">"The GOAT" • All-Time Leading Scorer</p>
+                            <div class="legend-stats">
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">10,518</div>
+                                    <div class="legend-stat-label">Points</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">3</div>
+                                    <div class="legend-stat-label">Titles</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">5</div>
+                                    <div class="legend-stat-label">Golds</div>
+                                </div>
+                            </div>
+                            <div class="legend-accolades">
+                                <span class="accolade-badge gold">1x MVP</span>
+                                <span class="accolade-badge gold">3x Champion</span>
+                                <span class="accolade-badge">10x All-Star</span>
+                                <span class="accolade-badge">5x Olympic Gold</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sue Bird -->
+                    <article class="legend-card">
+                        <div class="legend-card-header">
+                            <div class="legend-avatar">SB</div>
+                            <h3 class="legend-name"><a href="players/sue-bird.html">Sue Bird</a></h3>
+                            <p class="legend-era">Seattle Storm • 2002-2023</p>
+                        </div>
+                        <div class="hof-banner">🏅 Hall of Fame 2024</div>
+                        <div class="legend-card-body">
+                            <p class="legend-tagline">The Point Guard • Floor General</p>
+                            <div class="legend-stats">
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">3,234</div>
+                                    <div class="legend-stat-label">Assists</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">4</div>
+                                    <div class="legend-stat-label">Titles</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">5</div>
+                                    <div class="legend-stat-label">Golds</div>
+                                </div>
+                            </div>
+                            <div class="legend-accolades">
+                                <span class="accolade-badge gold">4x Champion</span>
+                                <span class="accolade-badge">13x All-Star</span>
+                                <span class="accolade-badge">Assists Leader</span>
+                                <span class="accolade-badge">5x Olympic Gold</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tamika Catchings -->
+                    <article class="legend-card">
+                        <div class="legend-card-header">
+                            <div class="legend-avatar">TC</div>
+                            <h3 class="legend-name">Tamika Catchings</h3>
+                            <p class="legend-era">Indiana Fever • 2002-2016</p>
+                        </div>
+                        <div class="hof-banner">🏅 Hall of Fame 2020</div>
+                        <div class="legend-card-body">
+                            <p class="legend-tagline">The Complete Player • Defensive Icon</p>
+                            <div class="legend-stats">
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">7,380</div>
+                                    <div class="legend-stat-label">Points</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">1</div>
+                                    <div class="legend-stat-label">Title</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">4</div>
+                                    <div class="legend-stat-label">Golds</div>
+                                </div>
+                            </div>
+                            <div class="legend-accolades">
+                                <span class="accolade-badge gold">1x MVP</span>
+                                <span class="accolade-badge gold">Champion</span>
+                                <span class="accolade-badge">5x DPOY</span>
+                                <span class="accolade-badge">10x All-Star</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Lisa Leslie -->
+                    <article class="legend-card">
+                        <div class="legend-card-header">
+                            <div class="legend-avatar">LL</div>
+                            <h3 class="legend-name">Lisa Leslie</h3>
+                            <p class="legend-era">Los Angeles Sparks • 1997-2009</p>
+                        </div>
+                        <div class="hof-banner">🏅 Hall of Fame 2015</div>
+                        <div class="legend-card-body">
+                            <p class="legend-tagline">First Dunk in WNBA History</p>
+                            <div class="legend-stats">
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">6,263</div>
+                                    <div class="legend-stat-label">Points</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">2</div>
+                                    <div class="legend-stat-label">Titles</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">4</div>
+                                    <div class="legend-stat-label">Golds</div>
+                                </div>
+                            </div>
+                            <div class="legend-accolades">
+                                <span class="accolade-badge gold">3x MVP</span>
+                                <span class="accolade-badge gold">2x Champion</span>
+                                <span class="accolade-badge">8x All-Star</span>
+                                <span class="accolade-badge">First Dunk</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sheryl Swoopes -->
+                    <article class="legend-card">
+                        <div class="legend-card-header">
+                            <div class="legend-avatar">SS</div>
+                            <h3 class="legend-name">Sheryl Swoopes</h3>
+                            <p class="legend-era">Houston Comets • 1997-2008</p>
+                        </div>
+                        <div class="hof-banner">🏅 Hall of Fame 2016</div>
+                        <div class="legend-card-body">
+                            <p class="legend-tagline">The Original Dynasty Player</p>
+                            <div class="legend-stats">
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">4,875</div>
+                                    <div class="legend-stat-label">Points</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">4</div>
+                                    <div class="legend-stat-label">Titles</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">3</div>
+                                    <div class="legend-stat-label">MVPs</div>
+                                </div>
+                            </div>
+                            <div class="legend-accolades">
+                                <span class="accolade-badge gold">3x MVP</span>
+                                <span class="accolade-badge gold">4x Champion</span>
+                                <span class="accolade-badge">3x DPOY</span>
+                                <span class="accolade-badge">First Shoe Deal</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cynthia Cooper -->
+                    <article class="legend-card">
+                        <div class="legend-card-header">
+                            <div class="legend-avatar">CC</div>
+                            <h3 class="legend-name">Cynthia Cooper</h3>
+                            <p class="legend-era">Houston Comets • 1997-2003</p>
+                        </div>
+                        <div class="hof-banner">🏅 Hall of Fame 2010</div>
+                        <div class="legend-card-body">
+                            <p class="legend-tagline">The Original WNBA Superstar</p>
+                            <div class="legend-stats">
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">2,601</div>
+                                    <div class="legend-stat-label">Points</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">4</div>
+                                    <div class="legend-stat-label">Titles</div>
+                                </div>
+                                <div class="legend-stat">
+                                    <div class="legend-stat-value">2</div>
+                                    <div class="legend-stat-label">MVPs</div>
+                                </div>
+                            </div>
+                            <div class="legend-accolades">
+                                <span class="accolade-badge gold">2x MVP</span>
+                                <span class="accolade-badge gold">4x Champion</span>
+                                <span class="accolade-badge">4x Finals MVP</span>
+                                <span class="accolade-badge">First Finals MVP</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">🏀</span>
+                        <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                    </a>
+                    <p class="footer-tagline">The ultimate free resource for women's basketball worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="players.html">Players</a></li>
+                            <li><a href="legends.html">Legends</a>
+                                    <a href="rookies.html">Rookies</a></li>
+                            <li><a href="stats.html">Stats Leaders</a></li>
+                            <li><a href="draft.html">Draft History</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>History</h4>
+                        <ul>
+                            <li><a href="awards.html">WNBA Awards</a></li>
+                            <li><a href="leagues/wnba-records.html">WNBA Records</a></li>
+                            <li><a href="compare.html">Compare Players</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Languages</h4>
+                        <ul>
+                            <li><a href="legends.html">English</a></li>
+                            <li><a href="es/legends.html">Español</a></li>
+                            <li><a href="fr/legends.html">Français</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HeroBasketball. Free and open to all.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

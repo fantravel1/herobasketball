@@ -83,10 +83,15 @@
         @media (min-width: 640px) { .team-identity h1 { font-size: 3rem; } .team-quick-stats { grid-template-columns: repeat(4, 1fr); } .roster-grid { grid-template-columns: repeat(3, 1fr); } }
         @media (min-width: 768px) { .team-header { flex-direction: row; align-items: center; } .team-logo { width: 120px; height: 120px; font-size: 4rem; } }
         @media (min-width: 1024px) { .roster-grid { grid-template-columns: repeat(4, 1fr); } }
+    
+        @media (max-width: 768px) {
+            .team-hero::before { font-size: 4rem; opacity: 0.08; }
+            .team-header h1 { font-size: 1.75rem; }
+        }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header class="header">
         <nav class="nav">
@@ -153,7 +158,7 @@
         <section class="team-hero">
             <div class="container">
                 <div class="team-hero-content">
-                    <nav class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/teams.html">Équipes</a><span>/</span><span>Chicago Sky</span></nav>
+                    <nav class="breadcrumb"><a href="/">Accueil</a><span>/</span><a href="/teams.html">Équipes</a><span>/</span><span>Chicago Sky</span></nav>
                     <div class="team-header">
                         <div class="team-logo">🌆</div>
                         <div class="team-identity">
@@ -242,7 +247,7 @@
         </section>
     </main>
 
-    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. Tous droits réservés.</p></div></div></footer>
     <script src="../script.js"></script>
 </body>
 </html>

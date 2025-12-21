@@ -46,10 +46,15 @@
         .award-info p { font-size: 0.75rem; color: var(--color-gray-500); }
         @media (min-width: 640px) { .player-identity h1 { font-size: 3rem; } .player-quick-stats { grid-template-columns: repeat(5, 1fr); } .info-grid { grid-template-columns: repeat(4, 1fr); } }
         @media (min-width: 768px) { .player-header { flex-direction: row; align-items: center; } .player-avatar-large { width: 150px; height: 150px; font-size: 3rem; } .awards-grid { grid-template-columns: repeat(3, 1fr); } }
+    
+        @media (max-width: 768px) {
+            .player-hero::before { font-size: 4rem; opacity: 0.08; }
+            .player-header h1 { font-size: 1.75rem; }
+        }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <header class="header"><nav class="nav"><div class="nav-container"><a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a><button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button><div class="nav-menu" id="nav-menu">
                     <ul class="nav-links">
                         <li class="nav-dropdown">
@@ -104,14 +109,14 @@
         <section class="player-hero">
             <div class="container">
                 <div class="player-hero-content">
-                    <nav class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/players.html">Joueuses</a><span>/</span><span>Arike Ogunbowale</span></nav>
+                    <nav class="breadcrumb"><a href="/">Accueil</a><span>/</span><a href="/players.html">Joueuses</a><span>/</span><span>Arike Ogunbowale</span></nav>
                     <div class="player-header">
                         <div class="player-avatar-large">AO</div>
                         <div class="player-identity">
                             <h1>Arike Ogunbowale</h1>
                             <div class="player-meta">
                                 <span><span>🏀</span><a href="/teams/dallas-wings.html" style="color: white;">Dallas Wings</a></span>
-                                <span><span>📍</span><span>Guard</span></span>
+                                <span><span>📍</span><span>Meneuse</span></span>
                                 <span><span>🇺🇸</span><span>USA</span></span>
                             </div>
                             <div class="player-badges">
@@ -147,20 +152,20 @@
                     </div>
                 </div>
                 <div class="content-section">
-                    <h2 class="section-heading"><span>📋</span> Player Information</h2>
+                    <h2 class="section-heading"><span>📋</span> Informations sur la Joueuse</h2>
                     <div class="info-grid">
-                        <div class="info-card"><div class="info-card-label">Height</div><div class="info-card-value">5'8" (173 cm)</div></div>
-                        <div class="info-card"><div class="info-card-label">Position</div><div class="info-card-value">Guard</div></div>
-                        <div class="info-card"><div class="info-card-label">Birthdate</div><div class="info-card-value">July 2, 1997</div></div>
-                        <div class="info-card"><div class="info-card-label">Birthplace</div><div class="info-card-value">Milwaukee, WI</div></div>
+                        <div class="info-card"><div class="info-card-label">Taille</div><div class="info-card-value">5'8" (173 cm)</div></div>
+                        <div class="info-card"><div class="info-card-label">Poste</div><div class="info-card-value">Meneuse</div></div>
+                        <div class="info-card"><div class="info-card-label">Date de Naissance</div><div class="info-card-value">July 2, 1997</div></div>
+                        <div class="info-card"><div class="info-card-label">Lieu de Naissance</div><div class="info-card-value">Milwaukee, WI</div></div>
                         <div class="info-card"><div class="info-card-label">Draft</div><div class="info-card-value">2019 / Round 1 / Pick 5</div></div>
-                        <div class="info-card"><div class="info-card-label">College</div><div class="info-card-value">Notre Dame</div></div>
-                        <div class="info-card"><div class="info-card-label">Career</div><div class="info-card-value">2019-Present (6 seasons)</div></div>
-                        <div class="info-card"><div class="info-card-label">Jersey Number</div><div class="info-card-value">#24</div></div>
+                        <div class="info-card"><div class="info-card-label">Université</div><div class="info-card-value">Notre Dame</div></div>
+                        <div class="info-card"><div class="info-card-label">Carrière</div><div class="info-card-value">2019-Present (6 seasons)</div></div>
+                        <div class="info-card"><div class="info-card-label">Numéro de Maillot</div><div class="info-card-value">#24</div></div>
                     </div>
                 </div>
                 <div class="content-section">
-                    <h2 class="section-heading"><span>🏆</span> Awards & Achievements</h2>
+                    <h2 class="section-heading"><span>🏆</span> Récompenses et Distinctions</h2>
                     <div class="awards-grid">
                         <div class="award-card"><div class="award-icon">🌟</div><div class="award-info"><h4>All-Star Game MVP</h4><p>2021</p></div></div>
                         <div class="award-card"><div class="award-icon">⭐</div><div class="award-info"><h4>4x WNBA All-Star</h4><p>2019, 2021, 2022, 2023</p></div></div>
@@ -173,7 +178,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. Tous droits réservés.</p></div></div></footer>
     <script src="../script.js"></script>
 </body>
 </html>

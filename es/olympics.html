@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Historia Olímpica del Baloncesto Femenino de USA | Medallas de Oro | HeroBasketball</title>
+    <meta name="description" content="Historia olímpica del baloncesto femenino de USA. Todas las medallas de oro, jugadoras legendarias y la dominancia del Team USA desde 1976 hasta 2024.">
+    <meta name="keywords" content="USA Basketball, Juegos Olímpicos femeninos, Team USA, medalla de oro, baloncesto femenino Olimpiadas">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/es/olympics/">
+    <link rel="alternate" hreflang="en" href="https://herobasketball.com/olympics/">
+    <link rel="alternate" hreflang="es" href="https://herobasketball.com/es/olympics/">
+    <link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/olympics/">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        .olympics-hero {
+            position: relative;
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #002868 0%, #001a4d 50%, #000d26 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .olympics-hero::before {
+            content: '🥇';
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10rem;
+            opacity: 0.15;
+        }
+        .olympics-hero-content { position: relative; z-index: 1; text-align: center; }
+        .olympics-header h1 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #FFD700, #C0C0C0, #CD7F32);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .olympics-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; }
+        .olympics-content { padding: 3rem 0 4rem; background: var(--color-gray-50); }
+
+        .streak-banner {
+            background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(0,40,104,0.1));
+            border: 2px solid rgba(255,215,0,0.3);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .streak-number {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 4rem;
+            color: #B8860B;
+            line-height: 1;
+        }
+        .streak-label { font-size: 1.25rem; color: var(--color-gray-700); margin-top: 0.5rem; }
+        .streak-years { font-size: 0.9375rem; color: var(--color-gray-500); margin-top: 0.5rem; }
+
+        .olympics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .olympic-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .olympic-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .olympic-card-header {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #002868, #001a4d);
+            color: white;
+            text-align: center;
+        }
+        .olympic-year { font-family: var(--font-display); font-weight: 800; font-size: 1.75rem; }
+        .olympic-city { font-size: 0.9375rem; opacity: 0.9; }
+        .olympic-card-body { padding: 1.5rem; text-align: center; }
+        .olympic-medal { font-size: 3rem; margin-bottom: 0.5rem; }
+        .olympic-result { font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; color: var(--color-gray-900); margin-bottom: 0.5rem; }
+        .olympic-record { font-size: 0.875rem; color: var(--color-gray-500); }
+        .olympic-mvp { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-200); font-size: 0.875rem; color: var(--color-gray-600); }
+        .olympic-mvp a { color: var(--color-primary); text-decoration: none; }
+        .olympic-mvp a:hover { text-decoration: underline; }
+
+        .legends-section { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--color-gray-200); }
+        .legends-section h2 { font-family: var(--font-display); font-weight: 800; font-size: 1.75rem; text-align: center; margin-bottom: 2rem; color: var(--color-gray-900); }
+        .legends-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; }
+        .legend-card { background: white; border-radius: 1rem; padding: 1.5rem; box-shadow: var(--shadow-md); text-align: center; }
+        .legend-medals { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .legend-name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--color-gray-900); margin-bottom: 0.25rem; }
+        .legend-name a { color: inherit; text-decoration: none; }
+        .legend-name a:hover { color: var(--color-primary); }
+        .legend-count { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; color: var(--color-primary); }
+        .legend-label { font-size: 0.75rem; color: var(--color-gray-500); text-transform: uppercase; }
+
+        @media (max-width: 768px) {
+            .olympics-header h1 { font-size: 1.75rem; }
+            .olympics-hero::before { font-size: 4rem; opacity: 0.08; }
+            .olympics-header h1 { font-size: 2rem; }
+            .streak-number { font-size: 3rem; }
+            .olympics-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/es/" class="logo">
+                    <span class="logo-icon">🏀</span>
+                    <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                </a>
+
+                <button class="nav-toggle" aria-label="Alternar menú de navegación" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="players.html" class="nav-link">Jugadoras</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Jugadoras Destacadas</h4>
+                                    <a href="players/aja-wilson.html">A'ja Wilson</a>
+                                    <a href="players/caitlin-clark.html">Caitlin Clark</a>
+                                    <a href="legends.html">Leyendas WNBA</a>
+                                    <a href="players.html" class="view-all">Ver Todas las Jugadoras →</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="teams.html" class="nav-link">Equipos</a>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="leagues/wnba.html" class="nav-link">Ligas</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-section">
+                                    <h4>Historia</h4>
+                                    <a href="championships.html">Campeonatos</a>
+                                    <a href="allstar.html">Juego de Estrellas</a>
+                                    <a href="olympics.html">Olimpiadas</a>
+                                    <a href="awards.html">Premios WNBA</a>
+                                    <a href="legends.html">Leyendas</a>
+                                    <a href="rookies.html">Novatas del Año</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="stats.html" class="nav-link">Estadísticas</a></li>
+                        <li><a href="compare.html" class="nav-link">Comparar</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="../olympics.html" class="lang-btn">EN</a>
+                            <a href="olympics.html" class="lang-btn active">ES</a>
+                            <a href="../fr/olympics.html" class="lang-btn">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="olympics-hero">
+            <div class="container olympics-hero-content">
+                <div class="olympics-header">
+                    <h1>Baloncesto Femenino USA</h1>
+                    <p class="olympics-subtitle">La dinastía más dominante en la historia del baloncesto olímpico</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Olympics Content -->
+        <section class="olympics-content">
+            <div class="container">
+                <!-- Streak Banner -->
+                <div class="streak-banner">
+                    <p class="streak-number">8</p>
+                    <p class="streak-label">Medallas de Oro Olímpicas Consecutivas</p>
+                    <p class="streak-years">1996 • 2000 • 2004 • 2008 • 2012 • 2016 • 2020 • 2024</p>
+                </div>
+
+                <!-- Olympic Results Grid -->
+                <div class="olympics-grid">
+                    <article class="olympic-card">
+                        <div class="olympic-card-header">
+                            <p class="olympic-year">París 2024</p>
+                            <p class="olympic-city">Francia</p>
+                        </div>
+                        <div class="olympic-card-body">
+                            <p class="olympic-medal">🥇</p>
+                            <p class="olympic-result">Medalla de Oro</p>
+                            <p class="olympic-record">Récord: 6-0</p>
+                            <p class="olympic-mvp">Liderado por <a href="players/aja-wilson.html">A'ja Wilson</a> y <a href="players/breanna-stewart.html">Breanna Stewart</a></p>
+                        </div>
+                    </article>
+
+                    <article class="olympic-card">
+                        <div class="olympic-card-header">
+                            <p class="olympic-year">Tokio 2020</p>
+                            <p class="olympic-city">Japón</p>
+                        </div>
+                        <div class="olympic-card-body">
+                            <p class="olympic-medal">🥇</p>
+                            <p class="olympic-result">Medalla de Oro</p>
+                            <p class="olympic-record">Récord: 6-0</p>
+                            <p class="olympic-mvp">Liderado por <a href="players/breanna-stewart.html">Breanna Stewart</a> y <a href="players/aja-wilson.html">A'ja Wilson</a></p>
+                        </div>
+                    </article>
+
+                    <article class="olympic-card">
+                        <div class="olympic-card-header">
+                            <p class="olympic-year">Río 2016</p>
+                            <p class="olympic-city">Brasil</p>
+                        </div>
+                        <div class="olympic-card-body">
+                            <p class="olympic-medal">🥇</p>
+                            <p class="olympic-result">Medalla de Oro</p>
+                            <p class="olympic-record">Récord: 8-0</p>
+                            <p class="olympic-mvp">Liderado por <a href="players/diana-taurasi.html">Diana Taurasi</a> y <a href="players/sue-bird.html">Sue Bird</a></p>
+                        </div>
+                    </article>
+
+                    <article class="olympic-card">
+                        <div class="olympic-card-header">
+                            <p class="olympic-year">Londres 2012</p>
+                            <p class="olympic-city">Reino Unido</p>
+                        </div>
+                        <div class="olympic-card-body">
+                            <p class="olympic-medal">🥇</p>
+                            <p class="olympic-result">Medalla de Oro</p>
+                            <p class="olympic-record">Récord: 8-0</p>
+                            <p class="olympic-mvp">Liderado por <a href="players/diana-taurasi.html">Diana Taurasi</a> y Candace Parker</p>
+                        </div>
+                    </article>
+
+                    <article class="olympic-card">
+                        <div class="olympic-card-header">
+                            <p class="olympic-year">Pekín 2008</p>
+                            <p class="olympic-city">China</p>
+                        </div>
+                        <div class="olympic-card-body">
+                            <p class="olympic-medal">🥇</p>
+                            <p class="olympic-result">Medalla de Oro</p>
+                            <p class="olympic-record">Récord: 8-0</p>
+                            <p class="olympic-mvp">Liderado por <a href="players/diana-taurasi.html">Diana Taurasi</a> y Lisa Leslie</p>
+                        </div>
+                    </article>
+
+                    <article class="olympic-card">
+                        <div class="olympic-card-header">
+                            <p class="olympic-year">Atenas 2004</p>
+                            <p class="olympic-city">Grecia</p>
+                        </div>
+                        <div class="olympic-card-body">
+                            <p class="olympic-medal">🥇</p>
+                            <p class="olympic-result">Medalla de Oro</p>
+                            <p class="olympic-record">Récord: 8-0</p>
+                            <p class="olympic-mvp">Liderado por <a href="players/diana-taurasi.html">Diana Taurasi</a> (debut) y Lisa Leslie</p>
+                        </div>
+                    </article>
+
+                    <article class="olympic-card">
+                        <div class="olympic-card-header">
+                            <p class="olympic-year">Sídney 2000</p>
+                            <p class="olympic-city">Australia</p>
+                        </div>
+                        <div class="olympic-card-body">
+                            <p class="olympic-medal">🥇</p>
+                            <p class="olympic-result">Medalla de Oro</p>
+                            <p class="olympic-record">Récord: 8-0</p>
+                            <p class="olympic-mvp">Liderado por Lisa Leslie y Sheryl Swoopes</p>
+                        </div>
+                    </article>
+
+                    <article class="olympic-card">
+                        <div class="olympic-card-header">
+                            <p class="olympic-year">Atlanta 1996</p>
+                            <p class="olympic-city">USA</p>
+                        </div>
+                        <div class="olympic-card-body">
+                            <p class="olympic-medal">🥇</p>
+                            <p class="olympic-result">Medalla de Oro</p>
+                            <p class="olympic-record">Récord: 8-0</p>
+                            <p class="olympic-mvp">Liderado por Lisa Leslie y Sheryl Swoopes</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Olympic Legends -->
+                <div class="legends-section">
+                    <h2>Más Medallas de Oro Olímpicas (Baloncesto Femenino)</h2>
+                    <div class="legends-grid">
+                        <div class="legend-card">
+                            <p class="legend-medals">🥇🥇🥇🥇🥇</p>
+                            <p class="legend-name"><a href="players/diana-taurasi.html">Diana Taurasi</a></p>
+                            <p class="legend-count">5</p>
+                            <p class="legend-label">Medallas de Oro</p>
+                        </div>
+                        <div class="legend-card">
+                            <p class="legend-medals">🥇🥇🥇🥇🥇</p>
+                            <p class="legend-name"><a href="players/sue-bird.html">Sue Bird</a></p>
+                            <p class="legend-count">5</p>
+                            <p class="legend-label">Medallas de Oro</p>
+                        </div>
+                        <div class="legend-card">
+                            <p class="legend-medals">🥇🥇🥇🥇</p>
+                            <p class="legend-name">Lisa Leslie</p>
+                            <p class="legend-count">4</p>
+                            <p class="legend-label">Medallas de Oro</p>
+                        </div>
+                        <div class="legend-card">
+                            <p class="legend-medals">🥇🥇🥇🥇</p>
+                            <p class="legend-name">Tamika Catchings</p>
+                            <p class="legend-count">4</p>
+                            <p class="legend-label">Medallas de Oro</p>
+                        </div>
+                        <div class="legend-card">
+                            <p class="legend-medals">🥇🥇🥇</p>
+                            <p class="legend-name"><a href="players/breanna-stewart.html">Breanna Stewart</a></p>
+                            <p class="legend-count">3</p>
+                            <p class="legend-label">Medallas de Oro</p>
+                        </div>
+                        <div class="legend-card">
+                            <p class="legend-medals">🥇🥇🥇</p>
+                            <p class="legend-name"><a href="players/aja-wilson.html">A'ja Wilson</a></p>
+                            <p class="legend-count">3</p>
+                            <p class="legend-label">Medallas de Oro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="/es/" class="footer-logo">
+                        <span class="logo-icon">🏀</span>
+                        <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                    </a>
+                    <p class="footer-tagline">El recurso gratuito definitivo para el baloncesto femenino en todo el mundo.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Explorar</h4>
+                        <ul>
+                            <li><a href="players.html">Jugadoras</a></li>
+                            <li><a href="legends.html">Leyendas</a>
+                                    <a href="rookies.html">Novatas del Año</a></li>
+                            <li><a href="olympics.html">Olimpiadas</a></li>
+                            <li><a href="stats.html">Líderes Estadísticas</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Historia</h4>
+                        <ul>
+                            <li><a href="championships.html">Campeonatos</a></li>
+                            <li><a href="allstar.html">Juego de Estrellas</a></li>
+                            <li><a href="awards.html">Premios WNBA</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Idiomas</h4>
+                        <ul>
+                            <li><a href="../olympics.html">English</a></li>
+                            <li><a href="olympics.html">Español</a></li>
+                            <li><a href="../fr/olympics.html">Français</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HeroBasketball. Gratis y abierto para todos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
