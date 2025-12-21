@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Kara Lawson - Duke Women's Basketball Coach | HeroBasketball</title>
+    <meta name="description" content="Kara Lawson is the Duke Blue Devils women's basketball coach. Former WNBA champion, Olympic gold medalist, and rising star in college coaching.">
+    <meta name="keywords" content="Kara Lawson, Duke women's basketball coach, Duke Blue Devils, WNBA champion, Olympic gold medalist">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/coaches/kara-lawson/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        .coach-hero {
+            position: relative;
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #003087 0%, #002366 50%, #001a4d 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .coach-hero::before {
+            content: '😈';
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10rem;
+            opacity: 0.1;
+        }
+        .coach-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+        .breadcrumb a:hover { color: white; }
+        .coach-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .coach-avatar {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, white, #f0f0f0);
+            color: #003087;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2.5rem;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .coach-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .coach-title { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
+        .coach-school { font-size: 1rem; color: rgba(255,255,255,0.7); }
+        .coach-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .coach-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.375rem 0.75rem;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .coach-badge.highlight { background: white; color: #003087; }
+
+        .coach-content { padding: 3rem 0 4rem; background: var(--color-gray-50); }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .bio-content { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .bio-content p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .bio-content p:last-child { margin-bottom: 0; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .stat-card { background: white; padding: 1.5rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow-md); }
+        .stat-value { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; color: #003087; line-height: 1; }
+        .stat-label { font-size: 0.875rem; color: var(--color-gray-500); margin-top: 0.5rem; }
+
+        .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .achievement-card { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .achievement-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0, 48, 135, 0.1), rgba(0, 48, 135, 0.05)); border-radius: 50%; font-size: 1.5rem; }
+        .achievement-info h4 { font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--color-gray-900); margin: 0 0 0.25rem 0; }
+        .achievement-info p { font-size: 0.875rem; color: var(--color-gray-500); margin: 0; }
+
+        @media (max-width: 768px) {
+            .coach-hero::before { font-size: 4rem; opacity: 0.08; }
+            .coach-identity h1 { font-size: 1.75rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-value { font-size: 2rem; }
+        }
+        @media (min-width: 640px) {
+            .coach-header { flex-direction: row; align-items: center; }
+            .stats-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🏀</span>
+                    <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="../players.html" class="nav-link">Players</a></li>
+                        <li><a href="../teams.html" class="nav-link">Teams</a></li>
+                        <li><a href="../stats.html" class="nav-link">Stats</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="coach-hero">
+            <div class="container">
+                <div class="coach-hero-content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/">Home</a><span>/</span><span>Coaches</span><span>/</span><span>Kara Lawson</span>
+                    </nav>
+                    <div class="coach-header">
+                        <div class="coach-avatar">KL</div>
+                        <div class="coach-identity">
+                            <h1>Kara Lawson</h1>
+                            <p class="coach-title">Head Women's Basketball Coach</p>
+                            <p class="coach-school">Duke University Blue Devils</p>
+                            <div class="coach-badges">
+                                <span class="coach-badge highlight">🏆 WNBA Champion</span>
+                                <span class="coach-badge">🥇 Olympic Gold Medalist</span>
+                                <span class="coach-badge">📺 Former NBA Analyst</span>
+                                <span class="coach-badge">🏀 WNBA All-Star</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="coach-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading">📊 Coaching at Duke</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">5</div>
+                            <div class="stat-label">Seasons at Duke</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">80+</div>
+                            <div class="stat-label">Career Wins</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">NCAA Tournaments</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">1</div>
+                            <div class="stat-label">WNBA Title (Player)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">📖 About Kara Lawson</h2>
+                    <div class="bio-content">
+                        <p><strong>Kara Lawson</strong> is one of the most accomplished women to ever transition from playing to coaching at the highest levels. She became the head coach at Duke University in 2020 after a decorated career as a player, broadcaster, and NBA assistant coach.</p>
+                        <p>As a player, Lawson won a WNBA Championship with the Sacramento Monarchs (2005) and an Olympic gold medal with Team USA (2008). She was a three-time WNBA All-Star and played 12 seasons in the league. After retiring, she became one of the most respected analysts in basketball, working for ESPN.</p>
+                        <p>Before Duke, Lawson served as an assistant coach with the Boston Celtics, becoming one of the few women to coach in the NBA. At Duke, she is building the program with a focus on player development and competing in one of college basketball's toughest conferences, the ACC.</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">🏅 Career Achievements</h2>
+                    <div class="achievements-grid">
+                        <article class="achievement-card">
+                            <div class="achievement-icon">🏆</div>
+                            <div class="achievement-info">
+                                <h4>WNBA Champion</h4>
+                                <p>2005 Sacramento Monarchs</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">🥇</div>
+                            <div class="achievement-info">
+                                <h4>Olympic Gold Medal</h4>
+                                <p>2008 Beijing Olympics</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">⭐</div>
+                            <div class="achievement-info">
+                                <h4>3x WNBA All-Star</h4>
+                                <p>Elite player recognition</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">🏀</div>
+                            <div class="achievement-info">
+                                <h4>NBA Coaching Experience</h4>
+                                <p>Boston Celtics Assistant</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">📺</div>
+                            <div class="achievement-info">
+                                <h4>ESPN Analyst</h4>
+                                <p>Respected broadcaster</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">🎓</div>
+                            <div class="achievement-info">
+                                <h4>Tennessee Volunteer</h4>
+                                <p>All-American player</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 HeroBasketball. Celebrating women's basketball worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
