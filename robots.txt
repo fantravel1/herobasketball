@@ -1,71 +1,11 @@
 # HeroBasketball Robots.txt
-# The Ultimate Women's Basketball Resource
-# https://herobasketball.com
+# The ultimate free resource for women's basketball worldwide
 
-# Allow all crawlers
 User-agent: *
 Allow: /
 
 # Sitemap location
 Sitemap: https://herobasketball.com/sitemap.xml
 
-# Crawl-delay for politeness (optional, 1 second)
+# Crawl-delay for polite crawling
 Crawl-delay: 1
-
-# Specific crawler allowances for AI assistants (AEO)
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-# Standard search engine bots
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# Social media crawlers
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-# Block bad bots (optional)
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
-
-# Host directive
-Host: https://herobasketball.com

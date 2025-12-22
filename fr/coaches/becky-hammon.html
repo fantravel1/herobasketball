@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Becky Hammon - Las Vegas Aces Entraîneuse en Chef | HeroBasketball</title>
+    <meta name="description" content="Becky Hammon - Entraîneuse en Chef de Las Vegas Aces. 🏆 2x Championne WNBA.">
+    <link rel="canonical" href="https://herobasketball.com/fr/coaches/becky-hammon/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .coach-hero {
+            position: relative;
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .coach-hero::before { content: '♠️'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 10rem; opacity: 0.1; }
+        .coach-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); }
+        .coach-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .coach-avatar { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #C8102E, #a00d24); color: white; font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; border-radius: 50%; }
+        .coach-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .coach-title { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
+        .coach-school { font-size: 1rem; color: rgba(255,255,255,0.7); }
+        .coach-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .coach-badge { padding: 0.375rem 0.75rem; background: rgba(255,255,255,0.15); border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .coach-content { padding: 3rem 0 4rem; background: var(--color-gray-50); }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .bio-content { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .bio-content p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .stat-card { background: white; padding: 1.5rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow-md); }
+        .stat-value { font-family: var(--font-display); font-weight: 800; font-size: 2rem; color: var(--color-primary); }
+        .stat-label { font-size: 0.875rem; color: var(--color-gray-500); margin-top: 0.5rem; }
+        .championship-list { display: flex; flex-direction: column; gap: 1rem; }
+        .championship-card { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .championship-year { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; color: var(--color-primary); min-width: 80px; }
+        .championship-details h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; color: var(--color-gray-900); margin: 0 0 0.25rem 0; }
+        .championship-details p { font-size: 0.875rem; color: var(--color-gray-500); margin: 0; }
+        .championship-trophy { font-size: 2rem; margin-left: auto; }
+        @media (max-width: 768px) { .coach-hero::before { font-size: 4rem; opacity: 0.08; } .coach-identity h1 { font-size: 1.75rem; } }
+        @media (min-width: 640px) { .coach-header { flex-direction: row; align-items: center; } .stats-grid { grid-template-columns: repeat(4, 1fr); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/fr/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="../players.html" class="nav-link">Joueuses</a></li>
+                        <li><a href="../teams.html" class="nav-link">Équipes</a></li>
+                        <li><a href="../stats.html" class="nav-link">Statistiques</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="../../coaches/becky-hammon.html" class="lang-btn">EN</a>
+                            <a href="../coaches/becky-hammon.html" class="lang-btn ">ES</a>
+                            <a href="../../fr/coaches/becky-hammon.html" class="lang-btn active">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="coach-hero">
+            <div class="container">
+                <div class="coach-hero-content">
+                    <nav class="breadcrumb"><a href="/fr/">Accueil</a><span>/</span><span>Entraîneuses</span><span>/</span><span>Becky Hammon</span></nav>
+                    <div class="coach-header">
+                        <div class="coach-avatar">BH</div>
+                        <div class="coach-identity">
+                            <h1>Becky Hammon</h1>
+                            <p class="coach-title">Entraîneuse en Chef</p>
+                            <p class="coach-school">Las Vegas Aces</p>
+                            <div class="coach-badges">
+                                <span class="coach-badge">🏆 2x Championne WNBA</span>
+                                <span class="coach-badge">👔 Entraîneuse de l'Année WNBA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="coach-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading">📊 Bilan d'Entraîneuse</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">2</div>
+                            <div class="stat-label">Championnats WNBA</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Saisons comme EC</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">1</div>
+                            <div class="stat-label">Entraîneuse de l'Année</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">$1M+</div>
+                            <div class="stat-label">Première Entraîneuse $1M</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">📖 À Propos de Becky Hammon</h2>
+                    <div class="bio-content">
+                        <p><strong>Becky Hammon</strong> est l'une des entraîneuses les plus accomplies de l'histoire de la WNBA et une pionnière pour les femmes dans le coaching de basketball professionnel. En 2022, elle est devenue entraîneuse en chef des Las Vegas Aces et les a immédiatement menées à deux championnats consécutifs en 2022 et 2023.</p><p>Avant de devenir entraîneuse, Hammon était une joueuse légendaire de la WNBA, obtenant six sélections All-Star. Elle a fait l'histoire en 2014 en devenant la première assistante à temps plein de l'histoire de la NBA avec les San Antonio Spurs.</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">🏆 Championnats</h2>
+                    <div class="championship-list">
+                        <article class="championship-card">
+                            <div class="championship-year">2023</div>
+                            <div class="championship-details">
+                                <h4>Las Vegas Aces</h4>
+                                <p>Championnes consécutives</p>
+                            </div>
+                            <div class="championship-trophy">🏆</div>
+                        </article>
+                        <article class="championship-card">
+                            <div class="championship-year">2022</div>
+                            <div class="championship-details">
+                                <h4>Las Vegas Aces</h4>
+                                <p>Premier championnat comme EC</p>
+                            </div>
+                            <div class="championship-trophy">🏆</div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 HeroBasketball.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
