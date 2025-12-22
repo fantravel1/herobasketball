@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>NCAA Women's Basketball Teams - Top College Programs | HeroBasketball</title>
+    <meta name="description" content="Explore the top NCAA women's basketball programs. South Carolina, LSU, Stanford, Tennessee, Notre Dame, Maryland, Duke and more championship contenders.">
+    <meta name="keywords" content="NCAA women's basketball, college basketball teams, South Carolina Gamecocks, LSU Tigers, women's college basketball">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/ncaa-teams/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "NCAA Women's Basketball Teams",
+        "description": "Directory of top NCAA women's basketball programs",
+        "url": "https://herobasketball.com/ncaa-teams/"
+    }
+    </script>
+
+    <style>
+        .teams-hero { position: relative; padding: 100px 0 60px; background: linear-gradient(135deg, #00843D 0%, #006B32 50%, #004D25 100%); color: white; overflow: hidden; }
+        .teams-hero::before { content: '🎓'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 10rem; opacity: 0.1; }
+        .teams-hero-content { position: relative; z-index: 1; }
+        .teams-header h1 { font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .teams-subtitle { font-size: 1.125rem; color: rgba(255,255,255,0.9); max-width: 600px; }
+        .teams-stats { display: flex; gap: 2rem; margin-top: 2rem; }
+        .teams-stat { text-align: center; }
+        .teams-stat-value { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; }
+        .teams-stat-label { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .teams-content { padding: 2rem 0 4rem; background: var(--color-gray-50); }
+        .conference-section { margin-bottom: 3rem; }
+        .conference-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 3px solid #00843D; }
+        .conference-title { display: flex; align-items: center; gap: 0.75rem; }
+        .conference-title h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--color-gray-900); }
+        .conference-badge { padding: 0.25rem 0.75rem; background: var(--color-gray-100); border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: var(--color-gray-600); }
+        .teams-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        .team-card { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); transition: all 0.2s; text-decoration: none; }
+        .team-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .team-logo { width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; font-size: 2rem; border-radius: 0.75rem; flex-shrink: 0; }
+        .team-info { flex: 1; min-width: 0; }
+        .team-info h3 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); margin-bottom: 0.25rem; }
+        .team-info .team-coach { font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 0.5rem; }
+        .team-badges { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+        .team-badge-small { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.25rem 0.5rem; background: var(--color-gray-100); border-radius: 9999px; font-size: 0.625rem; font-weight: 600; color: var(--color-gray-600); }
+        .team-badge-small.champion { background: #FFF3CD; color: #856404; }
+        .team-arrow { color: var(--color-gray-400); font-size: 1.25rem; }
+        
+        /* Team-specific colors */
+        .team-sc .team-logo { background: linear-gradient(135deg, #73000A, #5a0008); color: white; }
+        .team-lsu .team-logo { background: linear-gradient(135deg, #461D7C, #371563); color: #FDD023; }
+        .team-stanford .team-logo { background: linear-gradient(135deg, #8C1515, #751212); color: white; }
+        .team-tennessee .team-logo { background: linear-gradient(135deg, #FF8200, #e67300); color: white; }
+        .team-nd .team-logo { background: linear-gradient(135deg, #0C2340, #091a2e); color: #C99700; }
+        .team-maryland .team-logo { background: linear-gradient(135deg, #E21833, #c41429); color: #FFD200; }
+        .team-duke .team-logo { background: linear-gradient(135deg, #003087, #002366); color: white; }
+        
+        @media (min-width: 640px) { .teams-header h1 { font-size: 3rem; } .teams-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .teams-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .teams-header h1 { font-size: 1.75rem; } .teams-hero::before { font-size: 4rem; opacity: 0.08; } .teams-stats { gap: 1rem; } .teams-stat-value { font-size: 1.5rem; } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="players.html" class="nav-link">Players</a></li>
+                        <li><a href="teams.html" class="nav-link">Teams</a></li>
+                        <li><a href="coaches.html" class="nav-link">Coaches</a></li>
+                        <li><a href="stats.html" class="nav-link">Stats</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <a href="index.html" class="lang-btn active">EN</a>
+                            <a href="es/index.html" class="lang-btn">ES</a>
+                            <a href="fr/index.html" class="lang-btn">FR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="teams-hero">
+            <div class="container">
+                <div class="teams-hero-content">
+                    <div class="teams-header">
+                        <h1>🎓 NCAA Women's Basketball</h1>
+                        <p class="teams-subtitle">The top college programs developing the next generation of WNBA stars. Championship programs, legendary coaches, and elite talent.</p>
+                    </div>
+                    <div class="teams-stats">
+                        <div class="teams-stat">
+                            <div class="teams-stat-value">7</div>
+                            <div class="teams-stat-label">Featured Programs</div>
+                        </div>
+                        <div class="teams-stat">
+                            <div class="teams-stat-value">20+</div>
+                            <div class="teams-stat-label">NCAA Championships</div>
+                        </div>
+                        <div class="teams-stat">
+                            <div class="teams-stat-value">100+</div>
+                            <div class="teams-stat-label">WNBA Players Developed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="teams-content">
+            <div class="container">
+                <div class="conference-section">
+                    <div class="conference-header">
+                        <div class="conference-title">
+                            <span style="font-size: 1.5rem;">🏆</span>
+                            <h2>Championship Programs</h2>
+                        </div>
+                        <span class="conference-badge">7 Teams</span>
+                    </div>
+                    <div class="teams-grid">
+                        <a href="ncaa-teams/south-carolina.html" class="team-card team-sc">
+                            <div class="team-logo">🐔</div>
+                            <div class="team-info">
+                                <h3>South Carolina</h3>
+                                <p class="team-coach">Coach: Dawn Staley</p>
+                                <div class="team-badges">
+                                    <span class="team-badge-small champion">🏆 3x NCAA Champions</span>
+                                    <span class="team-badge-small">👑 Current Dynasty</span>
+                                </div>
+                            </div>
+                            <span class="team-arrow">→</span>
+                        </a>
+
+                        <a href="ncaa-teams/tennessee.html" class="team-card team-tennessee">
+                            <div class="team-logo">🧡</div>
+                            <div class="team-info">
+                                <h3>Tennessee</h3>
+                                <p class="team-coach">Legacy: Pat Summitt</p>
+                                <div class="team-badges">
+                                    <span class="team-badge-small champion">🏆 8x NCAA Champions</span>
+                                    <span class="team-badge-small">🎖️ Historic Program</span>
+                                </div>
+                            </div>
+                            <span class="team-arrow">→</span>
+                        </a>
+
+                        <a href="ncaa-teams/lsu.html" class="team-card team-lsu">
+                            <div class="team-logo">🐯</div>
+                            <div class="team-info">
+                                <h3>LSU</h3>
+                                <p class="team-coach">Coach: Kim Mulkey</p>
+                                <div class="team-badges">
+                                    <span class="team-badge-small champion">🏆 2023 NCAA Champions</span>
+                                    <span class="team-badge-small">⭐ Rising Power</span>
+                                </div>
+                            </div>
+                            <span class="team-arrow">→</span>
+                        </a>
+
+                        <a href="ncaa-teams/stanford.html" class="team-card team-stanford">
+                            <div class="team-logo">🌲</div>
+                            <div class="team-info">
+                                <h3>Stanford</h3>
+                                <p class="team-coach">Legacy: Tara VanDerveer</p>
+                                <div class="team-badges">
+                                    <span class="team-badge-small champion">🏆 3x NCAA Champions</span>
+                                    <span class="team-badge-small">👑 1,216 Wins Record</span>
+                                </div>
+                            </div>
+                            <span class="team-arrow">→</span>
+                        </a>
+
+                        <a href="ncaa-teams/notre-dame.html" class="team-card team-nd">
+                            <div class="team-logo">☘️</div>
+                            <div class="team-info">
+                                <h3>Notre Dame</h3>
+                                <p class="team-coach">Coach: Niele Ivey</p>
+                                <div class="team-badges">
+                                    <span class="team-badge-small champion">🏆 2x NCAA Champions</span>
+                                    <span class="team-badge-small">🏀 9 Final Fours</span>
+                                </div>
+                            </div>
+                            <span class="team-arrow">→</span>
+                        </a>
+
+                        <a href="ncaa-teams/maryland.html" class="team-card team-maryland">
+                            <div class="team-logo">🐢</div>
+                            <div class="team-info">
+                                <h3>Maryland</h3>
+                                <p class="team-coach">Coach: Brenda Frese</p>
+                                <div class="team-badges">
+                                    <span class="team-badge-small champion">🏆 2006 NCAA Champions</span>
+                                    <span class="team-badge-small">👔 7x Big Ten COY</span>
+                                </div>
+                            </div>
+                            <span class="team-arrow">→</span>
+                        </a>
+
+                        <a href="ncaa-teams/duke.html" class="team-card team-duke">
+                            <div class="team-logo">😈</div>
+                            <div class="team-info">
+                                <h3>Duke</h3>
+                                <p class="team-coach">Coach: Kara Lawson</p>
+                                <div class="team-badges">
+                                    <span class="team-badge-small">🏀 Building Contender</span>
+                                    <span class="team-badge-small">🥇 Olympic Coach</span>
+                                </div>
+                            </div>
+                            <span class="team-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 HeroBasketball. Celebrating women's basketball worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
