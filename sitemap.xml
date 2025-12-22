@@ -106,6 +106,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://herobasketball.com/es/coaches.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://herobasketball.com/es/coaches/becky-hammon.html</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
@@ -171,7 +176,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://herobasketball.com/es/</loc>
+    <loc>https://herobasketball.com/es/index.html</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
@@ -421,6 +426,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://herobasketball.com/fr/coaches.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://herobasketball.com/fr/coaches/becky-hammon.html</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
@@ -486,7 +496,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://herobasketball.com/fr/</loc>
+    <loc>https://herobasketball.com/fr/index.html</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
@@ -749,6 +759,41 @@
     <loc>https://herobasketball.com/legends.html</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://herobasketball.com/ncaa-teams/duke.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://herobasketball.com/ncaa-teams/lsu.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://herobasketball.com/ncaa-teams/maryland.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://herobasketball.com/ncaa-teams/notre-dame.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://herobasketball.com/ncaa-teams/south-carolina.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://herobasketball.com/ncaa-teams/stanford.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://herobasketball.com/ncaa-teams/tennessee.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://herobasketball.com/olympics.html</loc>
