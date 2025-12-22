@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsTeam",
+        "name": "Duke Blue Devils Women's Basketball",
+        "sport": "Basketball",
+        "memberOf": {"@type": "SportsOrganization", "name": "NCAA"},
+        "coach": {"@type": "Person", "name": "Kara Lawson"}
+    }
+    </script>
     <style>
         .team-hero { position: relative; padding: 100px 0 60px; background: linear-gradient(135deg, #003087 0%, #002366 50%, #001a4d 100%); color: white; overflow: hidden; }
         .team-hero::before { content: '😈'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.1; }
@@ -39,6 +49,11 @@
         .coach-info h3 { font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); }
         .coach-info p { font-size: 0.875rem; color: var(--color-gray-600); }
         .coach-arrow { color: var(--color-gray-400); font-size: 1.5rem; margin-left: auto; }
+        .notable-players { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .player-card { padding: 1rem; background: white; border-radius: 0.75rem; box-shadow: var(--shadow-md); text-align: center; text-decoration: none; transition: all 0.2s; }
+        .player-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .player-card h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); }
+        .player-card p { font-size: 0.75rem; color: var(--color-gray-500); }
         @media (min-width: 640px) { .team-identity h1 { font-size: 3rem; } .team-quick-stats { grid-template-columns: repeat(4, 1fr); } }
         @media (min-width: 768px) { .team-header { flex-direction: row; align-items: center; } }
         @media (max-width: 768px) { .team-hero::before { font-size: 4rem; opacity: 0.08; } .team-identity h1 { font-size: 1.75rem; } }
@@ -97,6 +112,29 @@
                     <h2 class="section-heading">📖 Program History</h2>
                     <div class="history-card">
                         <p>The <strong>Duke Blue Devils</strong> are building toward championship contention under <a href="../coaches/kara-lawson.html" style="color: inherit; font-weight: 600;">Kara Lawson</a>. The former WNBA champion and Olympic gold medalist took over in 2020 and is recruiting elite talent to Durham.</p>
+                        <p>Duke has a rich basketball tradition and has produced multiple WNBA players. Lawson is working to elevate the program back to national prominence with her elite pedigree as a player and coach.</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">⭐ Notable Alumni</h2>
+                    <div class="notable-players">
+                        <div class="player-card">
+                            <h4>Elizabeth Williams</h4>
+                            <p>3x WNBA All-Defensive Team</p>
+                        </div>
+                        <div class="player-card">
+                            <h4>Chelsea Gray</h4>
+                            <p>2x WNBA Champion • 2022 Finals MVP</p>
+                        </div>
+                        <div class="player-card">
+                            <h4>Jasmine Thomas</h4>
+                            <p>WNBA All-Star • Connecticut Sun</p>
+                        </div>
+                        <div class="player-card">
+                            <h4>Alana Beard</h4>
+                            <p>2x Defensive POY • Champion</p>
+                        </div>
                     </div>
                 </div>
             </div>

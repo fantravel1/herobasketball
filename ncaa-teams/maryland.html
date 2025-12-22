@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsTeam",
+        "name": "Maryland Terrapins Women's Basketball",
+        "sport": "Basketball",
+        "memberOf": {"@type": "SportsOrganization", "name": "NCAA"},
+        "coach": {"@type": "Person", "name": "Brenda Frese"},
+        "award": ["2006 NCAA Championship"]
+    }
+    </script>
     <style>
         .team-hero { position: relative; padding: 100px 0 60px; background: linear-gradient(135deg, #E21833 0%, #c41429 50%, #a6111f 100%); color: white; overflow: hidden; }
         .team-hero::before { content: '🐢'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.1; }
@@ -39,6 +50,11 @@
         .coach-info h3 { font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); }
         .coach-info p { font-size: 0.875rem; color: var(--color-gray-600); }
         .coach-arrow { color: var(--color-gray-400); font-size: 1.5rem; margin-left: auto; }
+        .notable-players { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .player-card { padding: 1rem; background: white; border-radius: 0.75rem; box-shadow: var(--shadow-md); text-align: center; text-decoration: none; transition: all 0.2s; }
+        .player-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .player-card h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); }
+        .player-card p { font-size: 0.75rem; color: var(--color-gray-500); }
         @media (min-width: 640px) { .team-identity h1 { font-size: 3rem; } .team-quick-stats { grid-template-columns: repeat(4, 1fr); } }
         @media (min-width: 768px) { .team-header { flex-direction: row; align-items: center; } }
         @media (max-width: 768px) { .team-hero::before { font-size: 4rem; opacity: 0.08; } .team-identity h1 { font-size: 1.75rem; } }
@@ -96,7 +112,31 @@
                 <div class="content-section">
                     <h2 class="section-heading">📖 Program History</h2>
                     <div class="history-card">
-                        <p>The <strong>Maryland Terrapins</strong> won the 2006 NCAA Championship under <a href="../coaches/brenda-frese.html" style="color: inherit; font-weight: 600;">Brenda Frese</a> in just her fourth season. Frese has built Maryland into a perennial contender and developed numerous WNBA players.</p><div class="championships"><div class="championship-badge">🏆 2006 NCAA Champions</div></div>
+                        <p>The <strong>Maryland Terrapins</strong> won the 2006 NCAA Championship under <a href="../coaches/brenda-frese.html" style="color: inherit; font-weight: 600;">Brenda Frese</a> in just her fourth season. The championship run featured an incredible undefeated run through the ACC tournament and NCAA tournament.</p>
+                        <p>Frese has been named Big Ten Coach of the Year seven times and has consistently developed WNBA talent. Maryland is a perennial conference contender and a regular NCAA Tournament team.</p>
+                        <div class="championships"><div class="championship-badge">🏆 2006 NCAA Champions</div></div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">⭐ Notable Alumni</h2>
+                    <div class="notable-players">
+                        <div class="player-card">
+                            <h4>Crystal Langhorne</h4>
+                            <p>2x WNBA Champion • 4x All-Star</p>
+                        </div>
+                        <div class="player-card">
+                            <h4>Marissa Coleman</h4>
+                            <p>WNBA Champion • 2006 Title Team</p>
+                        </div>
+                        <div class="player-card">
+                            <h4>Alyssa Thomas</h4>
+                            <p>WNBA All-Star • Connecticut Sun</p>
+                        </div>
+                        <div class="player-card">
+                            <h4>Brionna Jones</h4>
+                            <p>WNBA 6th Woman of Year</p>
+                        </div>
                     </div>
                 </div>
             </div>
