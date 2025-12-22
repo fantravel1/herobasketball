@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsTeam",
+        "name": "LSU Tigers Women's Basketball",
+        "sport": "Basketball",
+        "memberOf": {"@type": "SportsOrganization", "name": "NCAA"},
+        "coach": {"@type": "Person", "name": "Kim Mulkey"},
+        "award": ["2023 NCAA Championship"]
+    }
+    </script>
     <style>
         .team-hero { position: relative; padding: 100px 0 60px; background: linear-gradient(135deg, #461D7C 0%, #371563 50%, #260f47 100%); color: white; overflow: hidden; }
         .team-hero::before { content: '🐯'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.1; }
@@ -39,6 +50,11 @@
         .coach-info h3 { font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); }
         .coach-info p { font-size: 0.875rem; color: var(--color-gray-600); }
         .coach-arrow { color: var(--color-gray-400); font-size: 1.5rem; margin-left: auto; }
+        .notable-players { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .player-card { padding: 1rem; background: white; border-radius: 0.75rem; box-shadow: var(--shadow-md); text-align: center; text-decoration: none; transition: all 0.2s; }
+        .player-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .player-card h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); }
+        .player-card p { font-size: 0.75rem; color: var(--color-gray-500); }
         @media (min-width: 640px) { .team-identity h1 { font-size: 3rem; } .team-quick-stats { grid-template-columns: repeat(4, 1fr); } }
         @media (min-width: 768px) { .team-header { flex-direction: row; align-items: center; } }
         @media (max-width: 768px) { .team-hero::before { font-size: 4rem; opacity: 0.08; } .team-identity h1 { font-size: 1.75rem; } }
@@ -96,7 +112,27 @@
                 <div class="content-section">
                     <h2 class="section-heading">📖 Program History</h2>
                     <div class="history-card">
-                        <p>The <strong>LSU Tigers</strong> captured their first NCAA championship in 2023 under <a href="../coaches/kim-mulkey.html" style="color: inherit; font-weight: 600;">Kim Mulkey</a>, who transformed the program in just her second season. Led by Angel Reese, the Tigers defeated Iowa in a historic final.</p><div class="championships"><div class="championship-badge">🏆 2023 NCAA Champions</div></div>
+                        <p>The <strong>LSU Tigers</strong> captured their first NCAA championship in 2023 under <a href="../coaches/kim-mulkey.html" style="color: inherit; font-weight: 600;">Kim Mulkey</a>, who transformed the program in just her second season. Led by <a href="../players/angel-reese.html" style="color: inherit; font-weight: 600;">Angel Reese</a>, the Tigers defeated Iowa in a historic final that set viewership records.</p>
+                        <p>Mulkey's arrival in Baton Rouge in 2021 immediately elevated LSU's recruiting and national profile. The 2023 championship run featured dominant performances from Reese, who became a cultural icon during March Madness.</p>
+                        <div class="championships"><div class="championship-badge">🏆 2023 NCAA Champions</div></div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">⭐ Notable Alumni</h2>
+                    <div class="notable-players">
+                        <a href="../players/angel-reese.html" class="player-card">
+                            <h4>Angel Reese</h4>
+                            <p>2023 Final Four MOP • Chicago Sky</p>
+                        </a>
+                        <div class="player-card">
+                            <h4>Sylvia Fowles</h4>
+                            <p>8x WNBA All-Star • 2x MVP</p>
+                        </div>
+                        <div class="player-card">
+                            <h4>Seimone Augustus</h4>
+                            <p>4x WNBA Champion • Hall of Fame</p>
+                        </div>
                     </div>
                 </div>
             </div>

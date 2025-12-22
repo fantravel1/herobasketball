@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsTeam",
+        "name": "Stanford Cardinal Women's Basketball",
+        "sport": "Basketball",
+        "memberOf": {"@type": "SportsOrganization", "name": "NCAA"},
+        "award": ["2021 NCAA Championship", "1992 NCAA Championship", "1990 NCAA Championship"]
+    }
+    </script>
     <style>
         .team-hero { position: relative; padding: 100px 0 60px; background: linear-gradient(135deg, #8C1515 0%, #751212 50%, #5e0f0f 100%); color: white; overflow: hidden; }
         .team-hero::before { content: '🌲'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 12rem; opacity: 0.1; }
@@ -39,6 +49,11 @@
         .coach-info h3 { font-family: var(--font-display); font-weight: 700; color: var(--color-gray-900); }
         .coach-info p { font-size: 0.875rem; color: var(--color-gray-600); }
         .coach-arrow { color: var(--color-gray-400); font-size: 1.5rem; margin-left: auto; }
+        .notable-players { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .player-card { padding: 1rem; background: white; border-radius: 0.75rem; box-shadow: var(--shadow-md); text-align: center; text-decoration: none; transition: all 0.2s; }
+        .player-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .player-card h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); }
+        .player-card p { font-size: 0.75rem; color: var(--color-gray-500); }
         @media (min-width: 640px) { .team-identity h1 { font-size: 3rem; } .team-quick-stats { grid-template-columns: repeat(4, 1fr); } }
         @media (min-width: 768px) { .team-header { flex-direction: row; align-items: center; } }
         @media (max-width: 768px) { .team-hero::before { font-size: 4rem; opacity: 0.08; } .team-identity h1 { font-size: 1.75rem; } }
