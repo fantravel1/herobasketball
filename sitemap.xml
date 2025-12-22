@@ -46,6 +46,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://herobasketball.com/coaches/geno-auriemma.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://herobasketball.com/coaches/kara-lawson.html</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
@@ -792,6 +797,11 @@
   </url>
   <url>
     <loc>https://herobasketball.com/ncaa-teams/tennessee.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://herobasketball.com/ncaa-teams/uconn.html</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
