@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>WNBL Australie | Ligue Féminine Australienne | HeroBasketball</title>
+    <meta name="description" content="WNBL: la première ligue de basketball féminin d'Australie. Melbourne Boomers, Canberra Capitals et plus d'équipes australiennes.">
+    <meta name="keywords" content="WNBL, basketball féminin Australie, Melbourne Boomers, Canberra Capitals">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://herobasketball.com/fr/leagues/wnbl/">
+    <link rel="alternate" hreflang="en" href="https://herobasketball.com/leagues/wnbl/">
+    <link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/leagues/wnbl/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SportsOrganization","name":"Women's National Basketball League","sport":"Basketball","description":"La première ligue professionnelle de basketball féminin en Australie.","foundingDate":"1981","location":{"@type":"Country","name":"Australie"}}
+    </script>
+    <style>
+        .aus-hero{position:relative;padding:100px 0 60px;background:linear-gradient(135deg,#00008B 0%,#C8102E 50%,#FFD700 100%);color:white;overflow:hidden}
+        .aus-hero::before{content:'🇦🇺';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.15}
+        .aus-hero-content{position:relative;z-index:1}.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:rgba(255,255,255,0.7);margin-bottom:1.5rem}
+        .breadcrumb a{color:rgba(255,255,255,0.7);text-decoration:none}.breadcrumb a:hover{color:white}
+        .aus-header h1{font-family:var(--font-display);font-weight:900;font-size:2.5rem;margin-bottom:0.5rem}
+        .aus-subtitle{font-size:1.125rem;color:rgba(255,255,255,0.9);max-width:600px}
+        .aus-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.2)}
+        .aus-stat{text-align:center}.aus-stat-value{font-family:var(--font-mono);font-size:1.75rem;font-weight:700}
+        .aus-stat-label{font-size:0.75rem;text-transform:uppercase;color:rgba(255,255,255,0.7)}
+        .aus-content{padding:2rem 0 4rem}.content-section{margin-bottom:3rem}
+        .section-heading{display:flex;align-items:center;gap:0.75rem;font-family:var(--font-display);font-weight:700;font-size:1.5rem;color:var(--color-gray-900);margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:3px solid #00008B}
+        .teams-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+        .team-card{padding:1.5rem;background:white;border-radius:1rem;box-shadow:var(--shadow-md);transition:all 0.2s;text-decoration:none;color:inherit;display:block}
+        .team-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+        .team-header{display:flex;align-items:center;gap:1rem}
+        .team-logo{width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:1.75rem;border-radius:0.75rem;background:linear-gradient(135deg,#00008B,#001F5B);color:white}
+        .team-info h3{font-family:var(--font-display);font-weight:700;color:var(--color-gray-900)}
+        .team-info p{font-size:0.75rem;color:var(--color-gray-500)}
+        .related-leagues{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem}
+        .related-league{display:flex;align-items:center;gap:1rem;padding:1rem;background:var(--color-gray-50);border-radius:0.75rem;text-decoration:none;color:inherit;transition:all 0.2s}
+        .related-league:hover{background:var(--color-gray-100)}.related-league-icon{font-size:1.5rem}
+        .related-league-info h4{font-family:var(--font-display);font-weight:600;color:var(--color-gray-900)}
+        .related-league-info p{font-size:0.75rem;color:var(--color-gray-500)}
+        @media(min-width:640px){.aus-header h1{font-size:3rem}.aus-stats{grid-template-columns:repeat(4,1fr)}}
+        @media(min-width:1024px){.teams-grid{grid-template-columns:repeat(4,1fr)}.related-leagues{grid-template-columns:repeat(4,1fr)}}
+        @media(max-width:768px){.aus-header h1{font-size:1.75rem}.aus-hero::before{font-size:4rem;opacity:0.08}}
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <header class="header"><nav class="nav"><div class="nav-container">
+        <a href="/fr/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+        <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false"><span class="hamburger"></span></button>
+        <div class="nav-menu" id="nav-menu"><ul class="nav-links">
+            <li class="nav-dropdown"><a href="../players.html" class="nav-link">Joueuses</a></li>
+            <li class="nav-dropdown"><a href="../teams.html" class="nav-link">Équipes</a></li>
+            <li class="nav-dropdown"><a href="wnba.html" class="nav-link" style="color:var(--color-primary);">Ligues</a></li>
+        </ul></div>
+    </div></nav></header>
+    <main id="main-content">
+        <section class="aus-hero"><div class="container"><div class="aus-hero-content">
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="/fr/">Accueil</a><span>/</span><a href="../leagues.html">Ligues</a><span>/</span><span aria-current="page">WNBL Australie</span>
+            </nav>
+            <div class="aus-header">
+                <h1>WNBL Australie</h1>
+                <p class="aus-subtitle">La première ligue de basketball féminin d'Australie. Fondée en 1981, c'est l'une des plus anciennes ligues féminines au monde.</p>
+            </div>
+            <div class="aus-stats">
+                <div class="aus-stat"><div class="aus-stat-value">8</div><div class="aus-stat-label">Équipes</div></div>
+                <div class="aus-stat"><div class="aus-stat-value">1981</div><div class="aus-stat-label">Fondée</div></div>
+                <div class="aus-stat"><div class="aus-stat-value">21</div><div class="aus-stat-label">Matchs</div></div>
+                <div class="aus-stat"><div class="aus-stat-value">Oct-Fév</div><div class="aus-stat-label">Saison</div></div>
+            </div>
+        </div></div></section>
+        <section class="aus-content"><div class="container">
+            <div class="content-section">
+                <h2 class="section-heading"><span>🏟️</span> Équipes WNBL</h2>
+                <div class="teams-grid">
+                    <a href="../intl-teams/melbourne-boomers.html" class="team-card"><div class="team-header"><div class="team-logo">💥</div><div class="team-info"><h3>Melbourne Boomers</h3><p>Melbourne</p></div></div></a>
+                    <a href="../intl-teams/canberra-capitals.html" class="team-card"><div class="team-header"><div class="team-logo" style="background:linear-gradient(135deg,#0033A0,#C8102E)">🏛️</div><div class="team-info"><h3>Canberra Capitals</h3><p>Canberra</p></div></div></a>
+                    <a href="../intl-teams/southside-flyers.html" class="team-card"><div class="team-header"><div class="team-logo" style="background:linear-gradient(135deg,#00A651,#FDB913)">✈️</div><div class="team-info"><h3>Southside Flyers</h3><p>Melbourne</p></div></div></a>
+                    <a href="../intl-teams/perth-lynx.html" class="team-card"><div class="team-header"><div class="team-logo" style="background:linear-gradient(135deg,#E31837,#000)">🐆</div><div class="team-info"><h3>Perth Lynx</h3><p>Perth</p></div></div></a>
+                </div>
+            </div>
+            <div class="content-section">
+                <h2 class="section-heading"><span>🌍</span> Explorer d'Autres Ligues</h2>
+                <div class="related-leagues">
+                    <a href="wnba.html" class="related-league"><span class="related-league-icon">🇺🇸</span><div class="related-league-info"><h4>WNBA</h4><p>États-Unis</p></div></a>
+                    <a href="wjbl.html" class="related-league"><span class="related-league-icon">🇯🇵</span><div class="related-league-info"><h4>WJBL</h4><p>Japon</p></div></a>
+                    <a href="wkbl.html" class="related-league"><span class="related-league-icon">🇰🇷</span><div class="related-league-info"><h4>WKBL</h4><p>Corée du Sud</p></div></a>
+                    <a href="wcba.html" class="related-league"><span class="related-league-icon">🇨🇳</span><div class="related-league-info"><h4>WCBA</h4><p>Chine</p></div></a>
+                </div>
+            </div>
+        </div></section>
+    </main>
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. Tous droits réservés.</p></div></div></footer>
+    <script src="../../script.js"></script>
+</body>
+</html>
