@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Ann Meyers Stats, Bio et Carrière | Pionnière du Basketball Féminin | HeroBasketball</title>
+    <meta name="description" content="Ann Meyers: Première femme à recevoir une bourse complète à UCLA, première à signer un contrat NBA. 4x All-American, médaillée olympique.">
+    <meta name="keywords" content="Ann Meyers, UCLA Bruins, pionnière du basketball féminin, premier contrat NBA, médaillée olympique, Hall of Fame">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/fr/players/ann-meyers/">
+    <link rel="alternate" hreflang="en" href="https://herobasketball.com/players/ann-meyers/">
+    <link rel="alternate" hreflang="es" href="https://herobasketball.com/es/players/ann-meyers/">
+    <link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/players/ann-meyers/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#2774AE">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <style>
+        .player-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #2774AE 0%, #FFD100 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .player-hero::before { content: '🌟'; position: absolute; right: 5%; top: 20%; font-size: 10rem; opacity: 0.1; }
+        .player-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); }
+        .player-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .player-avatar-large { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2774AE, #1a4d7d); color: white; font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .player-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .player-nickname { font-size: 1.25rem; color: #2774AE; background: white; padding: 0.25rem 0.75rem; border-radius: 0.25rem; display: inline-block; margin-bottom: 0.5rem; font-weight: 700; }
+        .player-meta { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 1rem; color: rgba(255,255,255,0.9); }
+        .player-meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        .player-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .player-badge { padding: 0.375rem 0.75rem; background: rgba(255,255,255,0.15); border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .player-badge.goat { background: linear-gradient(135deg, #FFD700, #FFA500); color: #2774AE; }
+        .player-quick-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); }
+        .quick-stat { text-align: center; }
+        .quick-stat-value { font-family: var(--font-mono); font-size: 1.75rem; font-weight: 700; }
+        .quick-stat-label { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .player-content { padding: 2rem 0 4rem; }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .bio-content { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .bio-content p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .legend-callout { background: linear-gradient(135deg, rgba(39, 116, 174, 0.1), rgba(255, 209, 0, 0.1)); border-left: 4px solid #2774AE; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .legend-callout p { margin: 0; font-weight: 500; color: var(--color-gray-800); }
+        .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .info-card { background: white; padding: 1.25rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .info-card-label { font-size: 0.75rem; text-transform: uppercase; color: var(--color-gray-400); margin-bottom: 0.25rem; }
+        .info-card-value { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); }
+        .awards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .award-card { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .award-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(39, 116, 174, 0.2), rgba(39, 116, 174, 0.1)); border-radius: 50%; font-size: 1.5rem; }
+        .award-info h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); }
+        .award-info p { font-size: 0.75rem; color: var(--color-gray-500); }
+        @media (min-width: 640px) { .player-identity h1 { font-size: 3rem; } .player-quick-stats { grid-template-columns: repeat(5, 1fr); } .info-grid { grid-template-columns: repeat(4, 1fr); } }
+        @media (min-width: 768px) { .player-header { flex-direction: row; align-items: center; } .player-avatar-large { width: 150px; height: 150px; font-size: 3rem; } .awards-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .player-hero::before { font-size: 4rem; opacity: 0.08; } .player-header h1 { font-size: 1.75rem; } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <main id="main-content">
+        <section class="player-hero">
+            <div class="container">
+                <div class="player-hero-content">
+                    <nav class="breadcrumb"><a href="/fr/">Accueil</a><span>/</span><a href="/fr/players.html">Joueuses</a><span>/</span><span>Ann Meyers</span></nav>
+                    <div class="player-header">
+                        <div class="player-avatar-large">AM</div>
+                        <div class="player-identity">
+                            <div class="player-nickname">La Pionnière</div>
+                            <h1>Ann Meyers</h1>
+                            <div class="player-meta">
+                                <span class="player-meta-item"><span>🏀</span><span>UCLA Bruins</span></span>
+                                <span class="player-meta-item"><span>📍</span><span>Meneuse</span></span>
+                                <span class="player-meta-item"><span>🇺🇸</span><span>États-Unis</span></span>
+                            </div>
+                            <div class="player-badges">
+                                <span class="player-badge goat">🌟 Pionnière</span>
+                                <span class="player-badge">⭐ 4x All-American</span>
+                                <span class="player-badge">🥈 Argent Olympique 1976</span>
+                                <span class="player-badge">🏛️ Hall of Fame 1993</span>
+                                <span class="player-badge">📜 Premier Contrat NBA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-quick-stats">
+                        <div class="quick-stat"><div class="quick-stat-value">1ère</div><div class="quick-stat-label">Bourse Complète</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">4x</div><div class="quick-stat-label">All-American</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">17.4</div><div class="quick-stat-label">PPM Carrière</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">90-18</div><div class="quick-stat-label">Bilan Universitaire</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">#15</div><div class="quick-stat-label">Maillot</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="player-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📖</span> Biographie</h2>
+                    <div class="bio-content">
+                        <p><strong>Ann Meyers</strong> a brisé les barrières tout au long de sa carrière, devenant l'une des figures les plus importantes de l'histoire du basketball féminin. Elle a été la première femme à recevoir une bourse athlétique complète à UCLA et est ensuite devenue la première femme à signer un contrat avec une équipe NBA.</p>
+                        <div class="legend-callout">
+                            <p>"Ann Meyers a ouvert des portes qui n'avaient jamais été ouvertes auparavant. Chaque joueuse de basketball aujourd'hui lui doit une dette de gratitude."</p>
+                        </div>
+                        <p>Née le 26 mars 1955 à San Diego, Californie, Meyers venait d'une famille athlétique. À UCLA de 1974 à 1978, elle est devenue la première joueuse quatre fois All-American dans l'histoire du basketball féminin.</p>
+                        <p>En 1976, Meyers a représenté les États-Unis aux Jeux Olympiques de Montréal, où le basketball féminin a fait ses débuts olympiques.</p>
+                        <p>En 1979, elle a fait l'histoire à nouveau en signant un contrat avec les Indiana Pacers, devenant la première femme à signer avec une équipe NBA.</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📋</span> Informations de la Joueuse</h2>
+                    <div class="info-grid">
+                        <div class="info-card"><div class="info-card-label">Taille</div><div class="info-card-value">1.75 m</div></div>
+                        <div class="info-card"><div class="info-card-label">Position</div><div class="info-card-value">Meneuse</div></div>
+                        <div class="info-card"><div class="info-card-label">Naissance</div><div class="info-card-value">26 mars 1955</div></div>
+                        <div class="info-card"><div class="info-card-label">Lieu de Naissance</div><div class="info-card-value">San Diego, CA</div></div>
+                        <div class="info-card"><div class="info-card-label">Université</div><div class="info-card-value">UCLA (1974-78)</div></div>
+                        <div class="info-card"><div class="info-card-label">Lycée</div><div class="info-card-value">Sonora HS</div></div>
+                        <div class="info-card"><div class="info-card-label">Hall of Fame</div><div class="info-card-value">Promotion 1993</div></div>
+                        <div class="info-card"><div class="info-card-label">Numéro de Maillot</div><div class="info-card-value">#15 (Retiré)</div></div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>🏆</span> Prix et Honneurs</h2>
+                    <div class="awards-grid">
+                        <div class="award-card">
+                            <div class="award-icon">⭐</div>
+                            <div class="award-info"><h4>4x All-American</h4><p>1975, 1976, 1977, 1978</p></div>
+                        </div>
+                        <div class="award-card">
+                            <div class="award-icon">🥈</div>
+                            <div class="award-info"><h4>Médaille d'Argent Olympique</h4><p>1976 Montréal</p></div>
+                        </div>
+                        <div class="award-card">
+                            <div class="award-icon">🏛️</div>
+                            <div class="award-info"><h4>Hall of Fame</h4><p>Intronisée 1993</p></div>
+                        </div>
+                        <div class="award-card">
+                            <div class="award-icon">🌍</div>
+                            <div class="award-info"><h4>Hall of Fame FIBA</h4><p>Promotion 2007</p></div>
+                        </div>
+                        <div class="award-card">
+                            <div class="award-icon">🏆</div>
+                            <div class="award-info"><h4>Trophée Wade</h4><p>1978 - Meilleure Joueuse</p></div>
+                        </div>
+                        <div class="award-card">
+                            <div class="award-icon">👑</div>
+                            <div class="award-info"><h4>Maillot #15 Retiré</h4><p>UCLA Bruins</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 HeroBasketball. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

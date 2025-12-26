@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Van Chancellor - Entraîneur de la Dynastie Houston Comets | HeroBasketball</title>
+    <meta name="description" content="Van Chancellor: Seul entraîneur à gagner 4 championnats WNBA consécutifs avec Houston Comets (1997-2000). Bâtisseur de la plus grande dynastie de l'histoire de la WNBA.">
+    <meta name="keywords" content="Van Chancellor, Houston Comets, entraîneur WNBA, entraîneur champion WNBA, Hall of Fame, basketball féminin">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/fr/coaches/van-chancellor/">
+    <link rel="alternate" hreflang="en" href="https://herobasketball.com/coaches/van-chancellor/">
+    <link rel="alternate" hreflang="es" href="https://herobasketball.com/es/coaches/van-chancellor/">
+    <link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/coaches/van-chancellor/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#CE1141">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <style>
+        .coach-hero {
+            position: relative;
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #CE1141 0%, #8B0000 50%, #5a0a0a 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .coach-hero::before {
+            content: '🏆';
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10rem;
+            opacity: 0.1;
+        }
+        .coach-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+        .breadcrumb a:hover { color: white; }
+        .coach-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .coach-avatar {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #C4CED4, #a0aab0);
+            color: #CE1141;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2.5rem;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .coach-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .coach-title { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
+        .coach-school { font-size: 1rem; color: rgba(255,255,255,0.7); }
+        .coach-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .coach-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.375rem 0.75rem;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .coach-badge.champion { background: linear-gradient(135deg, #FFD700, #FFA500); color: #CE1141; }
+        .coach-content { padding: 3rem 0 4rem; background: var(--color-gray-50); }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .bio-content { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .bio-content p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .bio-content p:last-child { margin-bottom: 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .stat-card { background: white; padding: 1.5rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow-md); }
+        .stat-value { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; color: #CE1141; line-height: 1; }
+        .stat-label { font-size: 0.875rem; color: var(--color-gray-500); margin-top: 0.5rem; }
+        .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .achievement-card { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .achievement-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(206, 17, 65, 0.1), rgba(206, 17, 65, 0.05)); border-radius: 50%; font-size: 1.5rem; }
+        .achievement-info h4 { font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--color-gray-900); margin: 0 0 0.25rem 0; }
+        .achievement-info p { font-size: 0.875rem; color: var(--color-gray-500); margin: 0; }
+        @media (max-width: 768px) {
+            .coach-hero::before { font-size: 4rem; opacity: 0.08; }
+            .coach-identity h1 { font-size: 1.75rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-value { font-size: 2rem; }
+        }
+        @media (min-width: 640px) {
+            .coach-header { flex-direction: row; align-items: center; }
+            .stats-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <main id="main-content">
+        <section class="coach-hero">
+            <div class="container">
+                <div class="coach-hero-content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/fr/">Accueil</a><span>/</span><a href="/fr/coaches.html">Entraîneurs</a><span>/</span><span>Van Chancellor</span>
+                    </nav>
+                    <div class="coach-header">
+                        <div class="coach-avatar">VC</div>
+                        <div class="coach-identity">
+                            <h1>Van Chancellor</h1>
+                            <p class="coach-title">Entraîneur Principal (Retraité)</p>
+                            <p class="coach-school">Houston Comets (1997-2006)</p>
+                            <div class="coach-badges">
+                                <span class="coach-badge champion">🏆 4x Champion WNBA</span>
+                                <span class="coach-badge">👔 2x Entraîneur de l'Année</span>
+                                <span class="coach-badge">🏛️ Hall of Fame 2007</span>
+                                <span class="coach-badge">👑 Bâtisseur de Dynastie</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="coach-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📖</span> Biographie</h2>
+                    <div class="bio-content">
+                        <p><strong>Van Chancellor</strong> est l'architecte de la plus grande dynastie de l'histoire de la WNBA. En tant qu'entraîneur principal des Houston Comets de 1997 à 2006, il a mené l'équipe à quatre championnats WNBA consécutifs (1997-2000) - un exploit qui n'a jamais été reproduit.</p>
+                        <p>Né le 19 septembre 1943 à Louisville, Mississippi, Chancellor a commencé sa carrière d'entraîneur dans les années 60 et a passé 19 ans à Ole Miss (1978-1997), où il a compilé un bilan remarquable de 439-154.</p>
+                        <p>Lorsque la WNBA a été fondée en 1997, Chancellor a été choisi pour diriger les Houston Comets. Avec des stars comme Cynthia Cooper, Sheryl Swoopes et Tina Thompson, il a construit une équipe qui a dominé les premières années de la ligue.</p>
+                        <p>Il a été intronisé au Naismith Memorial Basketball Hall of Fame et au Women's Basketball Hall of Fame en 2007.</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📊</span> Statistiques de Carrière</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">4</div>
+                            <div class="stat-label">Championnats WNBA</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">211</div>
+                            <div class="stat-label">Victoires WNBA</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">.596</div>
+                            <div class="stat-label">% de Victoires</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">10</div>
+                            <div class="stat-label">Saisons WNBA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>🏅</span> Réalisations et Honneurs</h2>
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🏆</div>
+                            <div class="achievement-info">
+                                <h4>4x Champion WNBA</h4>
+                                <p>1997, 1998, 1999, 2000</p>
+                            </div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">👔</div>
+                            <div class="achievement-info">
+                                <h4>2x Entraîneur de l'Année WNBA</h4>
+                                <p>1997, 1999</p>
+                            </div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🏛️</div>
+                            <div class="achievement-info">
+                                <h4>Naismith Hall of Fame</h4>
+                                <p>Intronisé 2007</p>
+                            </div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🥇</div>
+                            <div class="achievement-info">
+                                <h4>Championnat Mondial FIBA</h4>
+                                <p>Médaille d'Or - USA 2002</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 HeroBasketball. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
