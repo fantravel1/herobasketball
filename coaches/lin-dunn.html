@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Lin Dunn - Indiana Fever Head Coach | HeroBasketball</title>
+    <meta name="description" content="Lin Dunn is a legendary WNBA coach who led the Indiana Fever to the 2012 WNBA Championship. A pioneer of women's basketball coaching with over 900 career wins.">
+    <meta name="keywords" content="Lin Dunn, Indiana Fever coach, WNBA coach, women's basketball coach, 2012 WNBA Champion">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/coaches/lin-dunn/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#002D62">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        .coach-hero {
+            position: relative;
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #002D62 0%, #001a3d 50%, #000d1f 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .coach-hero::before {
+            content: '🔥';
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10rem;
+            opacity: 0.1;
+        }
+        .coach-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+        .breadcrumb a:hover { color: white; }
+        .coach-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .coach-avatar {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #FDBB30, #e5a820);
+            color: #002D62;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2.5rem;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .coach-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .coach-title { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
+        .coach-school { font-size: 1rem; color: rgba(255,255,255,0.7); }
+        .coach-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .coach-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.375rem 0.75rem;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .coach-badge.champion { background: linear-gradient(135deg, #FDBB30, #e5a820); color: #002D62; }
+
+        .coach-content { padding: 3rem 0 4rem; background: var(--color-gray-50); }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .bio-content { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .bio-content p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .bio-content p:last-child { margin-bottom: 0; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .stat-card { background: white; padding: 1.5rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow-md); }
+        .stat-value { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; color: var(--color-primary); line-height: 1; }
+        .stat-label { font-size: 0.875rem; color: var(--color-gray-500); margin-top: 0.5rem; }
+
+        .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .achievement-card { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .achievement-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0, 45, 98, 0.1), rgba(0, 45, 98, 0.05)); border-radius: 50%; font-size: 1.5rem; }
+        .achievement-info h4 { font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--color-gray-900); margin: 0 0 0.25rem 0; }
+        .achievement-info p { font-size: 0.875rem; color: var(--color-gray-500); margin: 0; }
+
+        .championship-list { display: flex; flex-direction: column; gap: 1rem; }
+        .championship-card { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .championship-year { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; color: var(--color-primary); min-width: 80px; }
+        .championship-details h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; color: var(--color-gray-900); margin: 0 0 0.25rem 0; }
+        .championship-details p { font-size: 0.875rem; color: var(--color-gray-500); margin: 0; }
+        .championship-trophy { font-size: 2rem; margin-left: auto; }
+
+        .coaching-history { display: flex; flex-direction: column; gap: 1rem; }
+        .history-card { display: flex; align-items: center; gap: 1.5rem; padding: 1.25rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .history-years { font-family: var(--font-mono); font-weight: 600; font-size: 0.875rem; color: var(--color-primary); min-width: 100px; }
+        .history-details h4 { font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--color-gray-900); margin: 0 0 0.25rem 0; }
+        .history-details p { font-size: 0.875rem; color: var(--color-gray-500); margin: 0; }
+
+        @media (max-width: 768px) {
+            .coach-hero::before { font-size: 4rem; opacity: 0.08; }
+            .coach-identity h1 { font-size: 1.75rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-value { font-size: 2rem; }
+        }
+        @media (min-width: 640px) {
+            .coach-header { flex-direction: row; align-items: center; }
+            .stats-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🏀</span>
+                    <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="../players.html" class="nav-link">Players</a></li>
+                        <li><a href="../teams.html" class="nav-link">Teams</a></li>
+                        <li><a href="../stats.html" class="nav-link">Stats</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="coach-hero">
+            <div class="container">
+                <div class="coach-hero-content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/">Home</a><span>/</span><span>Coaches</span><span>/</span><span>Lin Dunn</span>
+                    </nav>
+                    <div class="coach-header">
+                        <div class="coach-avatar">LD</div>
+                        <div class="coach-identity">
+                            <h1>Lin Dunn</h1>
+                            <p class="coach-title">Head Coach</p>
+                            <p class="coach-school"><a href="../teams/indiana-fever.html" style="color: inherit;">Indiana Fever</a></p>
+                            <div class="coach-badges">
+                                <span class="coach-badge champion">🏆 WNBA Champion</span>
+                                <span class="coach-badge">🏛️ Hall of Fame</span>
+                                <span class="coach-badge">📊 900+ Career Wins</span>
+                                <span class="coach-badge">👑 Pioneer Coach</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="coach-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading">📊 Coaching Record</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">1</div>
+                            <div class="stat-label">WNBA Championship</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">900+</div>
+                            <div class="stat-label">Career Wins</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">40+</div>
+                            <div class="stat-label">Years Coaching</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">WNBA Teams</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">📖 About Lin Dunn</h2>
+                    <div class="bio-content">
+                        <p><strong>Lin Dunn</strong> is one of the true pioneers of women's basketball coaching, with a career spanning over four decades. She led the Indiana Fever to their first WNBA Championship in 2012, capping a remarkable coaching journey that began long before the WNBA existed.</p>
+                        <p>Dunn was an original WNBA coach, serving as the first head coach of the Seattle Storm (2000-2002) after previous stints with the Portland Power (ABL) and various college programs. Her ability to develop players and build winning cultures made her one of the most respected figures in women's basketball.</p>
+                        <p>After retiring in 2014, Dunn returned to coaching in 2024 when the Indiana Fever, now led by rookie sensation Caitlin Clark, needed an experienced hand. Her return demonstrates her enduring passion for the game and her commitment to women's basketball. She was inducted into the Women's Basketball Hall of Fame in 2014.</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">🏆 WNBA Championship</h2>
+                    <div class="championship-list">
+                        <article class="championship-card">
+                            <div class="championship-year">2012</div>
+                            <div class="championship-details">
+                                <h4>Indiana Fever</h4>
+                                <p>Defeated Minnesota Lynx • Tamika Catchings Finals MVP</p>
+                            </div>
+                            <div class="championship-trophy">🏆</div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">📜 Coaching History</h2>
+                    <div class="coaching-history">
+                        <article class="history-card">
+                            <div class="history-years">2024-Present</div>
+                            <div class="history-details">
+                                <h4>Indiana Fever</h4>
+                                <p>Head Coach • Return from retirement</p>
+                            </div>
+                        </article>
+                        <article class="history-card">
+                            <div class="history-years">2008-2014</div>
+                            <div class="history-details">
+                                <h4>Indiana Fever</h4>
+                                <p>Head Coach • 2012 WNBA Champion</p>
+                            </div>
+                        </article>
+                        <article class="history-card">
+                            <div class="history-years">2000-2002</div>
+                            <div class="history-details">
+                                <h4>Seattle Storm</h4>
+                                <p>First Head Coach in franchise history</p>
+                            </div>
+                        </article>
+                        <article class="history-card">
+                            <div class="history-years">1996-1998</div>
+                            <div class="history-details">
+                                <h4>Portland Power (ABL)</h4>
+                                <p>Head Coach</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">🏅 Career Achievements</h2>
+                    <div class="achievements-grid">
+                        <article class="achievement-card">
+                            <div class="achievement-icon">🏆</div>
+                            <div class="achievement-info">
+                                <h4>WNBA Champion</h4>
+                                <p>2012 Indiana Fever</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">🏛️</div>
+                            <div class="achievement-info">
+                                <h4>Hall of Fame</h4>
+                                <p>Women's Basketball HOF 2014</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">📊</div>
+                            <div class="achievement-info">
+                                <h4>900+ Career Wins</h4>
+                                <p>All levels combined</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">👑</div>
+                            <div class="achievement-info">
+                                <h4>Pioneer Coach</h4>
+                                <p>Original WNBA era coach</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 HeroBasketball. Celebrating women's basketball worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
