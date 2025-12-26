@@ -1618,6 +1618,10 @@
   <url><loc>https://herobasketball.com/fr/coaches/noelle-quinn.html</loc><lastmod>2025-12-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://herobasketball.com/fr/coaches/stephanie-white.html</loc><lastmod>2025-12-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://herobasketball.com/fr/coaches/teresa-weatherspoon.html</loc><lastmod>2025-12-25</lastmod><priority>0.7</priority></url>
+  <!-- Video Pages -->
+  <url><loc>https://herobasketball.com/videos.html</loc><lastmod>2025-12-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://herobasketball.com/es/videos.html</loc><lastmod>2025-12-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://herobasketball.com/fr/videos.html</loc><lastmod>2025-12-26</lastmod><priority>0.8</priority></url>
   <!-- Batch 3 Player Pages (Legends) -->
   <url><loc>https://herobasketball.com/players/becky-hammon.html</loc><lastmod>2025-12-26</lastmod><priority>0.9</priority></url>
   <url><loc>https://herobasketball.com/players/cappie-pondexter.html</loc><lastmod>2025-12-26</lastmod><priority>0.8</priority></url>
