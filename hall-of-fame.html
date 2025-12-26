@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Women's Basketball Hall of Fame - Legends & Icons | HeroBasketball</title>
+    <meta name="description" content="Celebrate the greatest women's basketball players of all time. Hall of Fame inductees, WNBA legends, Olympic champions, and pioneers who shaped the game.">
+    <meta name="keywords" content="women's basketball hall of fame, WNBA legends, greatest female basketball players, basketball pioneers, Olympic basketball champions">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herobasketball.com/hall-of-fame.html">
+    <meta property="og:title" content="Women's Basketball Hall of Fame | HeroBasketball">
+    <meta property="og:description" content="Celebrate the greatest women's basketball players of all time.">
+
+    <link rel="canonical" href="https://herobasketball.com/hall-of-fame.html">
+    <link rel="alternate" hreflang="en" href="https://herobasketball.com/hall-of-fame.html">
+    <link rel="alternate" hreflang="es" href="https://herobasketball.com/es/hall-of-fame.html">
+    <link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/hall-of-fame.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#5B2C6F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .hof-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #4a1942 50%, #16213e 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hof-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        .hof-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .hof-hero .trophy {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        .hof-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .hof-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .hof-stat {
+            text-align: center;
+        }
+        .hof-stat-num {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffd700;
+        }
+        .hof-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .era-section {
+            padding: 4rem 0;
+        }
+        .era-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .era-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .era-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+        .era-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .legends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .legend-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .legend-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .legend-banner {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .legend-avatar {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            font-weight: 800;
+            position: absolute;
+            bottom: -40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border: 4px solid white;
+        }
+        .legend-info {
+            padding: 3rem 1.5rem 1.5rem;
+            text-align: center;
+        }
+        .legend-info h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            color: #1a1a2e;
+        }
+        .legend-info .era {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.75rem;
+        }
+        .legend-accolades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .accolade {
+            background: #f0f0f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #555;
+        }
+        .accolade.gold {
+            background: linear-gradient(135deg, #ffd700, #ffed4a);
+            color: #1a1a2e;
+        }
+        .featured-legend {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 100%);
+            padding: 4rem 0;
+            color: white;
+        }
+        .featured-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .featured-avatar {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #ffd700, #ff6b35);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+        }
+        .featured-text h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .featured-text .subtitle {
+            color: #ffd700;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .featured-text p {
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .featured-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .featured-stat {
+            text-align: center;
+        }
+        .featured-stat-num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffd700;
+        }
+        .timeline-section {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #e91e63, #9c27b0);
+            border-radius: 2px;
+        }
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 50%;
+        }
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 350px;
+            margin-right: 2rem;
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 0;
+            margin-left: 2rem;
+        }
+        .timeline-year {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #e91e63;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-content h3 {
+            font-size: 1rem;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-content p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .hof-hero h1 { font-size: 2rem; }
+            .featured-content { grid-template-columns: 1fr; text-align: center; }
+            .timeline::before { left: 20px; }
+            .timeline-item, .timeline-item:nth-child(even) {
+                padding-left: 50px;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+            .timeline-content, .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <main id="main-content">
+        <section class="hof-hero">
+            <div class="container">
+                <span class="trophy">🏆</span>
+                <h1>Hall of Fame</h1>
+                <p>Celebrating the legends who shaped women's basketball - the pioneers, champions, and icons whose legacy continues to inspire generations</p>
+                <div class="hof-stats">
+                    <div class="hof-stat">
+                        <div class="hof-stat-num">150+</div>
+                        <div class="hof-stat-label">Hall of Famers</div>
+                    </div>
+                    <div class="hof-stat">
+                        <div class="hof-stat-num">50+</div>
+                        <div class="hof-stat-label">Olympic Golds</div>
+                    </div>
+                    <div class="hof-stat">
+                        <div class="hof-stat-num">27</div>
+                        <div class="hof-stat-label">WNBA Seasons</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Legend -->
+        <section class="featured-legend">
+            <div class="container">
+                <div class="featured-content">
+                    <div class="featured-avatar">DT</div>
+                    <div class="featured-text">
+                        <h2>Diana Taurasi</h2>
+                        <div class="subtitle">The Greatest of All Time</div>
+                        <p>With more points than any player in WNBA history, Diana Taurasi has defined excellence for two decades. A 3-time WNBA champion, 5-time Olympic gold medalist, and the league's all-time leading scorer, her competitive fire and clutch performances have made her the undisputed GOAT.</p>
+                        <div class="featured-stats">
+                            <div class="featured-stat">
+                                <div class="featured-stat-num">10,500+</div>
+                                <div class="hof-stat-label">Career Points</div>
+                            </div>
+                            <div class="featured-stat">
+                                <div class="featured-stat-num">3x</div>
+                                <div class="hof-stat-label">WNBA Champion</div>
+                            </div>
+                            <div class="featured-stat">
+                                <div class="featured-stat-num">5x</div>
+                                <div class="hof-stat-label">Olympic Gold</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pioneers Era -->
+        <section class="era-section">
+            <div class="container">
+                <div class="era-header">
+                    <h2>The Pioneers (1970s-1996)</h2>
+                    <p>The trailblazers who fought for recognition and built the foundation</p>
+                </div>
+                <div class="legends-grid">
+                    <a href="/players/teresa-edwards.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #002868, #BF0A30);">
+                            <div class="legend-avatar" style="color: #002868;">TE</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Teresa Edwards</h3>
+                            <div class="era">1984-2000 • USA</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">5x Olympian</span>
+                                <span class="accolade gold">4x Gold</span>
+                                <span class="accolade">Hall of Fame</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/cheryl-miller.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #990000, #FFC72C);">
+                            <div class="legend-avatar" style="color: #990000;">CM</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Cheryl Miller</h3>
+                            <div class="era">1982-1986 • USC</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">Olympic Gold</span>
+                                <span class="accolade">3x Naismith</span>
+                                <span class="accolade">Hall of Fame</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/ann-meyers.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #2774AE, #FFD100);">
+                            <div class="legend-avatar" style="color: #2774AE;">AM</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Ann Meyers Drysdale</h3>
+                            <div class="era">1974-1979 • UCLA</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">Olympic Silver</span>
+                                <span class="accolade">4x All-American</span>
+                                <span class="accolade">Hall of Fame</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/nancy-lieberman.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #461D7C, #FDD023);">
+                            <div class="legend-avatar" style="color: #461D7C;">NL</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Nancy Lieberman</h3>
+                            <div class="era">1976-2008 • Old Dominion</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">Olympic Silver</span>
+                                <span class="accolade">2x Wade Trophy</span>
+                                <span class="accolade">Hall of Fame</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WNBA Originals -->
+        <section class="era-section">
+            <div class="container">
+                <div class="era-header">
+                    <h2>WNBA Originals (1997-2005)</h2>
+                    <p>The founding stars who launched the professional era</p>
+                </div>
+                <div class="legends-grid">
+                    <a href="/players/cynthia-cooper.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #CE1141, #000000);">
+                            <div class="legend-avatar" style="color: #CE1141;">CC</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Cynthia Cooper</h3>
+                            <div class="era">1997-2003 • Houston Comets</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">4x Champion</span>
+                                <span class="accolade gold">2x MVP</span>
+                                <span class="accolade">2x Finals MVP</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/sheryl-swoopes.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #CE1141, #000000);">
+                            <div class="legend-avatar" style="color: #CE1141;">SS</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Sheryl Swoopes</h3>
+                            <div class="era">1997-2011 • Houston Comets</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">4x Champion</span>
+                                <span class="accolade gold">3x MVP</span>
+                                <span class="accolade gold">3x Olympic Gold</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/lisa-leslie.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #552583, #FDB927);">
+                            <div class="legend-avatar" style="color: #552583;">LL</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Lisa Leslie</h3>
+                            <div class="era">1997-2009 • LA Sparks</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">2x Champion</span>
+                                <span class="accolade gold">3x MVP</span>
+                                <span class="accolade">First WNBA Dunk</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/tina-thompson.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #CE1141, #000000);">
+                            <div class="legend-avatar" style="color: #CE1141;">TT</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Tina Thompson</h3>
+                            <div class="era">1997-2013 • Houston Comets</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">4x Champion</span>
+                                <span class="accolade">9x All-Star</span>
+                                <span class="accolade">First Draft Pick</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynasty Era -->
+        <section class="era-section">
+            <div class="container">
+                <div class="era-header">
+                    <h2>Dynasty Builders (2006-2015)</h2>
+                    <p>Champions who defined winning and excellence</p>
+                </div>
+                <div class="legends-grid">
+                    <a href="/players/diana-taurasi.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #1D1160, #E56020);">
+                            <div class="legend-avatar" style="color: #1D1160;">DT</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Diana Taurasi</h3>
+                            <div class="era">2004-Present • Phoenix Mercury</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">3x Champion</span>
+                                <span class="accolade gold">All-Time Scorer</span>
+                                <span class="accolade gold">5x Olympic Gold</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/sue-bird.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #2C5234, #FFC72C);">
+                            <div class="legend-avatar" style="color: #2C5234;">SB</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Sue Bird</h3>
+                            <div class="era">2002-2023 • Seattle Storm</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">4x Champion</span>
+                                <span class="accolade gold">5x Olympic Gold</span>
+                                <span class="accolade">All-Time Assists</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/tamika-catchings.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #002D62, #FDBB30);">
+                            <div class="legend-avatar" style="color: #002D62;">TC</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Tamika Catchings</h3>
+                            <div class="era">2002-2016 • Indiana Fever</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">Champion</span>
+                                <span class="accolade gold">MVP</span>
+                                <span class="accolade gold">4x Olympic Gold</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/candace-parker.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #552583, #FDB927);">
+                            <div class="legend-avatar" style="color: #552583;">CP</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Candace Parker</h3>
+                            <div class="era">2008-2023 • Sparks/Sky/Aces</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">3x Champion</span>
+                                <span class="accolade gold">2x MVP</span>
+                                <span class="accolade gold">2x Olympic Gold</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/maya-moore.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #0C2340, #236192);">
+                            <div class="legend-avatar" style="color: #0C2340;">MM</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Maya Moore</h3>
+                            <div class="era">2011-2018 • Minnesota Lynx</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">4x Champion</span>
+                                <span class="accolade gold">MVP</span>
+                                <span class="accolade gold">2x Olympic Gold</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/sylvia-fowles.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #0C2340, #236192);">
+                            <div class="legend-avatar" style="color: #0C2340;">SF</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Sylvia Fowles</h3>
+                            <div class="era">2008-2022 • Sky/Lynx</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">2x Champion</span>
+                                <span class="accolade gold">2x MVP</span>
+                                <span class="accolade gold">4x Olympic Gold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Greats -->
+        <section class="era-section">
+            <div class="container">
+                <div class="era-header">
+                    <h2>Modern Icons (2016-Present)</h2>
+                    <p>Today's superstars carrying the torch forward</p>
+                </div>
+                <div class="legends-grid">
+                    <a href="/players/breanna-stewart.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #FF6600, #000000);">
+                            <div class="legend-avatar" style="color: #FF6600;">BS</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Breanna Stewart</h3>
+                            <div class="era">2016-Present • Storm/Liberty</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">2x Champion</span>
+                                <span class="accolade gold">2x MVP</span>
+                                <span class="accolade gold">2x Olympic Gold</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/aja-wilson.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #000000, #C4CED4);">
+                            <div class="legend-avatar" style="color: #000000;">AW</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>A'ja Wilson</h3>
+                            <div class="era">2018-Present • Las Vegas Aces</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">2x Champion</span>
+                                <span class="accolade gold">2x MVP</span>
+                                <span class="accolade gold">Olympic Gold</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/nneka-ogwumike.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #552583, #FDB927);">
+                            <div class="legend-avatar" style="color: #552583;">NO</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Nneka Ogwumike</h3>
+                            <div class="era">2012-Present • Sparks/Storm</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">Champion</span>
+                                <span class="accolade gold">MVP</span>
+                                <span class="accolade">WNBPA President</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/jonquel-jones.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #FF6600, #000000);">
+                            <div class="legend-avatar" style="color: #FF6600;">JJ</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Jonquel Jones</h3>
+                            <div class="era">2016-Present • Sun/Liberty</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">Champion</span>
+                                <span class="accolade gold">MVP</span>
+                                <span class="accolade">Bahamas Icon</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- International Legends -->
+        <section class="era-section">
+            <div class="container">
+                <div class="era-header">
+                    <h2>International Icons</h2>
+                    <p>Global stars who brought world-class talent to the WNBA</p>
+                </div>
+                <div class="legends-grid">
+                    <a href="/players/lauren-jackson.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #00843D, #FFCD00);">
+                            <div class="legend-avatar" style="color: #00843D;">LJ</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Lauren Jackson</h3>
+                            <div class="era">2001-2023 • Australia</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">2x Champion</span>
+                                <span class="accolade gold">3x MVP</span>
+                                <span class="accolade">Australian Icon</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/becky-hammon.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #C4CED4, #000000);">
+                            <div class="legend-avatar" style="color: #000000;">BH</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Becky Hammon</h3>
+                            <div class="era">1999-2014 • Liberty/Stars</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">2x Champion (Coach)</span>
+                                <span class="accolade">6x All-Star</span>
+                                <span class="accolade">NBA Pioneer</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/ticha-penicheiro.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #006600, #FF0000);">
+                            <div class="legend-avatar" style="color: #006600;">TP</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Ticha Penicheiro</h3>
+                            <div class="era">1998-2012 • Portugal</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">Champion</span>
+                                <span class="accolade">4x Assist Leader</span>
+                                <span class="accolade">Portuguese Pioneer</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/players/emma-meesseman.html" class="legend-card">
+                        <div class="legend-banner" style="background: linear-gradient(135deg, #000000, #FED100);">
+                            <div class="legend-avatar" style="color: #000000;">EM</div>
+                        </div>
+                        <div class="legend-info">
+                            <h3>Emma Meesseman</h3>
+                            <div class="era">2013-Present • Belgium</div>
+                            <div class="legend-accolades">
+                                <span class="accolade gold">Champion</span>
+                                <span class="accolade gold">Finals MVP</span>
+                                <span class="accolade">EuroLeague Champ</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="timeline-section">
+            <div class="container">
+                <div class="era-header">
+                    <h2>Historic Milestones</h2>
+                    <p>Key moments that shaped women's basketball</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">1976</div>
+                            <h3>Olympic Debut</h3>
+                            <p>Women's basketball becomes an Olympic sport at the Montreal Games</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">1997</div>
+                            <h3>WNBA Founded</h3>
+                            <p>The WNBA tips off its inaugural season with 8 teams</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2002</div>
+                            <h3>First Dunk</h3>
+                            <p>Lisa Leslie becomes the first player to dunk in a WNBA game</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2017</div>
+                            <h3>CBA Revolution</h3>
+                            <p>Players secure groundbreaking collective bargaining agreement</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3>Viewership Boom</h3>
+                            <p>Record TV ratings as Caitlin Clark era begins, transforming the league</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 HeroBasketball. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
