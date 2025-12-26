@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Lin Dunn - Entraîneuse Principale Indiana Fever | HeroBasketball</title>
+    <meta name="description" content="Lin Dunn: Entraîneuse légendaire de la WNBA qui a mené Indiana Fever au championnat 2012. Pionnière avec plus de 900 victoires en carrière.">
+    <meta name="keywords" content="Lin Dunn, Indiana Fever, entraîneuse WNBA, championne WNBA 2012, Hall of Fame, basketball féminin">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/fr/coaches/lin-dunn/">
+    <link rel="alternate" hreflang="en" href="https://herobasketball.com/coaches/lin-dunn/">
+    <link rel="alternate" hreflang="es" href="https://herobasketball.com/es/coaches/lin-dunn/">
+    <link rel="alternate" hreflang="fr" href="https://herobasketball.com/fr/coaches/lin-dunn/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#002D62">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <style>
+        .coach-hero {
+            position: relative;
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #002D62 0%, #001a3d 50%, #000d1f 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .coach-hero::before {
+            content: '🔥';
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10rem;
+            opacity: 0.1;
+        }
+        .coach-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+        .breadcrumb a:hover { color: white; }
+        .coach-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .coach-avatar {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #FDBB30, #e5a820);
+            color: #002D62;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2.5rem;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .coach-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .coach-title { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
+        .coach-school { font-size: 1rem; color: rgba(255,255,255,0.7); }
+        .coach-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .coach-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.375rem 0.75rem;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .coach-badge.champion { background: linear-gradient(135deg, #FDBB30, #e5a820); color: #002D62; }
+        .coach-content { padding: 3rem 0 4rem; background: var(--color-gray-50); }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .bio-content { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .bio-content p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .bio-content p:last-child { margin-bottom: 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .stat-card { background: white; padding: 1.5rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow-md); }
+        .stat-value { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; color: var(--color-primary); line-height: 1; }
+        .stat-label { font-size: 0.875rem; color: var(--color-gray-500); margin-top: 0.5rem; }
+        .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .achievement-card { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .achievement-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0, 45, 98, 0.1), rgba(0, 45, 98, 0.05)); border-radius: 50%; font-size: 1.5rem; }
+        .achievement-info h4 { font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--color-gray-900); margin: 0 0 0.25rem 0; }
+        .achievement-info p { font-size: 0.875rem; color: var(--color-gray-500); margin: 0; }
+        @media (max-width: 768px) {
+            .coach-hero::before { font-size: 4rem; opacity: 0.08; }
+            .coach-identity h1 { font-size: 1.75rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-value { font-size: 2rem; }
+        }
+        @media (min-width: 640px) {
+            .coach-header { flex-direction: row; align-items: center; }
+            .stats-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <main id="main-content">
+        <section class="coach-hero">
+            <div class="container">
+                <div class="coach-hero-content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/fr/">Accueil</a><span>/</span><a href="/fr/coaches.html">Entraîneurs</a><span>/</span><span>Lin Dunn</span>
+                    </nav>
+                    <div class="coach-header">
+                        <div class="coach-avatar">LD</div>
+                        <div class="coach-identity">
+                            <h1>Lin Dunn</h1>
+                            <p class="coach-title">Entraîneuse Principale</p>
+                            <p class="coach-school">Indiana Fever</p>
+                            <div class="coach-badges">
+                                <span class="coach-badge champion">🏆 Championne WNBA</span>
+                                <span class="coach-badge">🏛️ Hall of Fame</span>
+                                <span class="coach-badge">📊 900+ Victoires</span>
+                                <span class="coach-badge">👑 Entraîneuse Pionnière</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="coach-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📖</span> Biographie</h2>
+                    <div class="bio-content">
+                        <p><strong>Lin Dunn</strong> est l'une des vraies pionnières de l'entraînement de basketball féminin, avec une carrière s'étendant sur plus de quatre décennies. Elle a mené Indiana Fever à son premier championnat WNBA en 2012.</p>
+                        <p>Dunn était une entraîneuse originale de la WNBA, servant comme première entraîneuse principale de Seattle Storm (2000-2002). Sa capacité à développer des joueuses et à construire des cultures gagnantes l'a rendue l'une des figures les plus respectées du basketball féminin.</p>
+                        <p>Après sa retraite en 2014, Dunn est revenue à l'entraînement en 2024 quand Indiana Fever, maintenant dirigé par la sensation rookie Caitlin Clark, avait besoin d'une main expérimentée.</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📊</span> Bilan d'Entraîneuse</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">1</div>
+                            <div class="stat-label">Championnat WNBA</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">900+</div>
+                            <div class="stat-label">Victoires Carrière</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">40+</div>
+                            <div class="stat-label">Années d'Entraînement</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Équipes WNBA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>🏅</span> Réalisations</h2>
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🏆</div>
+                            <div class="achievement-info">
+                                <h4>Championne WNBA</h4>
+                                <p>2012 Indiana Fever</p>
+                            </div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🏛️</div>
+                            <div class="achievement-info">
+                                <h4>Hall of Fame</h4>
+                                <p>Women's Basketball HOF 2014</p>
+                            </div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">📊</div>
+                            <div class="achievement-info">
+                                <h4>900+ Victoires</h4>
+                                <p>Tous niveaux combinés</p>
+                            </div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">👑</div>
+                            <div class="achievement-info">
+                                <h4>Entraîneuse Pionnière</h4>
+                                <p>Ère originale de la WNBA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 HeroBasketball. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

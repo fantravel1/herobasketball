@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Derek Fisher - Los Angeles Sparks Head Coach | HeroBasketball</title>
+    <meta name="description" content="Derek Fisher is the Los Angeles Sparks head coach and 5x NBA Champion. The first NBA player to become a WNBA head coach, bridging NBA and WNBA excellence.">
+    <meta name="keywords" content="Derek Fisher, Los Angeles Sparks coach, WNBA coach, NBA champion, women's basketball coach">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/coaches/derek-fisher/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#552583">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        .coach-hero {
+            position: relative;
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #552583 0%, #3d1a61 50%, #260f3d 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .coach-hero::before {
+            content: '✨';
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10rem;
+            opacity: 0.1;
+        }
+        .coach-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+        .breadcrumb a:hover { color: white; }
+        .coach-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .coach-avatar {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #FDB927, #e5a820);
+            color: #552583;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2.5rem;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .coach-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .coach-title { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
+        .coach-school { font-size: 1rem; color: rgba(255,255,255,0.7); }
+        .coach-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .coach-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.375rem 0.75rem;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .coach-badge.champion { background: linear-gradient(135deg, #FDB927, #e5a820); color: #552583; }
+
+        .coach-content { padding: 3rem 0 4rem; background: var(--color-gray-50); }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .bio-content { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .bio-content p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .bio-content p:last-child { margin-bottom: 0; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .stat-card { background: white; padding: 1.5rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow-md); }
+        .stat-value { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; color: var(--color-primary); line-height: 1; }
+        .stat-label { font-size: 0.875rem; color: var(--color-gray-500); margin-top: 0.5rem; }
+
+        .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .achievement-card { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .achievement-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(85, 37, 131, 0.1), rgba(85, 37, 131, 0.05)); border-radius: 50%; font-size: 1.5rem; }
+        .achievement-info h4 { font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--color-gray-900); margin: 0 0 0.25rem 0; }
+        .achievement-info p { font-size: 0.875rem; color: var(--color-gray-500); margin: 0; }
+
+        .career-timeline { display: flex; flex-direction: column; gap: 1rem; }
+        .timeline-card { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .timeline-period { font-family: var(--font-mono); font-weight: 600; font-size: 0.875rem; color: var(--color-primary); min-width: 100px; }
+        .timeline-details h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; color: var(--color-gray-900); margin: 0 0 0.25rem 0; }
+        .timeline-details p { font-size: 0.875rem; color: var(--color-gray-500); margin: 0; }
+        .timeline-icon { font-size: 1.5rem; margin-left: auto; }
+
+        @media (max-width: 768px) {
+            .coach-hero::before { font-size: 4rem; opacity: 0.08; }
+            .coach-identity h1 { font-size: 1.75rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-value { font-size: 2rem; }
+        }
+        @media (min-width: 640px) {
+            .coach-header { flex-direction: row; align-items: center; }
+            .stats-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🏀</span>
+                    <span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="../players.html" class="nav-link">Players</a></li>
+                        <li><a href="../teams.html" class="nav-link">Teams</a></li>
+                        <li><a href="../stats.html" class="nav-link">Stats</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="coach-hero">
+            <div class="container">
+                <div class="coach-hero-content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/">Home</a><span>/</span><span>Coaches</span><span>/</span><span>Derek Fisher</span>
+                    </nav>
+                    <div class="coach-header">
+                        <div class="coach-avatar">DF</div>
+                        <div class="coach-identity">
+                            <h1>Derek Fisher</h1>
+                            <p class="coach-title">Head Coach</p>
+                            <p class="coach-school"><a href="../teams/los-angeles-sparks.html" style="color: inherit;">Los Angeles Sparks</a></p>
+                            <div class="coach-badges">
+                                <span class="coach-badge champion">🏆 5x NBA Champion</span>
+                                <span class="coach-badge">🌉 NBA to WNBA Pioneer</span>
+                                <span class="coach-badge">🏀 18-Year NBA Career</span>
+                                <span class="coach-badge">💜 Lakers Legend</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="coach-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading">📊 Career Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">5</div>
+                            <div class="stat-label">NBA Championships</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">18</div>
+                            <div class="stat-label">NBA Seasons</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">1,287</div>
+                            <div class="stat-label">NBA Games Played</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">1st</div>
+                            <div class="stat-label">NBA Player to WNBA Coach</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">📖 About Derek Fisher</h2>
+                    <div class="bio-content">
+                        <p><strong>Derek Fisher</strong> made history when he became the first former NBA player to serve as a WNBA head coach. Appointed by the Los Angeles Sparks in 2019, Fisher brought his championship pedigree and basketball IQ to the women's game, bridging the gap between the NBA and WNBA in a groundbreaking way.</p>
+                        <p>Fisher's playing career was legendary. As the starting point guard for the Los Angeles Lakers, he won five NBA Championships (2000, 2001, 2002, 2009, 2010) alongside Kobe Bryant and Shaquille O'Neal. Known for clutch shooting and leadership, Fisher played 18 seasons in the NBA and served as president of the NBA Players Association.</p>
+                        <p>His transition to WNBA coaching represents an important moment in the convergence of men's and women's professional basketball. Fisher has brought his championship experience, attention to detail, and understanding of what it takes to win at the highest level to the Sparks organization, working to restore the franchise to its championship glory.</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">📜 Basketball Journey</h2>
+                    <div class="career-timeline">
+                        <article class="timeline-card">
+                            <div class="timeline-period">2019-Present</div>
+                            <div class="timeline-details">
+                                <h4>Los Angeles Sparks</h4>
+                                <p>WNBA Head Coach • First NBA player to become WNBA coach</p>
+                            </div>
+                            <div class="timeline-icon">👔</div>
+                        </article>
+                        <article class="timeline-card">
+                            <div class="timeline-period">2014-2016</div>
+                            <div class="timeline-details">
+                                <h4>New York Knicks</h4>
+                                <p>NBA Head Coach</p>
+                            </div>
+                            <div class="timeline-icon">🏀</div>
+                        </article>
+                        <article class="timeline-card">
+                            <div class="timeline-period">1996-2014</div>
+                            <div class="timeline-details">
+                                <h4>NBA Player Career</h4>
+                                <p>Lakers, Warriors, Jazz, Thunder, Mavericks • 5x Champion</p>
+                            </div>
+                            <div class="timeline-icon">🏆</div>
+                        </article>
+                        <article class="timeline-card">
+                            <div class="timeline-period">1992-1996</div>
+                            <div class="timeline-details">
+                                <h4>Arkansas-Little Rock</h4>
+                                <p>College Basketball</p>
+                            </div>
+                            <div class="timeline-icon">🎓</div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">🏅 Career Achievements</h2>
+                    <div class="achievements-grid">
+                        <article class="achievement-card">
+                            <div class="achievement-icon">🏆</div>
+                            <div class="achievement-info">
+                                <h4>5x NBA Champion</h4>
+                                <p>2000, 2001, 2002, 2009, 2010</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">🌉</div>
+                            <div class="achievement-info">
+                                <h4>NBA to WNBA Pioneer</h4>
+                                <p>First NBA player to coach WNBA</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">🤝</div>
+                            <div class="achievement-info">
+                                <h4>NBPA President</h4>
+                                <p>Players Association Leader</p>
+                            </div>
+                        </article>
+                        <article class="achievement-card">
+                            <div class="achievement-icon">💜</div>
+                            <div class="achievement-info">
+                                <h4>Lakers Legacy</h4>
+                                <p>LA basketball icon</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 HeroBasketball. Celebrating women's basketball worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

@@ -653,6 +653,7 @@ ul, ol {
     justify-content: center;
     gap: var(--space-4);
     flex-wrap: wrap;
+    margin-bottom: var(--space-16); /* Add space for scroll indicator */
 }
 
 .stat-item {
@@ -684,7 +685,7 @@ ul, ol {
 
 .scroll-indicator {
     position: absolute;
-    bottom: var(--space-6);
+    bottom: var(--space-4);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -696,6 +697,7 @@ ul, ol {
     animation: fadeInUp 1s ease forwards;
     animation-delay: 2s;
     opacity: 0;
+    z-index: 5;
 }
 
 .scroll-arrow {
@@ -1878,6 +1880,10 @@ section {
         justify-content: center;
     }
 
+    .hero-stats {
+        margin-bottom: var(--space-16); /* Space for scroll indicator on tablet */
+    }
+
     .leagues-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1969,6 +1975,14 @@ section {
 
     .hero-title {
         font-size: var(--text-6xl);
+    }
+
+    .hero-stats {
+        margin-bottom: var(--space-20); /* More space for scroll indicator on desktop */
+    }
+
+    .scroll-indicator {
+        bottom: var(--space-6);
     }
 
     .section-title {

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>UMMC Ekaterinburg - Women's Basketball | EuroLeague | HeroBasketball</title>
+    <meta name="description" content="UMMC Ekaterinburg women's basketball: 7-time EuroLeague Champions. Russia's historic powerhouse with record-breaking success.">
+    <meta name="keywords" content="UMMC Ekaterinburg, EuroLeague Women, Russian basketball, European champions, women's basketball">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://herobasketball.com/teams/ummc-ekaterinburg/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+    <meta name="theme-color" content="#FF4500">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        .team-hero {
+            position: relative;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #FF4500 0%, #CC3700 50%, #1a1a1a 100%);
+            color: white;
+            overflow: hidden;
+        }
+        .team-hero::before { content: '🇷🇺'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 15rem; opacity: 0.1; }
+        .team-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); }
+        .team-header { display: flex; flex-direction: column; gap: 1.5rem; }
+        .team-logo { width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; background: #FF4500; color: white; font-size: 3rem; border-radius: 1rem; border: 3px solid white; }
+        .team-identity h1 { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .team-meta { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 1rem; color: rgba(255,255,255,0.9); }
+        .team-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .team-badge { padding: 0.375rem 0.75rem; background: rgba(255,255,255,0.2); border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .team-badge.champ { background: white; color: #FF4500; }
+        .team-quick-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); }
+        .quick-stat { text-align: center; }
+        .quick-stat-value { font-family: var(--font-mono); font-size: 1.75rem; font-weight: 700; color: white; }
+        .quick-stat-label { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .team-content { padding: 2rem 0 4rem; }
+        .content-section { margin-bottom: 3rem; }
+        .section-heading { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-gray-900); margin-bottom: 1.5rem; }
+        .history-card { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-md); }
+        .history-card p { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .championships { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .championship-badge { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; background: linear-gradient(135deg, #FF4500, #CC3700); color: white; border-radius: 0.5rem; font-family: var(--font-display); font-weight: 600; font-size: 0.875rem; }
+        .notable-players { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem; }
+        .player-card { padding: 1rem; background: var(--color-gray-50); border-radius: 0.75rem; }
+        .player-card h4 { font-family: var(--font-display); font-weight: 600; color: var(--color-gray-900); font-size: 0.9375rem; }
+        .player-card p { font-size: 0.75rem; color: var(--color-gray-500); margin-top: 0.25rem; }
+        @media (min-width: 640px) { .team-identity h1 { font-size: 3rem; } .team-quick-stats { grid-template-columns: repeat(4, 1fr); } .notable-players { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 768px) { .team-header { flex-direction: row; align-items: center; } .team-logo { width: 120px; height: 120px; font-size: 4rem; } }
+        @media (max-width: 768px) { .team-hero::before { font-size: 4rem; opacity: 0.08; } .team-header h1 { font-size: 1.75rem; } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo"><span class="logo-icon">🏀</span><span class="logo-text">Hero<span class="logo-highlight">Basketball</span></span></a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="../players.html" class="nav-link">Players</a></li>
+                        <li><a href="../teams.html" class="nav-link" style="color: var(--color-primary);">Teams</a></li>
+                        <li><a href="../coaches.html" class="nav-link">Coaches</a></li>
+                        <li><a href="../leagues/wnba.html" class="nav-link">Leagues</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="team-hero">
+            <div class="container">
+                <div class="team-hero-content">
+                    <nav class="breadcrumb"><a href="/">Home</a><span>/</span><a href="../leagues/euroleague-women.html">EuroLeague</a><span>/</span><span>UMMC Ekaterinburg</span></nav>
+                    <div class="team-header">
+                        <div class="team-logo">🇷🇺</div>
+                        <div class="team-identity">
+                            <h1>UMMC Ekaterinburg</h1>
+                            <div class="team-meta">
+                                <span>📍 Ekaterinburg, Russia</span>
+                                <span>🏟️ DIVS Arena</span>
+                                <span>🏀 Russian League</span>
+                            </div>
+                            <div class="team-badges">
+                                <span class="team-badge champ">🏆 7x EuroLeague Champions</span>
+                                <span class="team-badge">💰 Top Payroll</span>
+                                <span class="team-badge">🏛️ Historic Club</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-quick-stats">
+                        <div class="quick-stat"><div class="quick-stat-value">7</div><div class="quick-stat-label">EuroLeague Titles</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">€1M+</div><div class="quick-stat-label">Top Salaries</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">2000</div><div class="quick-stat-label">Founded</div></div>
+                        <div class="quick-stat"><div class="quick-stat-value">🇷🇺</div><div class="quick-stat-label">Russia</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-content">
+            <div class="container">
+                <div class="content-section">
+                    <h2 class="section-heading"><span>📖</span> Club History</h2>
+                    <div class="history-card">
+                        <p><strong>UMMC Ekaterinburg</strong> holds the record for the most EuroLeague Women titles with 7 championships. The club, backed by UMMC mining company, has historically offered the highest salaries in women's basketball, attracting the world's best players.</p>
+                        <p>Based in the Ural Mountains region of Russia, UMMC has featured legendary players including Diana Taurasi, Sue Bird, and Brittney Griner during various seasons. The club's financial resources and commitment to winning made it the premier destination for WNBA players during the offseason.</p>
+                        <p>Due to geopolitical events beginning in 2022, UMMC has been excluded from EuroLeague competition, but their historical dominance remains unmatched in European women's basketball.</p>
+                        <div class="championships">
+                            <div class="championship-badge">🏆 2021</div>
+                            <div class="championship-badge">🏆 2019</div>
+                            <div class="championship-badge">🏆 2018</div>
+                            <div class="championship-badge">🏆 2016</div>
+                            <div class="championship-badge">🏆 2013</div>
+                            <div class="championship-badge">🏆 2006</div>
+                            <div class="championship-badge">🏆 2003</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading"><span>⭐</span> Historic Players</h2>
+                    <div class="notable-players">
+                        <a href="../players/diana-taurasi.html" class="player-card">
+                            <h4>Diana Taurasi</h4>
+                            <p>WNBA Legend • Former Player</p>
+                        </a>
+                        <a href="../players/sue-bird.html" class="player-card">
+                            <h4>Sue Bird</h4>
+                            <p>4x WNBA Champion • Former Player</p>
+                        </a>
+                        <div class="player-card">
+                            <h4>Brittney Griner</h4>
+                            <p>WNBA All-Star • Former Player</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 HeroBasketball. All rights reserved.</p></div></div></footer>
+    <script src="../script.js"></script>
+</body>
+</html>
